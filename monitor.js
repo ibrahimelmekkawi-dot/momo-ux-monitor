@@ -1,4 +1,5 @@
 const { chromium } = require('playwright');
+const fs = require('fs');
 
 (async () => {
   const browser = await chromium.launch({
@@ -13,34 +14,78 @@ const { chromium } = require('playwright');
 
   const page = await context.newPage();
 
-  try {
-    console.log("Checking category page...");
+  const pagesToCheck = [
+    { name: "Homepage", url: "https://market.momo.africa/" },
+    { name: "Category", url: "https://market.momo.africa/Portal/category/1373329" },
+    { name: "Login", url: "https://market.momo.africa/Portal/login" }
+  ];
 
-    const start = Date.now();
-    const response = await page.goto(
-      "https://market.momo.africa/Portal/category/1373329",
-      { timeout: 60000 }
-    );
+  let totalScore = 0;
+  let results = [];
 
-    const loadTime = (Date.now() - start) / 1000;
+  for (const p of pagesToCheck) {
+    try {
+      console.log(`Checking ${p.name}...`);
 
-    if (!response || response.status() !== 200) {
-      throw new Error("Page not reachable");
+      const start = Date.now();
+      const response = await page.goto(p.url, { timeout: 60000 });
+      const loadTime = (Date.now() - start) / 1000;
+
+      let score = 100;
+
+      if (!response || response.status() !== 200) {
+        throw new Error("HTTP not 200");
+      }
+
+      const html = await page.content();
+
+      if (html.length < 10000) {
+        score -= 50;
+      }
+
+      if (loadTime > 5) {
+        score -= 25;
+      }
+
+      console.log(`${p.name} loaded in ${loadTime}s | Score: ${score}`);
+
+      totalScore += score;
+
+      results.push({
+        page: p.name,
+        status: "OK",
+        loadTime,
+        score
+      });
+
+    } catch (error) {
+      console.error(`${p.name} FAILED:`, error.message);
+
+      results.push({
+        page: p.name,
+        status: "FAIL",
+        loadTime: 0,
+        score: 0
+      });
+
+      totalScore += 0;
     }
+  }
 
-    const html = await page.content();
+  const healthScore = Math.round(totalScore / pagesToCheck.length);
 
-    if (!html.includes("MOMO") && html.length < 10000) {
-      throw new Error("Page content seems invalid or blocked");
-    }
+  console.log(`\nFinal Health Score: ${healthScore}/100`);
 
-    console.log(`Page loaded in ${loadTime}s`);
-    console.log(`HTML size: ${html.length} characters`);
+  // Save metrics to file
+  const csv = [
+    "Page,Status,LoadTime,Score",
+    ...results.map(r => `${r.page},${r.status},${r.loadTime},${r.score}`)
+  ].join("\n");
 
-    console.log("SUCCESS - Site reachable and content valid");
+  fs.writeFileSync("health-report.csv", csv);
 
-  } catch (error) {
-    console.error("FAIL:", error.message);
+  if (healthScore < 70) {
+    console.error("Health below SLA threshold!");
     process.exit(1);
   }
 
