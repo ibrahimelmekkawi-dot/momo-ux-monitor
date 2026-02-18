@@ -17,11 +17,11 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install Playwright
+          - name: Install dependencies
         run: |
           npm init -y
           npm install playwright
-          npx playwright install
+          npx playwright install --with-deps
 
       - name: Run Monitor
         run: node monitor.js
