@@ -15,8 +15,15 @@ const { chromium } = require('playwright');
     console.log(`Homepage loaded in ${loadTime}s`);
 
     console.log("Searching product...");
-    await page.waitForSelector('input[type="search"]', { timeout: 10000 });
-    await page.fill('input[type="search"]', 'phone');
+   console.log("Searching product...");
+await page.waitForSelector('input', { timeout: 15000 });
+
+const searchInput = await page.$('input');
+await searchInput.fill('phone');
+await page.keyboard.press('Enter');
+
+await page.waitForLoadState('networkidle');
+
     await page.keyboard.press('Enter');
     await page.waitForLoadState('networkidle');
 
