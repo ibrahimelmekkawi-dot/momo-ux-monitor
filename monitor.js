@@ -21,22 +21,23 @@ const fs = require('fs');
 
     // 1️⃣ Open category
     console.log("Opening category...");
-    await page.goto('https://market.momo.africa/Portal/category/1373329', { timeout: 60000 });
-    await page.waitForLoadState('networkidle');
 
-    results.push({ page: "Category", status: "OK", loadTime: (Date.now() - startTotal)/1000, score: 100 });
+await page.goto('https://market.momo.africa/Portal/category/1373329', { timeout: 60000 });
 
+// Wait for Angular to bootstrap
+await page.waitForLoadState('domcontentloaded');
+
+// Wait for product card container to exist
+await page.waitForSelector('[class*="mtn-product-card"]', { timeout: 45000 });
+
+console.log("Products detected.");
     // 2️⃣ Open first product
-    console.log("Opening first product...");
+console.log("Opening first product...");
 
-// Wait for product titles to appear
-await page.waitForSelector('.mtn-product-card__product-details__title', { timeout: 30000 });
-
-// Click first product title
-const firstProduct = page.locator('.mtn-product-card__product-details__title').first();
+const firstProduct = page.locator('[class*="mtn-product-card"]').first();
 await firstProduct.click();
 
-await page.waitForLoadState('networkidle');
+await page.waitForLoadState('domcontentloaded');
 
 
     // 3️⃣ Add to cart
