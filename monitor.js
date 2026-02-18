@@ -27,11 +27,32 @@ await page.waitForLoadState('networkidle');
     await page.keyboard.press('Enter');
     await page.waitForLoadState('networkidle');
 
-    console.log("Opening first product...");
-    await page.waitForSelector('a[href*="/Portal/"]', { timeout: 15000 });
-    const productLink = await page.$('a[href*="/Portal/"]');
-    await productLink.click();
-    await page.waitForLoadState('networkidle');
+   console.log("Opening first product...");
+
+// Wait for product grid to appear
+await page.waitForSelector('a', { timeout: 20000 });
+
+// Get all links
+const links = await page.$$('a');
+
+// Find first link that looks like product
+let productClicked = false;
+
+for (const link of links) {
+  const href = await link.getAttribute('href');
+  if (href && href.includes('product')) {
+    await link.click();
+    productClicked = true;
+    break;
+  }
+}
+
+if (!productClicked) {
+  throw new Error("No product link found");
+}
+
+await page.waitForLoadState('networkidle');
+
 
     console.log("Adding to cart...");
     await page.waitForSelector('button:has-text("Add")', { timeout: 15000 });
