@@ -8,7 +8,7 @@ const { chromium } = require('playwright');
     console.log("Opening homepage...");
     const start = Date.now();
 
-    await page.goto('https://https://market.momo.africa/Portal/category/1373329', { timeout: 60000 });
+    await page.goto('https://market.momo.africa/Portal/category/1373329', { timeout: 60000 });
     await page.waitForLoadState('networkidle');
 
     const loadTime = (Date.now() - start) / 1000;
