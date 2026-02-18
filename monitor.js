@@ -87,6 +87,15 @@ const fs = require('fs');
     console.error("SLA BREACH: Health below 70");
     process.exit(1);
   }
+// Save CSV report
+const csv = [
+  "Timestamp,Page,Status,LoadTime,Score",
+  ...results.map(r =>
+    `${new Date().toISOString()},${r.page},${r.status},${r.loadTime},${r.score}`
+  )
+].join("\n");
+
+fs.writeFileSync("health-report.csv", csv);
 
   await browser.close();
 })();
