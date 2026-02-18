@@ -22,11 +22,10 @@ const fs = require('fs');
 
   let totalScore = 0;
   let results = [];
+  let failures = 0;
 
   for (const p of pagesToCheck) {
     try {
-      console.log(`Checking ${p.name}...`);
-
       const start = Date.now();
       const response = await page.goto(p.url, { timeout: 60000 });
       const loadTime = (Date.now() - start) / 1000;
@@ -39,17 +38,13 @@ const fs = require('fs');
 
       const html = await page.content();
 
-      if (html.length < 10000) {
-        score -= 50;
-      }
+      if (html.length < 10000) score -= 50;
 
-      if (loadTime > 5) {
-        score -= 25;
-      }
+      if (loadTime > 3) score -= 10;
+      if (loadTime > 5) score -= 25;
+      if (loadTime > 8) score -= 50;
 
-      console.log(`${p.name} loaded in ${loadTime}s | Score: ${score}`);
-
-      totalScore += score;
+      if (score < 0) score = 0;
 
       results.push({
         page: p.name,
@@ -58,9 +53,10 @@ const fs = require('fs');
         score
       });
 
-    } catch (error) {
-      console.error(`${p.name} FAILED:`, error.message);
+      totalScore += score;
 
+    } catch (error) {
+      failures++;
       results.push({
         page: p.name,
         status: "FAIL",
@@ -74,18 +70,21 @@ const fs = require('fs');
 
   const healthScore = Math.round(totalScore / pagesToCheck.length);
 
-  console.log(`\nFinal Health Score: ${healthScore}/100`);
+  const report = {
+    timestamp: new Date().toISOString(),
+    healthScore,
+    totalPages: pagesToCheck.length,
+    failures,
+    pages: results
+  };
 
-  // Save metrics to file
-  const csv = [
-    "Page,Status,LoadTime,Score",
-    ...results.map(r => `${r.page},${r.status},${r.loadTime},${r.score}`)
-  ].join("\n");
+  fs.writeFileSync("health-report.json", JSON.stringify(report, null, 2));
 
-  fs.writeFileSync("health-report.csv", csv);
+  console.log("\nEnterprise Health Report:");
+  console.log(JSON.stringify(report, null, 2));
 
   if (healthScore < 70) {
-    console.error("Health below SLA threshold!");
+    console.error("SLA BREACH: Health below 70");
     process.exit(1);
   }
 
