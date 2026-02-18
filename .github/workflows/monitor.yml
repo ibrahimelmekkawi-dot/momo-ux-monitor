@@ -24,4 +24,9 @@ jobs:
           npx playwright install --with-deps
 
       - name: Run Monitor
+            - name: Upload Health Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: health-report
+          path: health-report.csv
         run: node monitor.js
