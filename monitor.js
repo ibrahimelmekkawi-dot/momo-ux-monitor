@@ -28,11 +28,16 @@ const fs = require('fs');
 
     // 2️⃣ Open first product
     console.log("Opening first product...");
-    await page.waitForSelector('a[href*="product"]', { timeout: 20000 });
-    await page.click('a[href*="product"]');
-    await page.waitForLoadState('networkidle');
 
-    results.push({ page: "Product Page", status: "OK", loadTime: 0, score: 100 });
+// Wait for product titles to appear
+await page.waitForSelector('.mtn-product-card__product-details__title', { timeout: 30000 });
+
+// Click first product title
+const firstProduct = page.locator('.mtn-product-card__product-details__title').first();
+await firstProduct.click();
+
+await page.waitForLoadState('networkidle');
+
 
     // 3️⃣ Add to cart
     console.log("Adding to cart...");
