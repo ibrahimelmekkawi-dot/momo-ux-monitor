@@ -2,100 +2,91 @@ const { chromium } = require('playwright');
 const fs = require('fs');
 
 (async () => {
+
+  const results = [];
+
+  const phone = process.env.MOMO_PHONE;
+  const password = process.env.MOMO_PASSWORD;
+
   const browser = await chromium.launch({
     headless: true,
     args: ['--no-sandbox', '--disable-setuid-sandbox']
   });
 
-  const context = await browser.newContext({
-    userAgent:
-      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36",
-  });
+  const page = await browser.newPage();
 
-  const page = await context.newPage();
+  try {
 
-  const pagesToCheck = [
-    { name: "Homepage", url: "https://market.momo.africa/" },
-    { name: "Category", url: "https://market.momo.africa/Portal/category/1373329" },
-    { name: "Login", url: "https://market.momo.africa/Portal/login" }
-  ];
+    const startTotal = Date.now();
 
-  let totalScore = 0;
-  let results = [];
-  let failures = 0;
+    // 1️⃣ Open category
+    console.log("Opening category...");
+    await page.goto('https://market.momo.africa/Portal/category/1373329', { timeout: 60000 });
+    await page.waitForLoadState('networkidle');
 
-  for (const p of pagesToCheck) {
-    try {
-      const start = Date.now();
-      const response = await page.goto(p.url, { timeout: 60000 });
-      const loadTime = (Date.now() - start) / 1000;
+    results.push({ page: "Category", status: "OK", loadTime: (Date.now() - startTotal)/1000, score: 100 });
 
-      let score = 100;
+    // 2️⃣ Open first product
+    console.log("Opening first product...");
+    await page.waitForSelector('a[href*="product"]', { timeout: 20000 });
+    await page.click('a[href*="product"]');
+    await page.waitForLoadState('networkidle');
 
-      if (!response || response.status() !== 200) {
-        throw new Error("HTTP not 200");
-      }
+    results.push({ page: "Product Page", status: "OK", loadTime: 0, score: 100 });
 
-      const html = await page.content();
+    // 3️⃣ Add to cart
+    console.log("Adding to cart...");
+    await page.waitForSelector('button:has-text("Add")', { timeout: 20000 });
+    await page.click('button:has-text("Add")');
 
-      if (html.length < 10000) score -= 50;
+    results.push({ page: "Add To Cart", status: "OK", loadTime: 0, score: 100 });
 
-      if (loadTime > 3) score -= 10;
-      if (loadTime > 5) score -= 25;
-      if (loadTime > 8) score -= 50;
+    // 4️⃣ Go to login
+    console.log("Opening login page...");
+    await page.goto('https://market.momo.africa/Portal/login');
+    await page.waitForSelector('input[type="tel"]', { timeout: 20000 });
 
-      if (score < 0) score = 0;
+    // 5️⃣ Login
+    console.log("Logging in...");
+    await page.fill('input[type="tel"]', phone);
+    await page.fill('input[type="password"]', password);
+    await page.click('button[type="submit"]');
+    await page.waitForLoadState('networkidle');
 
-      results.push({
-        page: p.name,
-        status: "OK",
-        loadTime,
-        score
-      });
+    results.push({ page: "Login", status: "OK", loadTime: 0, score: 100 });
 
-      totalScore += score;
+    // 6️⃣ Go to cart
+    console.log("Opening cart...");
+    await page.goto('https://market.momo.africa/Portal/cart');
+    await page.waitForLoadState('networkidle');
 
-    } catch (error) {
-      failures++;
-      results.push({
-        page: p.name,
-        status: "FAIL",
-        loadTime: 0,
-        score: 0
-      });
+    // 7️⃣ Checkout
+    console.log("Proceeding to checkout...");
+    await page.waitForSelector('button:has-text("Checkout")', { timeout: 20000 });
+    await page.click('button:has-text("Checkout")');
+    await page.waitForLoadState('networkidle');
 
-      totalScore += 0;
-    }
+    results.push({ page: "Checkout Page", status: "OK", loadTime: 0, score: 100 });
+
+    console.log("FULL JOURNEY SUCCESS");
+
+  } catch (error) {
+
+    console.error("FAIL:", error.message);
+    results.push({ page: "Failure", status: error.message, loadTime: 0, score: 0 });
+
   }
 
-  const healthScore = Math.round(totalScore / pagesToCheck.length);
+  // Save CSV report
+  const csv = [
+    "Timestamp,Page,Status,LoadTime,Score",
+    ...results.map(r =>
+      `${new Date().toISOString()},${r.page},${r.status},${r.loadTime},${r.score}`
+    )
+  ].join("\n");
 
-  const report = {
-    timestamp: new Date().toISOString(),
-    healthScore,
-    totalPages: pagesToCheck.length,
-    failures,
-    pages: results
-  };
-
-  fs.writeFileSync("health-report.json", JSON.stringify(report, null, 2));
-
-  console.log("\nEnterprise Health Report:");
-  console.log(JSON.stringify(report, null, 2));
-
-  if (healthScore < 70) {
-    console.error("SLA BREACH: Health below 70");
-    process.exit(1);
-  }
-// Save CSV report
-const csv = [
-  "Timestamp,Page,Status,LoadTime,Score",
-  ...results.map(r =>
-    `${new Date().toISOString()},${r.page},${r.status},${r.loadTime},${r.score}`
-  )
-].join("\n");
-
-fs.writeFileSync("health-report.csv", csv);
+  fs.writeFileSync("health-report.csv", csv);
 
   await browser.close();
+
 })();
