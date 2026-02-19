@@ -9,6 +9,10 @@ const fs = require('fs');
   const phone = process.env.MOMO_PHONE;
   const password = process.env.MOMO_PASSWORD;
 
+  if (!phone || !password) {
+    throw new Error("Secrets not loaded. Check MOMO_PHONE and MOMO_PASSWORD.");
+  }
+
   const browser = await chromium.launch({
     headless: true,
     args: ['--no-sandbox', '--disable-setuid-sandbox']
@@ -32,105 +36,64 @@ const fs = require('fs');
       waitUntil: 'domcontentloaded'
     });
 
-    /* ==============================
-       HANDLE COOKIE
-    ============================== */
+    // Accept cookies
     try {
-      await page.waitForSelector('text=I ACCEPT', { timeout: 10000 });
-      await page.click('text=I ACCEPT');
-      console.log("Cookie accepted");
+      await page.click('text=I ACCEPT', { timeout: 8000 });
     } catch {}
 
-    /* ==============================
-       SELECT COUNTRY
-    ============================== */
+    // Select Uganda (change if needed)
     try {
-      await page.waitForSelector('text=Uganda', { timeout: 15000 });
-      await page.click('text=Uganda');
-      console.log("Country selected");
+      await page.click('text=Uganda', { timeout: 15000 });
     } catch {}
 
     await page.waitForLoadState('networkidle');
 
-    /* ==============================
-       WAIT FOR PRODUCTS
-    ============================== */
+    // Wait for product cards
+    await page.waitForSelector('[class*="mtn-product-card"]', { timeout: 45000 });
 
-    await page.waitForSelector('[class*="mtn-product-card"]', {
-      timeout: 45000
-    });
-
-    const loadTime = (Date.now() - start) / 1000;
+    const categoryLoad = (Date.now() - start) / 1000;
 
     results.push({
       page: "Category",
       status: "OK",
-      loadTime,
-      score: 100
+      loadTime: categoryLoad,
+      score: categoryLoad < 12 ? 100 : 70
     });
 
-    console.log("Opening first product...");
-
-    const firstProduct = page.locator('[class*="mtn-product-card"]').first();
-    await firstProduct.click();
-
+    // Open first product
+    await page.locator('[class*="mtn-product-card"]').first().click();
     await page.waitForLoadState('domcontentloaded');
 
-    results.push({
-      page: "Product Page",
-      status: "OK",
-      loadTime: 0,
-      score: 100
-    });
+    results.push({ page: "Product Page", status: "OK", loadTime: 0, score: 100 });
 
-    console.log("Adding to cart...");
+    // Add to cart
+    await page.click('button:has-text("Add")', { timeout: 20000 });
 
-    await page.waitForSelector('button:has-text("Add")', { timeout: 20000 });
-    await page.click('button:has-text("Add")');
+    results.push({ page: "Add To Cart", status: "OK", loadTime: 0, score: 100 });
 
-    results.push({
-      page: "Add To Cart",
-      status: "OK",
-      loadTime: 0,
-      score: 100
-    });
-
-    console.log("Opening login page...");
-
+    // Login
     await page.goto('https://market.momo.africa/Portal/login');
-    await page.waitForSelector('input[type="tel"]', { timeout: 20000 });
 
-    await page.fill('input[type="tel"]', phone);
-    await page.fill('input[type="password"]', password);
-    await page.locator('button:has-text("Sign-in")').click();
+    await page.waitForSelector('input[formcontrolname="mobileNumber"]', { timeout: 20000 });
+
+    await page.fill('input[formcontrolname="mobileNumber"]', phone);
+    await page.fill('input[formcontrolname="password"]', password);
+
+    await page.click('button:has-text("Sign-in")');
 
     await page.waitForLoadState('networkidle');
 
-    results.push({
-      page: "Login",
-      status: "OK",
-      loadTime: 0,
-      score: 100
-    });
+    results.push({ page: "Login", status: "OK", loadTime: 0, score: 100 });
 
-    console.log("Opening cart...");
-
+    // Checkout
     await page.goto('https://market.momo.africa/Portal/cart');
-    await page.waitForLoadState('networkidle');
-
-    console.log("Proceeding to checkout...");
 
     await page.waitForSelector('button:has-text("Checkout")', { timeout: 20000 });
     await page.click('button:has-text("Checkout")');
 
     await page.waitForLoadState('networkidle');
 
-    results.push({
-      page: "Checkout",
-      status: "OK",
-      loadTime: 0,
-      score: 100
-    });
+    results.push({ page: "Checkout", status: "OK", loadTime: 0, score: 100 });
 
     console.log("FULL JOURNEY SUCCESS");
 
@@ -149,17 +112,34 @@ const fs = require('fs');
   }
 
   /* ==============================
-     SAVE CSV
+     APPEND TO HISTORY FILE
   ============================== */
 
-  const csv = [
+  const historyFile = "monitoring-history.csv";
+
+  const newRows = results.map(r =>
+    `${timestamp},${r.page},${r.status},${r.loadTime},${r.score}`
+  ).join("\n");
+
+  if (fs.existsSync(historyFile)) {
+    fs.appendFileSync(historyFile, "\n" + newRows);
+  } else {
+    const header = "Timestamp,Page,Status,LoadTime,Score\n";
+    fs.writeFileSync(historyFile, header + newRows);
+  }
+
+  /* ==============================
+     SAVE SINGLE RUN FILE
+  ============================== */
+
+  const singleRun = [
     "Timestamp,Page,Status,LoadTime,Score",
     ...results.map(r =>
       `${timestamp},${r.page},${r.status},${r.loadTime},${r.score}`
     )
   ].join("\n");
 
-  fs.writeFileSync("health-report.csv", csv);
+  fs.writeFileSync("health-report.csv", singleRun);
 
   await browser.close();
 
