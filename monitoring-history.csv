@@ -8,4 +8,11 @@ Timestamp,Page,Status,LoadTime,Score
 2026-02-19T12:59:55.852Z,Product Page,OK,0,100
 2026-02-19T12:59:55.852Z,Add To Cart,OK,0,100
 2026-02-19T12:59:55.852Z,Login,OK,0,100
-2026-02-19T12:59:55.852Z,Checkout,OK,0,100
+2026-02-19T12:59:55.852Z,Checkout,OK,0,1002026-02-19T13:16:04.626Z,Category,OK,12.567,100
+2026-02-19T13:16:04.626Z,Product Page,OK,0,100
+2026-02-19T13:16:04.626Z,Add To Cart,OK,0,100
+2026-02-19T13:16:04.626Z,Login,OK,0,100
+2026-02-19T13:16:04.626Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
