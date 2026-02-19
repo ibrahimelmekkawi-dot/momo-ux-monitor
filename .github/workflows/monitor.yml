@@ -1,4 +1,4 @@
-name: MOMO UX Enterprise Monitor
+name: MOMO UX Monitor
 
 on:
   schedule:
@@ -9,10 +9,6 @@ jobs:
   monitor:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        country: [uganda, ghana, cote_divoire]
-
     steps:
       - uses: actions/checkout@v3
 
@@ -21,10 +17,10 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install Dependencies
+      - name: Install Playwright
         run: |
           npm init -y
-          npm install playwright axios
+          npm install playwright
           npx playwright install --with-deps
 
       - name: Run Monitor
@@ -32,14 +28,11 @@ jobs:
         env:
           MOMO_PHONE: ${{ secrets.MOMO_PHONE }}
           MOMO_PASSWORD: ${{ secrets.MOMO_PASSWORD }}
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-          COUNTRY: ${{ matrix.country }}
 
-      - name: Upload Artifacts
+      - name: Upload Monitor Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: monitor-artifacts-${{ matrix.country }}
+          name: monitor-artifacts
           path: |
             health-report.csv
-            health-report.json
-            failure.png
+            debug-*.png
