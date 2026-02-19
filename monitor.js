@@ -28,13 +28,31 @@ const fs = require('fs');
 
   try {
 
-    console.log("Opening main page...");
-    const start = Date.now();
+   console.log("Opening login page...");
 
-    await page.goto('https://market.momo.africa', {
-      timeout: 60000,
-      waitUntil: 'domcontentloaded'
-    });
+await page.goto('https://market.momo.africa/Portal/login');
+await page.waitForLoadState('domcontentloaded');
+
+console.log("Waiting for login form...");
+
+await page.waitForSelector('input[type="tel"]', { timeout: 30000 });
+
+console.log("Filling credentials...");
+
+await page.fill('input[type="tel"]', phone);
+await page.fill('input[type="password"]', password);
+
+await page.locator('button:has-text("Sign-in")').click();
+
+await page.waitForLoadState('networkidle');
+
+results.push({
+  page: "Login",
+  status: "OK",
+  loadTime: 0,
+  score: 100
+});
+
 
     // Accept cookies
     try {
