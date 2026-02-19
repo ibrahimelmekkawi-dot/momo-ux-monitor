@@ -1,4 +1,5 @@
 name: MOMO UX Monitor
+
 on:
   schedule:
     - cron: "*/15 * * * *"
@@ -24,14 +25,11 @@ jobs:
 
       - name: Run Monitor
         run: node monitor.js
-        env:
-          MOMO_PHONE: ${{ secrets.MOMO_PHONE }}
-          MOMO_PASSWORD: ${{ secrets.MOMO_PASSWORD }}
 
-       name: Upload Health Report
-  uses: actions/upload-artifact@v4
-  with:
-    name: monitor-artifacts
-    path: |
-      health-report.csv
-      debug-category.png
+      - name: Upload Monitor Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: monitor-artifacts
+          path: |
+            health-report.csv
+            debug-category.png
