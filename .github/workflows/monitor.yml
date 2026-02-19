@@ -29,6 +29,14 @@ jobs:
           MOMO_PHONE: ${{ secrets.MOMO_PHONE }}
           MOMO_PASSWORD: ${{ secrets.MOMO_PASSWORD }}
 
+      - name: Commit Monitoring History
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git add monitoring-history.csv
+          git commit -m "Update monitoring history" || echo "No changes"
+          git push
+
       - name: Upload Monitor Artifacts
         uses: actions/upload-artifact@v4
         with:
