@@ -28,8 +28,10 @@ jobs:
           MOMO_PHONE: ${{ secrets.MOMO_PHONE }}
           MOMO_PASSWORD: ${{ secrets.MOMO_PASSWORD }}
 
-      - name: Upload Health Report
-        uses: actions/upload-artifact@v4
-        with:
-          name: health-report
-          path: health-report.csv
+       name: Upload Health Report
+  uses: actions/upload-artifact@v4
+  with:
+    name: monitor-artifacts
+    path: |
+      health-report.csv
+      debug-category.png
