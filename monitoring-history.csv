@@ -14,3 +14,7 @@ Call log:
 Call log:
   - waiting for locator('input[type="tel"]') to be visible
 ,0,0
+2026-02-19T11:01:17.760Z,Failure,page.waitForSelector: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('input[type="tel"]') to be visible
+,0,0
