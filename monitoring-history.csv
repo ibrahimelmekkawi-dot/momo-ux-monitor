@@ -15,4 +15,8 @@ Timestamp,Page,Status,LoadTime,Score
 2026-02-19T13:16:04.626Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
 Call log:
   - waiting for locator('button:has-text("Checkout")') to be visible
-,0,0
+,0,02026-02-19T13:31:06.204Z,Category,OK,12.919,100
+2026-02-19T13:31:06.204Z,Product Page,OK,0,100
+2026-02-19T13:31:06.204Z,Add To Cart,OK,0,100
+2026-02-19T13:31:06.204Z,Login,OK,0,100
+2026-02-19T13:31:06.204Z,Checkout,OK,0,100
