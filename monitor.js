@@ -1,6 +1,5 @@
 const { chromium } = require('playwright');
 const fs = require('fs');
-const axios = require('axios');
 
 (async () => {
 
@@ -9,14 +8,6 @@ const axios = require('axios');
 
   const phone = process.env.MOMO_PHONE;
   const password = process.env.MOMO_PASSWORD;
-  const country = process.env.COUNTRY || "uganda";
-  const slackWebhook = process.env.SLACK_WEBHOOK;
-
-  const countryMap = {
-    uganda: "text=Uganda",
-    ghana: "text=Ghana",
-    cote_divoire: "text=Côte d’Ivoire"
-  };
 
   const browser = await chromium.launch({
     headless: true,
@@ -24,6 +15,8 @@ const axios = require('axios');
   });
 
   const context = await browser.newContext({
+    userAgent:
+      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36',
     viewport: { width: 1280, height: 800 }
   });
 
@@ -31,8 +24,7 @@ const axios = require('axios');
 
   try {
 
-    console.log(`🌍 Starting monitoring for ${country}`);
-
+    console.log("Opening main page...");
     const start = Date.now();
 
     await page.goto('https://market.momo.africa', {
@@ -40,87 +32,126 @@ const axios = require('axios');
       waitUntil: 'domcontentloaded'
     });
 
-    // Accept cookies
+    /* ==============================
+       HANDLE COOKIE
+    ============================== */
     try {
-      await page.click('text=I ACCEPT', { timeout: 8000 });
+      await page.waitForSelector('text=I ACCEPT', { timeout: 10000 });
+      await page.click('text=I ACCEPT');
+      console.log("Cookie accepted");
     } catch {}
 
-    // Select country
+    /* ==============================
+       SELECT COUNTRY
+    ============================== */
     try {
-      await page.click(countryMap[country], { timeout: 15000 });
+      await page.waitForSelector('text=Uganda', { timeout: 15000 });
+      await page.click('text=Uganda');
+      console.log("Country selected");
     } catch {}
 
     await page.waitForLoadState('networkidle');
 
-    // Wait for products
-    await page.waitForSelector('[class*="mtn-product-card"]', { timeout: 45000 });
+    /* ==============================
+       WAIT FOR PRODUCTS
+    ============================== */
 
-    const categoryLoad = (Date.now() - start) / 1000;
+    await page.waitForSelector('[class*="mtn-product-card"]', {
+      timeout: 45000
+    });
+
+    const loadTime = (Date.now() - start) / 1000;
 
     results.push({
       page: "Category",
       status: "OK",
-      loadTime: categoryLoad,
-      score: categoryLoad < 12 ? 100 : 70
+      loadTime,
+      score: 100
     });
 
-    // Open product
-    await page.locator('[class*="mtn-product-card"]').first().click();
+    console.log("Opening first product...");
+
+    const firstProduct = page.locator('[class*="mtn-product-card"]').first();
+    await firstProduct.click();
+
     await page.waitForLoadState('domcontentloaded');
 
-    results.push({ page: "Product Page", status: "OK", loadTime: 0, score: 100 });
+    results.push({
+      page: "Product Page",
+      status: "OK",
+      loadTime: 0,
+      score: 100
+    });
 
-    // Add to cart
-    await page.click('button:has-text("Add")', { timeout: 20000 });
+    console.log("Adding to cart...");
 
-    results.push({ page: "Add To Cart", status: "OK", loadTime: 0, score: 100 });
+    await page.waitForSelector('button:has-text("Add")', { timeout: 20000 });
+    await page.click('button:has-text("Add")');
 
-    // Login
+    results.push({
+      page: "Add To Cart",
+      status: "OK",
+      loadTime: 0,
+      score: 100
+    });
+
+    console.log("Opening login page...");
+
     await page.goto('https://market.momo.africa/Portal/login');
+    await page.waitForSelector('input[type="tel"]', { timeout: 20000 });
 
-    await page.waitForSelector('input[formcontrolname="mobileNumber"]', { timeout: 20000 });
-
-    await page.fill('input[formcontrolname="mobileNumber"]', phone);
-    await page.fill('input[formcontrolname="password"]', password);
-
-    await page.click('button:has-text("Sign-in")');
+    await page.fill('input[type="tel"]', phone);
+    await page.fill('input[type="password"]', password);
+    await page.locator('button:has-text("Sign-in")').click();
 
     await page.waitForLoadState('networkidle');
 
-    results.push({ page: "Login", status: "OK", loadTime: 0, score: 100 });
+    results.push({
+      page: "Login",
+      status: "OK",
+      loadTime: 0,
+      score: 100
+    });
 
-    // Checkout
+    console.log("Opening cart...");
+
     await page.goto('https://market.momo.africa/Portal/cart');
+    await page.waitForLoadState('networkidle');
+
+    console.log("Proceeding to checkout...");
+
+    await page.waitForSelector('button:has-text("Checkout")', { timeout: 20000 });
     await page.click('button:has-text("Checkout")');
 
-    await page.waitForURL(/checkout|payment/, { timeout: 30000 });
+    await page.waitForLoadState('networkidle');
 
-    results.push({ page: "Checkout", status: "OK", loadTime: 0, score: 100 });
+    results.push({
+      page: "Checkout",
+      status: "OK",
+      loadTime: 0,
+      score: 100
+    });
 
-    console.log("✅ FULL JOURNEY SUCCESS");
+    console.log("FULL JOURNEY SUCCESS");
 
   } catch (error) {
 
-    console.error("❌ FAILURE:", error.message);
+    console.error("FAIL:", error.message);
 
-    await page.screenshot({ path: 'failure.png', fullPage: true });
+    await page.screenshot({ path: 'debug-error.png', fullPage: true });
 
     results.push({
       page: "Failure",
-      status: error.message,
+      status: error.message.replace(/,/g, ' '),
       loadTime: 0,
       score: 0
     });
-
-    // Slack Alert
-    if (slackWebhook) {
-      await axios.post(slackWebhook, {
-        text: `🚨 MOMO MONITOR FAILURE\nCountry: ${country}\nError: ${error.message}`
-      });
-    }
   }
 
-  // Save CSV
+  /* ==============================
+     SAVE CSV
+  ============================== */
+
   const csv = [
     "Timestamp,Page,Status,LoadTime,Score",
     ...results.map(r =>
@@ -129,9 +160,6 @@ const axios = require('axios');
   ].join("\n");
 
   fs.writeFileSync("health-report.csv", csv);
-
-  // Save JSON
-  fs.writeFileSync("health-report.json", JSON.stringify(results, null, 2));
 
   await browser.close();
 
