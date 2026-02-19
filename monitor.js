@@ -13,6 +13,99 @@ const fs = require('fs');
     headless: true,
     args: ['--no-sandbox', '--disable-setuid-sandbox']
   });
+const { chromium } = require('playwright');
+const fs = require('fs');
+
+(async () => {
+  const browser = await chromium.launch({
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
+  });
+
+  const page = await browser.newPage();
+  const results = [];
+
+  try {
+    console.log("Opening main page...");
+    const start = Date.now();
+
+    await page.goto('https://market.momo.africa', {
+      timeout: 60000,
+      waitUntil: 'domcontentloaded'
+    });
+
+    /* ==============================
+       HANDLE COOKIE POPUP
+    ============================== */
+
+    try {
+      await page.waitForSelector('text=I ACCEPT', { timeout: 10000 });
+      await page.click('text=I ACCEPT');
+      console.log("Cookie accepted");
+    } catch {
+      console.log("No cookie popup");
+    }
+
+    /* ==============================
+       SELECT COUNTRY (Uganda example)
+    ============================== */
+
+    try {
+      await page.waitForSelector('text=Uganda', { timeout: 15000 });
+      await page.click('text=Uganda');
+      console.log("Country selected");
+    } catch {
+      console.log("Country already selected");
+    }
+
+    await page.waitForLoadState('networkidle');
+
+    /* ==============================
+       WAIT FOR PRODUCTS
+    ============================== */
+
+    console.log("Waiting for products...");
+    await page.waitForSelector('[class*="mtn-product-card"]', {
+      timeout: 45000
+    });
+
+    const loadTime = (Date.now() - start) / 1000;
+
+    results.push({
+      page: "Category",
+      status: "OK",
+      loadTime,
+      score: 100
+    });
+
+    console.log("Products loaded successfully");
+
+  } catch (error) {
+    console.error("Failure:", error.message);
+
+    results.push({
+      page: "Failure",
+      status: error.message,
+      loadTime: 0,
+      score: 0
+    });
+  }
+
+  /* ==============================
+     SAVE CSV REPORT
+  ============================== */
+
+  const csv = [
+    "Timestamp,Page,Status,LoadTime,Score",
+    ...results.map(r =>
+      `${new Date().toISOString()},${r.page},${r.status},${r.loadTime},${r.score}`
+    )
+  ].join("\n");
+
+  fs.writeFileSync("health-report.csv", csv);
+
+  await browser.close();
+})();
 
   const context = await browser.newContext({
     userAgent:
