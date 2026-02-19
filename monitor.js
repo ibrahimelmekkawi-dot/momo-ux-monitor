@@ -134,7 +134,7 @@ const fs = require('fs');
     });
 
   }
-
+await page.screenshot({ path: 'debug-category.png', fullPage: true });
   // 📊 Save CSV
   const csv = [
     "Timestamp,Page,Status,LoadTime,Score",
