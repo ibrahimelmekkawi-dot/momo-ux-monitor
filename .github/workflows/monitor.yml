@@ -5,18 +5,14 @@ on:
     - cron: "*/15 * * * *"
   workflow_dispatch:
 
-permissions:
-  contents: write   # REQUIRED to push monitoring-history.csv
-
 jobs:
   monitor:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0   # required for rebase
+      - uses: actions/checkout@v3
 
       - name: Setup Node
         uses: actions/setup-node@v3
@@ -35,39 +31,10 @@ jobs:
           MOMO_PHONE: ${{ secrets.MOMO_PHONE }}
           MOMO_PASSWORD: ${{ secrets.MOMO_PASSWORD }}
 
-      # ---------------------------------------
-      # Append to monitoring-history.csv
-      # ---------------------------------------
-      - name: Append Monitoring History
-        run: |
-          if [ ! -f monitoring-history.csv ]; then
-            echo "Timestamp,Page,Status,LoadTime,Score" > monitoring-history.csv
-          fi
-
-          tail -n +2 health-report.csv >> monitoring-history.csv
-
-      # ---------------------------------------
-      # Commit History Back To Repo (SAFE)
-      # ---------------------------------------
-      - name: Commit Monitoring History
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "actions@github.com"
-
-          git add monitoring-history.csv
-          git commit -m "Update monitoring history" || echo "No changes to commit"
-
-          git pull --rebase origin main
-          git push origin main
-
-      # ---------------------------------------
-      # Upload Artifacts
-      # ---------------------------------------
       - name: Upload Monitor Artifacts
         uses: actions/upload-artifact@v4
         with:
           name: monitor-artifacts
           path: |
             health-report.csv
-            monitoring-history.csv
             debug-*.png
