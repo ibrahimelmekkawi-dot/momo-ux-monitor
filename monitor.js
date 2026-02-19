@@ -9,11 +9,6 @@ const fs = require('fs');
   const phone = process.env.MOMO_PHONE;
   const password = process.env.MOMO_PASSWORD;
 
-  if (!phone || !password) {
-    console.error("Missing MOMO credentials");
-    process.exit(1);
-  }
-
   const browser = await chromium.launch({
     headless: true,
     args: ['--no-sandbox', '--disable-setuid-sandbox']
@@ -38,39 +33,29 @@ const fs = require('fs');
     });
 
     /* ==============================
-       ACCEPT COOKIE
+       HANDLE COOKIE
     ============================== */
     try {
-      const cookieBtn = page.locator('button:has-text("I ACCEPT")');
-      if (await cookieBtn.isVisible({ timeout: 8000 })) {
-        await cookieBtn.click();
-        console.log("Cookie accepted");
-      }
-    } catch {
-      console.log("No cookie popup");
-    }
+      await page.waitForSelector('text=I ACCEPT', { timeout: 10000 });
+      await page.click('text=I ACCEPT');
+      console.log("Cookie accepted");
+    } catch {}
 
     /* ==============================
        SELECT COUNTRY
     ============================== */
     try {
-      const ugandaBtn = page.locator('text=Uganda');
-      await ugandaBtn.waitFor({ timeout: 15000 });
-      await ugandaBtn.click({ force: true });
+      await page.waitForSelector('text=Uganda', { timeout: 15000 });
+      await page.click('text=Uganda');
       console.log("Country selected");
-    } catch {
-      console.log("Country already selected");
-    }
+    } catch {}
 
-    /* ==============================
-       WAIT FOR PORTAL LOAD
-    ============================== */
-    await page.waitForURL(/Portal/, { timeout: 30000 });
     await page.waitForLoadState('networkidle');
 
     /* ==============================
        WAIT FOR PRODUCTS
     ============================== */
+
     await page.waitForSelector('[class*="mtn-product-card"]', {
       timeout: 45000
     });
@@ -88,6 +73,7 @@ const fs = require('fs');
 
     const firstProduct = page.locator('[class*="mtn-product-card"]').first();
     await firstProduct.click();
+
     await page.waitForLoadState('domcontentloaded');
 
     results.push({
@@ -97,10 +83,8 @@ const fs = require('fs');
       score: 100
     });
 
-    /* ==============================
-       ADD TO CART
-    ============================== */
     console.log("Adding to cart...");
+
     await page.waitForSelector('button:has-text("Add")', { timeout: 20000 });
     await page.click('button:has-text("Add")');
 
@@ -111,22 +95,13 @@ const fs = require('fs');
       score: 100
     });
 
-    /* ==============================
-       LOGIN
-    ============================== */
     console.log("Opening login page...");
 
-    await page.goto('https://market.momo.africa/Portal/login', {
-      waitUntil: 'domcontentloaded'
-    });
+    await page.goto('https://market.momo.africa/Portal/login');
+    await page.waitForSelector('input[type="tel"]', { timeout: 20000 });
 
-    await page.waitForSelector('input[formcontrolname="mobileNumber"]', {
-      timeout: 30000
-    });
-
-    await page.fill('input[formcontrolname="mobileNumber"]', phone);
+    await page.fill('input[type="tel"]', phone);
     await page.fill('input[type="password"]', password);
-
     await page.locator('button:has-text("Sign-in")').click();
 
     await page.waitForLoadState('networkidle');
@@ -138,16 +113,16 @@ const fs = require('fs');
       score: 100
     });
 
-    /* ==============================
-       CHECKOUT
-    ============================== */
     console.log("Opening cart...");
+
     await page.goto('https://market.momo.africa/Portal/cart');
     await page.waitForLoadState('networkidle');
 
     console.log("Proceeding to checkout...");
+
     await page.waitForSelector('button:has-text("Checkout")', { timeout: 20000 });
     await page.click('button:has-text("Checkout")');
+
     await page.waitForLoadState('networkidle');
 
     results.push({
@@ -163,10 +138,7 @@ const fs = require('fs');
 
     console.error("FAIL:", error.message);
 
-    await page.screenshot({
-      path: 'debug-error.png',
-      fullPage: true
-    });
+    await page.screenshot({ path: 'debug-error.png', fullPage: true });
 
     results.push({
       page: "Failure",
@@ -177,7 +149,7 @@ const fs = require('fs');
   }
 
   /* ==============================
-     SAVE CSV REPORT
+     SAVE CSV
   ============================== */
 
   const csv = [
