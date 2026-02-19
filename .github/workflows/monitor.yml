@@ -8,11 +8,14 @@ on:
 jobs:
   monitor:
     runs-on: ubuntu-latest
+
     permissions:
-      contents: write
+      contents: write   # IMPORTANT for pushing back to repo
 
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v3
@@ -31,10 +34,26 @@ jobs:
           MOMO_PHONE: ${{ secrets.MOMO_PHONE }}
           MOMO_PASSWORD: ${{ secrets.MOMO_PASSWORD }}
 
-      - name: Upload Monitor Artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: monitor-artifacts
-          path: |
-            health-report.csv
-            debug-*.png
+      # ==============================
+      # APPEND TO MASTER HISTORY FILE
+      # ==============================
+
+      - name: Append to monitoring history
+        run: |
+          if [ ! -f monitoring-history.csv ]; then
+            echo "Timestamp,Page,Status,LoadTime,Score" > monitoring-history.csv
+          fi
+
+          tail -n +2 health-report.csv >> monitoring-history.csv
+
+      # ==============================
+      # COMMIT & PUSH BACK TO REPO
+      # ==============================
+
+      - name: Commit history file
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git add monitoring-history.csv
+          git commit -m "Update monitoring history" || echo "No changes"
+          git push
