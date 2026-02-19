@@ -59,4 +59,8 @@ Call log:
 ,0,02026-02-19T12:03:38.613Z,Failure,page.waitForSelector: Timeout 30000ms exceeded.
 Call log:
   - waiting for locator('input[type="tel"]') to be visible
-,0,0
+,0,02026-02-19T12:49:56.450Z,Category,OK,12.653,100
+2026-02-19T12:49:56.450Z,Product Page,OK,0,100
+2026-02-19T12:49:56.450Z,Add To Cart,OK,0,100
+2026-02-19T12:49:56.450Z,Login,OK,0,100
+2026-02-19T12:49:56.450Z,Checkout,OK,0,100
