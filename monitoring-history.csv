@@ -1,0 +1,8 @@
+Timestamp,Page,Status,LoadTime,Score
+2026-02-19T10:22:10.518Z,Category,OK,10.219,100
+2026-02-19T10:22:10.518Z,Product Page,OK,0,100
+2026-02-19T10:22:10.518Z,Add To Cart,OK,0,100
+2026-02-19T10:22:10.518Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('input[formcontrolname="mobileNumber"]') to be visible
+,0,0
