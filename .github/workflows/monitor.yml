@@ -23,12 +23,11 @@ jobs:
           npm install playwright
           npx playwright install --with-deps
 
-      - - name: Run Monitor
-  run: node monitor.js
-  env:
-    MOMO_PHONE: ${{ secrets.MOMO_PHONE }}
-    MOMO_PASSWORD: ${{ secrets.MOMO_PASSWORD }}
-
+      - name: Run Monitor
+        run: node monitor.js
+        env:
+          MOMO_PHONE: ${{ secrets.MOMO_PHONE }}
+          MOMO_PASSWORD: ${{ secrets.MOMO_PASSWORD }}
 
       - name: Upload Monitor Artifacts
         uses: actions/upload-artifact@v4
@@ -36,4 +35,4 @@ jobs:
           name: monitor-artifacts
           path: |
             health-report.csv
-            debug-category.png
+            debug-*.png
