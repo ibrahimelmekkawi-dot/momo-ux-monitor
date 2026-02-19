@@ -32,29 +32,17 @@ const fs = require('fs');
       waitUntil: 'domcontentloaded'
     });
 
-    /* ==============================
-       HANDLE COOKIE
-    ============================== */
     try {
       await page.waitForSelector('text=I ACCEPT', { timeout: 10000 });
       await page.click('text=I ACCEPT');
-      console.log("Cookie accepted");
     } catch {}
 
-    /* ==============================
-       SELECT COUNTRY
-    ============================== */
     try {
       await page.waitForSelector('text=Uganda', { timeout: 15000 });
       await page.click('text=Uganda');
-      console.log("Country selected");
     } catch {}
 
     await page.waitForLoadState('networkidle');
-
-    /* ==============================
-       WAIT FOR PRODUCTS
-    ============================== */
 
     await page.waitForSelector('[class*="mtn-product-card"]', {
       timeout: 45000
@@ -62,40 +50,18 @@ const fs = require('fs');
 
     const loadTime = (Date.now() - start) / 1000;
 
-    results.push({
-      page: "Category",
-      status: "OK",
-      loadTime,
-      score: 100
-    });
-
-    console.log("Opening first product...");
+    results.push({ page: "Category", status: "OK", loadTime, score: 100 });
 
     const firstProduct = page.locator('[class*="mtn-product-card"]').first();
     await firstProduct.click();
-
     await page.waitForLoadState('domcontentloaded');
 
-    results.push({
-      page: "Product Page",
-      status: "OK",
-      loadTime: 0,
-      score: 100
-    });
-
-    console.log("Adding to cart...");
+    results.push({ page: "Product Page", status: "OK", loadTime: 0, score: 100 });
 
     await page.waitForSelector('button:has-text("Add")', { timeout: 20000 });
     await page.click('button:has-text("Add")');
 
-    results.push({
-      page: "Add To Cart",
-      status: "OK",
-      loadTime: 0,
-      score: 100
-    });
-
-    console.log("Opening login page...");
+    results.push({ page: "Add To Cart", status: "OK", loadTime: 0, score: 100 });
 
     await page.goto('https://market.momo.africa/Portal/login');
     await page.waitForSelector('input[type="tel"]', { timeout: 20000 });
@@ -106,60 +72,69 @@ const fs = require('fs');
 
     await page.waitForLoadState('networkidle');
 
-    results.push({
-      page: "Login",
-      status: "OK",
-      loadTime: 0,
-      score: 100
-    });
-
-    console.log("Opening cart...");
+    results.push({ page: "Login", status: "OK", loadTime: 0, score: 100 });
 
     await page.goto('https://market.momo.africa/Portal/cart');
     await page.waitForLoadState('networkidle');
-
-    console.log("Proceeding to checkout...");
 
     await page.waitForSelector('button:has-text("Checkout")', { timeout: 20000 });
     await page.click('button:has-text("Checkout")');
 
     await page.waitForLoadState('networkidle');
 
-    results.push({
-      page: "Checkout",
-      status: "OK",
-      loadTime: 0,
-      score: 100
-    });
-
-    console.log("FULL JOURNEY SUCCESS");
+    results.push({ page: "Checkout", status: "OK", loadTime: 0, score: 100 });
 
   } catch (error) {
-
-    console.error("FAIL:", error.message);
 
     await page.screenshot({ path: 'debug-error.png', fullPage: true });
 
     results.push({
       page: "Failure",
-      status: error.message.replace(/,/g, ' '),
+      status: error.message,
       loadTime: 0,
       score: 0
     });
   }
 
-  /* ==============================
-     SAVE CSV
-  ============================== */
+  /* ======================================================
+     CLEAN STATUS FUNCTION (Power BI Safe)
+  ====================================================== */
 
-  const csv = [
-    "Timestamp,Page,Status,LoadTime,Score",
-    ...results.map(r =>
-      `${timestamp},${r.page},${r.status},${r.loadTime},${r.score}`
-    )
-  ].join("\n");
+  function clean(text) {
+    return String(text)
+      .replace(/[\r\n]+/g, ' ')   // remove line breaks
+      .replace(/,/g, ' ')         // remove commas
+      .trim();
+  }
 
-  fs.writeFileSync("health-report.csv", csv);
+  /* ======================================================
+     SINGLE RUN FILE (health-report.csv)
+  ====================================================== */
+
+  const singleRunRows = results.map(r =>
+    `${timestamp},${r.page},${clean(r.status)},${r.loadTime},${r.score}`
+  ).join("\n");
+
+  const singleRunFile =
+    "Timestamp,Page,Status,LoadTime,Score\n" +
+    singleRunRows + "\n";
+
+  fs.writeFileSync("health-report.csv", singleRunFile);
+
+  /* ======================================================
+     MASTER HISTORY FILE (monitoring-history.csv)
+  ====================================================== */
+
+  const historyFile = "monitoring-history.csv";
+
+  if (!fs.existsSync(historyFile)) {
+    fs.writeFileSync(
+      historyFile,
+      "Timestamp,Page,Status,LoadTime,Score\n"
+    );
+  }
+
+  fs.appendFileSync(historyFile, singleRunRows + "\n");
 
   await browser.close();
 
