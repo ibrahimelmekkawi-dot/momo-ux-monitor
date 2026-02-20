@@ -392,3 +392,5 @@ Call log:
 2026-02-20T02:01:11.474Z,Add To Cart,OK,0,100
 2026-02-20T02:01:11.474Z,Login,OK,0,100
 2026-02-20T02:01:11.474Z,Checkout,OK,0,100
+2026-02-20T02:16:28.411Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded. =========================== logs ===========================   "domcontentloaded" event fired   "load" event fired ============================================================,0,0
+2026-02-20T02:16:28.411Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded. =========================== logs ===========================   "domcontentloaded" event fired   "load" event fired ============================================================,0,0
