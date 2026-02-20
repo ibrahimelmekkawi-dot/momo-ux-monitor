@@ -416,3 +416,5 @@ Call log:
 2026-02-20T03:01:09.379Z,Add To Cart,OK,0,100
 2026-02-20T03:01:09.379Z,Login,OK,0,100
 2026-02-20T03:01:09.379Z,Failure,page.waitForSelector: Timeout 20000ms exceeded. Call log:   - waiting for locator('button:has-text("Checkout")') to be visible,0,0
+2026-02-20T03:16:11.934Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded. =========================== logs ===========================   "domcontentloaded" event fired   "load" event fired ============================================================,0,0
+2026-02-20T03:16:11.934Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded. =========================== logs ===========================   "domcontentloaded" event fired   "load" event fired ============================================================,0,0
