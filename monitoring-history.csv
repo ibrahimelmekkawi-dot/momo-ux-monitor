@@ -1280,3 +1280,5 @@ Call log:
 2026-02-20T23:46:08.541Z,Add To Cart,OK,0,100
 2026-02-20T23:46:08.541Z,Login,OK,0,100
 2026-02-20T23:46:08.541Z,Checkout,OK,0,100
+2026-02-20T23:55:49.765Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded. =========================== logs ===========================   "domcontentloaded" event fired   "load" event fired ============================================================,0,0
+2026-02-20T23:55:49.765Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded. =========================== logs ===========================   "domcontentloaded" event fired   "load" event fired ============================================================,0,0
