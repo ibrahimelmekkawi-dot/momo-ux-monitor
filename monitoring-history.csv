@@ -708,3 +708,13 @@ Call log:
 2026-02-20T11:01:01.246Z,Add To Cart,OK,0,100
 2026-02-20T11:01:01.246Z,Login,OK,0,100
 2026-02-20T11:01:01.246Z,Failure,page.waitForSelector: Timeout 20000ms exceeded. Call log:   - waiting for locator('button:has-text("Checkout")') to be visible,0,0
+2026-02-20T11:16:07.845Z,Category,OK,11.403,100
+2026-02-20T11:16:07.845Z,Product Page,OK,0,100
+2026-02-20T11:16:07.845Z,Add To Cart,OK,0,100
+2026-02-20T11:16:07.845Z,Login,OK,0,100
+2026-02-20T11:16:07.845Z,Checkout,OK,0,100
+2026-02-20T11:16:07.845Z,Category,OK,11.403,100
+2026-02-20T11:16:07.845Z,Product Page,OK,0,100
+2026-02-20T11:16:07.845Z,Add To Cart,OK,0,100
+2026-02-20T11:16:07.845Z,Login,OK,0,100
+2026-02-20T11:16:07.845Z,Checkout,OK,0,100
