@@ -728,3 +728,5 @@ Call log:
 2026-02-20T11:31:14.412Z,Add To Cart,OK,0,100
 2026-02-20T11:31:14.412Z,Login,OK,0,100
 2026-02-20T11:31:14.412Z,Checkout,OK,0,100
+2026-02-20T11:46:03.878Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded. =========================== logs ===========================   "domcontentloaded" event fired   "load" event fired ============================================================,0,0
+2026-02-20T11:46:03.878Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded. =========================== logs ===========================   "domcontentloaded" event fired   "load" event fired ============================================================,0,0
