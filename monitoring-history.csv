@@ -406,3 +406,13 @@ Call log:
 2026-02-20T02:46:15.134Z,Add To Cart,OK,0,100
 2026-02-20T02:46:15.134Z,Login,OK,0,100
 2026-02-20T02:46:15.134Z,Failure,page.waitForSelector: Timeout 20000ms exceeded. Call log:   - waiting for locator('button:has-text("Checkout")') to be visible,0,0
+2026-02-20T03:01:09.379Z,Category,OK,10.987,100
+2026-02-20T03:01:09.379Z,Product Page,OK,0,100
+2026-02-20T03:01:09.379Z,Add To Cart,OK,0,100
+2026-02-20T03:01:09.379Z,Login,OK,0,100
+2026-02-20T03:01:09.379Z,Failure,page.waitForSelector: Timeout 20000ms exceeded. Call log:   - waiting for locator('button:has-text("Checkout")') to be visible,0,0
+2026-02-20T03:01:09.379Z,Category,OK,10.987,100
+2026-02-20T03:01:09.379Z,Product Page,OK,0,100
+2026-02-20T03:01:09.379Z,Add To Cart,OK,0,100
+2026-02-20T03:01:09.379Z,Login,OK,0,100
+2026-02-20T03:01:09.379Z,Failure,page.waitForSelector: Timeout 20000ms exceeded. Call log:   - waiting for locator('button:has-text("Checkout")') to be visible,0,0
