@@ -396,3 +396,13 @@ Call log:
 2026-02-20T02:16:28.411Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded. =========================== logs ===========================   "domcontentloaded" event fired   "load" event fired ============================================================,0,0
 2026-02-20T02:31:16.088Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded. =========================== logs ===========================   "domcontentloaded" event fired   "load" event fired ============================================================,0,0
 2026-02-20T02:31:16.088Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded. =========================== logs ===========================   "domcontentloaded" event fired   "load" event fired ============================================================,0,0
+2026-02-20T02:46:15.134Z,Category,OK,11.671,100
+2026-02-20T02:46:15.134Z,Product Page,OK,0,100
+2026-02-20T02:46:15.134Z,Add To Cart,OK,0,100
+2026-02-20T02:46:15.134Z,Login,OK,0,100
+2026-02-20T02:46:15.134Z,Failure,page.waitForSelector: Timeout 20000ms exceeded. Call log:   - waiting for locator('button:has-text("Checkout")') to be visible,0,0
+2026-02-20T02:46:15.134Z,Category,OK,11.671,100
+2026-02-20T02:46:15.134Z,Product Page,OK,0,100
+2026-02-20T02:46:15.134Z,Add To Cart,OK,0,100
+2026-02-20T02:46:15.134Z,Login,OK,0,100
+2026-02-20T02:46:15.134Z,Failure,page.waitForSelector: Timeout 20000ms exceeded. Call log:   - waiting for locator('button:has-text("Checkout")') to be visible,0,0
