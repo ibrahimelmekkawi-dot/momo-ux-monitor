@@ -420,3 +420,13 @@ Call log:
 2026-02-20T03:16:11.934Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded. =========================== logs ===========================   "domcontentloaded" event fired   "load" event fired ============================================================,0,0
 2026-02-20T03:31:03.791Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded. =========================== logs ===========================   "domcontentloaded" event fired   "load" event fired ============================================================,0,0
 2026-02-20T03:31:03.791Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded. =========================== logs ===========================   "domcontentloaded" event fired   "load" event fired ============================================================,0,0
+2026-02-20T03:46:16.196Z,Category,OK,12.1,100
+2026-02-20T03:46:16.196Z,Product Page,OK,0,100
+2026-02-20T03:46:16.196Z,Add To Cart,OK,0,100
+2026-02-20T03:46:16.196Z,Login,OK,0,100
+2026-02-20T03:46:16.196Z,Checkout,OK,0,100
+2026-02-20T03:46:16.196Z,Category,OK,12.1,100
+2026-02-20T03:46:16.196Z,Product Page,OK,0,100
+2026-02-20T03:46:16.196Z,Add To Cart,OK,0,100
+2026-02-20T03:46:16.196Z,Login,OK,0,100
+2026-02-20T03:46:16.196Z,Checkout,OK,0,100
