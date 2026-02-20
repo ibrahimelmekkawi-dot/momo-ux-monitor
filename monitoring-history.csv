@@ -478,3 +478,13 @@ Call log:
 2026-02-20T05:16:24.671Z,Checkout,OK,0,100
 2026-02-20T05:31:03.361Z,Failure,page.waitForSelector: Timeout 45000ms exceeded. Call log:   - waiting for locator('[class*="mtn-product-card"]') to be visible,0,0
 2026-02-20T05:31:03.361Z,Failure,page.waitForSelector: Timeout 45000ms exceeded. Call log:   - waiting for locator('[class*="mtn-product-card"]') to be visible,0,0
+2026-02-20T05:46:24.637Z,Category,OK,12.799,100
+2026-02-20T05:46:24.637Z,Product Page,OK,0,100
+2026-02-20T05:46:24.637Z,Add To Cart,OK,0,100
+2026-02-20T05:46:24.637Z,Login,OK,0,100
+2026-02-20T05:46:24.637Z,Checkout,OK,0,100
+2026-02-20T05:46:24.637Z,Category,OK,12.799,100
+2026-02-20T05:46:24.637Z,Product Page,OK,0,100
+2026-02-20T05:46:24.637Z,Add To Cart,OK,0,100
+2026-02-20T05:46:24.637Z,Login,OK,0,100
+2026-02-20T05:46:24.637Z,Checkout,OK,0,100
