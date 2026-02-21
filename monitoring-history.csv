@@ -1436,3 +1436,13 @@ Call log:
 2026-02-21T03:46:01.756Z,Failure,page.waitForSelector: Timeout 45000ms exceeded. Call log:   - waiting for locator('[class*="mtn-product-card"]') to be visible,0,0
 2026-02-21T04:01:17.131Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded. =========================== logs ===========================   "domcontentloaded" event fired   "load" event fired ============================================================,0,0
 2026-02-21T04:01:17.131Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded. =========================== logs ===========================   "domcontentloaded" event fired   "load" event fired ============================================================,0,0
+2026-02-21T04:16:02.176Z,Category,OK,32.136,100
+2026-02-21T04:16:02.176Z,Product Page,OK,0,100
+2026-02-21T04:16:02.176Z,Add To Cart,OK,0,100
+2026-02-21T04:16:02.176Z,Login,OK,0,100
+2026-02-21T04:16:02.176Z,Failure,page.waitForSelector: Timeout 20000ms exceeded. Call log:   - waiting for locator('button:has-text("Checkout")') to be visible,0,0
+2026-02-21T04:16:02.176Z,Category,OK,32.136,100
+2026-02-21T04:16:02.176Z,Product Page,OK,0,100
+2026-02-21T04:16:02.176Z,Add To Cart,OK,0,100
+2026-02-21T04:16:02.176Z,Login,OK,0,100
+2026-02-21T04:16:02.176Z,Failure,page.waitForSelector: Timeout 20000ms exceeded. Call log:   - waiting for locator('button:has-text("Checkout")') to be visible,0,0
