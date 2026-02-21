@@ -1488,3 +1488,13 @@ Call log:
 2026-02-21T05:01:21.527Z,Checkout,OK,0,100
 2026-02-21T05:16:10.097Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded. =========================== logs ===========================   "domcontentloaded" event fired   "load" event fired ============================================================,0,0
 2026-02-21T05:16:10.097Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded. =========================== logs ===========================   "domcontentloaded" event fired   "load" event fired ============================================================,0,0
+2026-02-21T05:31:08.342Z,Category,OK,10.702,100
+2026-02-21T05:31:08.342Z,Product Page,OK,0,100
+2026-02-21T05:31:08.342Z,Add To Cart,OK,0,100
+2026-02-21T05:31:08.342Z,Login,OK,0,100
+2026-02-21T05:31:08.342Z,Checkout,OK,0,100
+2026-02-21T05:31:08.342Z,Category,OK,10.702,100
+2026-02-21T05:31:08.342Z,Product Page,OK,0,100
+2026-02-21T05:31:08.342Z,Add To Cart,OK,0,100
+2026-02-21T05:31:08.342Z,Login,OK,0,100
+2026-02-21T05:31:08.342Z,Checkout,OK,0,100
