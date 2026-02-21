@@ -2028,3 +2028,13 @@ Call log:
 2026-02-21T16:31:13.791Z,Add To Cart,OK,0,100
 2026-02-21T16:31:13.791Z,Login,OK,0,100
 2026-02-21T16:31:13.791Z,Checkout,OK,0,100
+2026-02-21T16:45:58.873Z,Category,OK,10.355,100
+2026-02-21T16:45:58.873Z,Product Page,OK,0,100
+2026-02-21T16:45:58.873Z,Add To Cart,OK,0,100
+2026-02-21T16:45:58.873Z,Login,OK,0,100
+2026-02-21T16:45:58.873Z,Failure,page.waitForSelector: Timeout 20000ms exceeded. Call log:   - waiting for locator('button:has-text("Checkout")') to be visible,0,0
+2026-02-21T16:45:58.873Z,Category,OK,10.355,100
+2026-02-21T16:45:58.873Z,Product Page,OK,0,100
+2026-02-21T16:45:58.873Z,Add To Cart,OK,0,100
+2026-02-21T16:45:58.873Z,Login,OK,0,100
+2026-02-21T16:45:58.873Z,Failure,page.waitForSelector: Timeout 20000ms exceeded. Call log:   - waiting for locator('button:has-text("Checkout")') to be visible,0,0
