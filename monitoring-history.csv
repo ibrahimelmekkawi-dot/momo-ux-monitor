@@ -2464,3 +2464,5 @@ Call log:
 2026-02-22T02:46:08.028Z,Add To Cart,OK,0,100
 2026-02-22T02:46:08.028Z,Login,OK,0,100
 2026-02-22T02:46:08.028Z,Checkout,OK,0,100
+2026-02-22T03:01:11.075Z,Failure,page.waitForSelector: Timeout 45000ms exceeded. Call log:   - waiting for locator('[class*="mtn-product-card"]') to be visible,0,0
+2026-02-22T03:01:11.075Z,Failure,page.waitForSelector: Timeout 45000ms exceeded. Call log:   - waiting for locator('[class*="mtn-product-card"]') to be visible,0,0
