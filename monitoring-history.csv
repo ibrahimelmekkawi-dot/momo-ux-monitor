@@ -2454,3 +2454,13 @@ Call log:
 2026-02-22T02:16:14.289Z,Checkout,OK,0,100
 2026-02-22T02:31:22.540Z,Failure,page.waitForSelector: Timeout 45000ms exceeded. Call log:   - waiting for locator('[class*="mtn-product-card"]') to be visible,0,0
 2026-02-22T02:31:22.540Z,Failure,page.waitForSelector: Timeout 45000ms exceeded. Call log:   - waiting for locator('[class*="mtn-product-card"]') to be visible,0,0
+2026-02-22T02:46:08.028Z,Category,OK,10.864,100
+2026-02-22T02:46:08.028Z,Product Page,OK,0,100
+2026-02-22T02:46:08.028Z,Add To Cart,OK,0,100
+2026-02-22T02:46:08.028Z,Login,OK,0,100
+2026-02-22T02:46:08.028Z,Checkout,OK,0,100
+2026-02-22T02:46:08.028Z,Category,OK,10.864,100
+2026-02-22T02:46:08.028Z,Product Page,OK,0,100
+2026-02-22T02:46:08.028Z,Add To Cart,OK,0,100
+2026-02-22T02:46:08.028Z,Login,OK,0,100
+2026-02-22T02:46:08.028Z,Checkout,OK,0,100
