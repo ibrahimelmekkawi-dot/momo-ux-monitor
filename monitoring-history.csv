@@ -2938,3 +2938,13 @@ Call log:
 2026-02-22T13:46:19.973Z,Add To Cart,OK,0,100
 2026-02-22T13:46:19.973Z,Login,OK,0,100
 2026-02-22T13:46:19.973Z,Checkout,OK,0,100
+2026-02-22T13:56:33.768Z,Category,OK,10.344,100
+2026-02-22T13:56:33.768Z,Product Page,OK,0,100
+2026-02-22T13:56:33.768Z,Add To Cart,OK,0,100
+2026-02-22T13:56:33.768Z,Login,OK,0,100
+2026-02-22T13:56:33.768Z,Failure,page.waitForSelector: Timeout 20000ms exceeded. Call log:   - waiting for locator('button:has-text("Checkout")') to be visible,0,0
+2026-02-22T13:56:33.768Z,Category,OK,10.344,100
+2026-02-22T13:56:33.768Z,Product Page,OK,0,100
+2026-02-22T13:56:33.768Z,Add To Cart,OK,0,100
+2026-02-22T13:56:33.768Z,Login,OK,0,100
+2026-02-22T13:56:33.768Z,Failure,page.waitForSelector: Timeout 20000ms exceeded. Call log:   - waiting for locator('button:has-text("Checkout")') to be visible,0,0
