@@ -3368,3 +3368,5 @@ Call log:
 2026-02-22T22:31:20.845Z,Add To Cart,OK,0,100
 2026-02-22T22:31:20.845Z,Login,OK,0,100
 2026-02-22T22:31:20.845Z,Checkout,OK,0,100
+2026-02-22T22:46:08.035Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded. =========================== logs ===========================   "domcontentloaded" event fired   "load" event fired ============================================================,0,0
+2026-02-22T22:46:08.035Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded. =========================== logs ===========================   "domcontentloaded" event fired   "load" event fired ============================================================,0,0
