@@ -3866,3 +3866,13 @@ Call log:
 2026-02-23T10:46:08.542Z,Add To Cart,OK,0,100
 2026-02-23T10:46:08.542Z,Login,OK,0,100
 2026-02-23T10:46:08.542Z,Failure,page.waitForSelector: Timeout 20000ms exceeded. Call log:   - waiting for locator('button:has-text("Checkout")') to be visible,0,0
+2026-02-23T11:01:26.993Z,Category,OK,14.947,100
+2026-02-23T11:01:26.993Z,Product Page,OK,0,100
+2026-02-23T11:01:26.993Z,Add To Cart,OK,0,100
+2026-02-23T11:01:26.993Z,Login,OK,0,100
+2026-02-23T11:01:26.993Z,Checkout,OK,0,100
+2026-02-23T11:01:26.993Z,Category,OK,14.947,100
+2026-02-23T11:01:26.993Z,Product Page,OK,0,100
+2026-02-23T11:01:26.993Z,Add To Cart,OK,0,100
+2026-02-23T11:01:26.993Z,Login,OK,0,100
+2026-02-23T11:01:26.993Z,Checkout,OK,0,100
