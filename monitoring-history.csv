@@ -4246,3 +4246,13 @@ Call log:
 2026-02-23T20:56:56.982Z,Add To Cart,OK,0,100
 2026-02-23T20:56:56.982Z,Login,OK,0,100
 2026-02-23T20:56:56.982Z,Checkout,OK,0,100
+2026-02-23T21:01:24.112Z,Category,OK,10.86,100
+2026-02-23T21:01:24.112Z,Product Page,OK,0,100
+2026-02-23T21:01:24.112Z,Add To Cart,OK,0,100
+2026-02-23T21:01:24.112Z,Login,OK,0,100
+2026-02-23T21:01:24.112Z,Failure,page.waitForSelector: Timeout 20000ms exceeded. Call log:   - waiting for locator('button:has-text("Checkout")') to be visible,0,0
+2026-02-23T21:01:24.112Z,Category,OK,10.86,100
+2026-02-23T21:01:24.112Z,Product Page,OK,0,100
+2026-02-23T21:01:24.112Z,Add To Cart,OK,0,100
+2026-02-23T21:01:24.112Z,Login,OK,0,100
+2026-02-23T21:01:24.112Z,Failure,page.waitForSelector: Timeout 20000ms exceeded. Call log:   - waiting for locator('button:has-text("Checkout")') to be visible,0,0
