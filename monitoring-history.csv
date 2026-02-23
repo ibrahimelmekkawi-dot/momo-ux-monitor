@@ -3574,3 +3574,5 @@ Call log:
 2026-02-23T03:46:19.273Z,Add To Cart,OK,0,100
 2026-02-23T03:46:19.273Z,Login,OK,0,100
 2026-02-23T03:46:19.273Z,Checkout,OK,0,100
+2026-02-23T04:01:02.317Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded. =========================== logs ===========================   "domcontentloaded" event fired   "load" event fired ============================================================,0,0
+2026-02-23T04:01:02.317Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded. =========================== logs ===========================   "domcontentloaded" event fired   "load" event fired ============================================================,0,0
