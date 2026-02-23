@@ -3462,3 +3462,13 @@ Call log:
 2026-02-23T00:31:09.455Z,Checkout,OK,0,100
 2026-02-23T00:46:18.760Z,Failure,page.waitForSelector: Timeout 45000ms exceeded. Call log:   - waiting for locator('[class*="mtn-product-card"]') to be visible,0,0
 2026-02-23T00:46:18.760Z,Failure,page.waitForSelector: Timeout 45000ms exceeded. Call log:   - waiting for locator('[class*="mtn-product-card"]') to be visible,0,0
+2026-02-23T01:01:12.771Z,Category,OK,11.474,100
+2026-02-23T01:01:12.771Z,Product Page,OK,0,100
+2026-02-23T01:01:12.771Z,Add To Cart,OK,0,100
+2026-02-23T01:01:12.771Z,Login,OK,0,100
+2026-02-23T01:01:12.771Z,Checkout,OK,0,100
+2026-02-23T01:01:12.771Z,Category,OK,11.474,100
+2026-02-23T01:01:12.771Z,Product Page,OK,0,100
+2026-02-23T01:01:12.771Z,Add To Cart,OK,0,100
+2026-02-23T01:01:12.771Z,Login,OK,0,100
+2026-02-23T01:01:12.771Z,Checkout,OK,0,100
