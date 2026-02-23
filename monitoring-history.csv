@@ -3936,3 +3936,13 @@ Call log:
 2026-02-23T12:20:07.063Z,Add To Cart,OK,0,100
 2026-02-23T12:20:07.063Z,Login,OK,0,100
 2026-02-23T12:20:07.063Z,Failure,page.waitForSelector: Timeout 20000ms exceeded. Call log:   - waiting for locator('button:has-text("Checkout")') to be visible,0,0
+2026-02-23T12:31:05.792Z,Category,OK,12.486,100
+2026-02-23T12:31:05.792Z,Product Page,OK,0,100
+2026-02-23T12:31:05.792Z,Add To Cart,OK,0,100
+2026-02-23T12:31:05.792Z,Login,OK,0,100
+2026-02-23T12:31:05.792Z,Checkout,OK,0,100
+2026-02-23T12:31:05.792Z,Category,OK,12.486,100
+2026-02-23T12:31:05.792Z,Product Page,OK,0,100
+2026-02-23T12:31:05.792Z,Add To Cart,OK,0,100
+2026-02-23T12:31:05.792Z,Login,OK,0,100
+2026-02-23T12:31:05.792Z,Checkout,OK,0,100
