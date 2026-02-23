@@ -3440,3 +3440,13 @@ Call log:
 2026-02-23T00:01:15.078Z,Add To Cart,OK,0,100
 2026-02-23T00:01:15.078Z,Login,OK,0,100
 2026-02-23T00:01:15.078Z,Checkout,OK,0,100
+2026-02-23T00:16:13.617Z,Category,OK,10.257,100
+2026-02-23T00:16:13.617Z,Product Page,OK,0,100
+2026-02-23T00:16:13.617Z,Add To Cart,OK,0,100
+2026-02-23T00:16:13.617Z,Login,OK,0,100
+2026-02-23T00:16:13.617Z,Failure,page.waitForSelector: Timeout 20000ms exceeded. Call log:   - waiting for locator('button:has-text("Checkout")') to be visible,0,0
+2026-02-23T00:16:13.617Z,Category,OK,10.257,100
+2026-02-23T00:16:13.617Z,Product Page,OK,0,100
+2026-02-23T00:16:13.617Z,Add To Cart,OK,0,100
+2026-02-23T00:16:13.617Z,Login,OK,0,100
+2026-02-23T00:16:13.617Z,Failure,page.waitForSelector: Timeout 20000ms exceeded. Call log:   - waiting for locator('button:has-text("Checkout")') to be visible,0,0
