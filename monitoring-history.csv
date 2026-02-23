@@ -3616,3 +3616,13 @@ Call log:
 2026-02-23T05:01:20.995Z,Add To Cart,OK,0,100
 2026-02-23T05:01:20.995Z,Login,OK,0,100
 2026-02-23T05:01:20.995Z,Checkout,OK,0,100
+2026-02-23T05:16:00.572Z,Category,OK,32.214,100
+2026-02-23T05:16:00.572Z,Product Page,OK,0,100
+2026-02-23T05:16:00.572Z,Add To Cart,OK,0,100
+2026-02-23T05:16:00.572Z,Login,OK,0,100
+2026-02-23T05:16:00.572Z,Failure,page.waitForSelector: Timeout 20000ms exceeded. Call log:   - waiting for locator('button:has-text("Checkout")') to be visible,0,0
+2026-02-23T05:16:00.572Z,Category,OK,32.214,100
+2026-02-23T05:16:00.572Z,Product Page,OK,0,100
+2026-02-23T05:16:00.572Z,Add To Cart,OK,0,100
+2026-02-23T05:16:00.572Z,Login,OK,0,100
+2026-02-23T05:16:00.572Z,Failure,page.waitForSelector: Timeout 20000ms exceeded. Call log:   - waiting for locator('button:has-text("Checkout")') to be visible,0,0
