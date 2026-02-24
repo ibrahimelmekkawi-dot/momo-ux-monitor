@@ -4440,3 +4440,9 @@ Call log:
 2026-02-24T01:46:32.814Z,Checkout,OK,0,100
 2026-02-24T02:01:28.583Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded. =========================== logs ===========================   "domcontentloaded" event fired   "load" event fired ============================================================,0,0
 2026-02-24T02:01:28.583Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded. =========================== logs ===========================   "domcontentloaded" event fired   "load" event fired ============================================================,0,0
+2026-02-24T02:16:42.646Z,Category,OK,30.819,100
+2026-02-24T02:16:42.646Z,Product Page,OK,0,100
+2026-02-24T02:16:42.646Z,Failure,page.waitForSelector: Timeout 20000ms exceeded. Call log:   - waiting for locator('button:has-text("Add")') to be visible,0,0
+2026-02-24T02:16:42.646Z,Category,OK,30.819,100
+2026-02-24T02:16:42.646Z,Product Page,OK,0,100
+2026-02-24T02:16:42.646Z,Failure,page.waitForSelector: Timeout 20000ms exceeded. Call log:   - waiting for locator('button:has-text("Add")') to be visible,0,0
