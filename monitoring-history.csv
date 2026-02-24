@@ -4516,3 +4516,13 @@ Call log:
 2026-02-24T04:31:39.332Z,Failure,page.fill: Timeout 30000ms exceeded. Call log:   - waiting for locator('input[type="password"]'),0,0
 2026-02-24T04:47:12.983Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded. =========================== logs ===========================   "domcontentloaded" event fired   "load" event fired ============================================================,0,0
 2026-02-24T04:47:12.983Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded. =========================== logs ===========================   "domcontentloaded" event fired   "load" event fired ============================================================,0,0
+2026-02-24T05:08:58.381Z,Category,OK,30.533,100
+2026-02-24T05:08:58.381Z,Product Page,OK,0,100
+2026-02-24T05:08:58.381Z,Add To Cart,OK,0,100
+2026-02-24T05:08:58.381Z,Login,OK,0,100
+2026-02-24T05:08:58.381Z,Checkout,OK,0,100
+2026-02-24T05:08:58.381Z,Category,OK,30.533,100
+2026-02-24T05:08:58.381Z,Product Page,OK,0,100
+2026-02-24T05:08:58.381Z,Add To Cart,OK,0,100
+2026-02-24T05:08:58.381Z,Login,OK,0,100
+2026-02-24T05:08:58.381Z,Checkout,OK,0,100
