@@ -4498,3 +4498,11 @@ Call log:
 2026-02-24T03:31:00.982Z,Checkout,OK,0,100
 2026-02-24T04:01:21.891Z,Failure,page.waitForSelector: Timeout 45000ms exceeded. Call log:   - waiting for locator('[class*="mtn-product-card"]') to be visible,0,0
 2026-02-24T04:01:21.891Z,Failure,page.waitForSelector: Timeout 45000ms exceeded. Call log:   - waiting for locator('[class*="mtn-product-card"]') to be visible,0,0
+2026-02-24T04:16:21.487Z,Category,OK,12.221,100
+2026-02-24T04:16:21.487Z,Product Page,OK,0,100
+2026-02-24T04:16:21.487Z,Add To Cart,OK,0,100
+2026-02-24T04:16:21.487Z,Failure,page.fill: Timeout 30000ms exceeded. Call log:   - waiting for locator('input[type="password"]'),0,0
+2026-02-24T04:16:21.487Z,Category,OK,12.221,100
+2026-02-24T04:16:21.487Z,Product Page,OK,0,100
+2026-02-24T04:16:21.487Z,Add To Cart,OK,0,100
+2026-02-24T04:16:21.487Z,Failure,page.fill: Timeout 30000ms exceeded. Call log:   - waiting for locator('input[type="password"]'),0,0
