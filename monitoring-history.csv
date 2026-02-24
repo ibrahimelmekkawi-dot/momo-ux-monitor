@@ -4730,3 +4730,13 @@ Call log:
 2026-02-24T10:46:05.315Z,Add To Cart,OK,0,100
 2026-02-24T10:46:05.315Z,Login,OK,0,100
 2026-02-24T10:46:05.315Z,Checkout,OK,0,100
+2026-02-24T11:03:11.045Z,Category,OK,12.766,100
+2026-02-24T11:03:11.045Z,Product Page,OK,0,100
+2026-02-24T11:03:11.045Z,Add To Cart,OK,0,100
+2026-02-24T11:03:11.045Z,Login,OK,0,100
+2026-02-24T11:03:11.045Z,Failure,page.waitForSelector: Timeout 20000ms exceeded. Call log:   - waiting for locator('button:has-text("Checkout")') to be visible,0,0
+2026-02-24T11:03:11.045Z,Category,OK,12.766,100
+2026-02-24T11:03:11.045Z,Product Page,OK,0,100
+2026-02-24T11:03:11.045Z,Add To Cart,OK,0,100
+2026-02-24T11:03:11.045Z,Login,OK,0,100
+2026-02-24T11:03:11.045Z,Failure,page.waitForSelector: Timeout 20000ms exceeded. Call log:   - waiting for locator('button:has-text("Checkout")') to be visible,0,0
