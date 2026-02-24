@@ -4628,3 +4628,13 @@ Call log:
 2026-02-24T07:46:03.995Z,Failure,page.waitForSelector: Timeout 20000ms exceeded. Call log:   - waiting for locator('button:has-text("Checkout")') to be visible,0,0
 2026-02-24T08:08:45.156Z,Failure,page.waitForSelector: Timeout 45000ms exceeded. Call log:   - waiting for locator('[class*="mtn-product-card"]') to be visible,0,0
 2026-02-24T08:08:45.156Z,Failure,page.waitForSelector: Timeout 45000ms exceeded. Call log:   - waiting for locator('[class*="mtn-product-card"]') to be visible,0,0
+2026-02-24T08:16:11.136Z,Category,OK,11.404,100
+2026-02-24T08:16:11.136Z,Product Page,OK,0,100
+2026-02-24T08:16:11.136Z,Add To Cart,OK,0,100
+2026-02-24T08:16:11.136Z,Login,OK,0,100
+2026-02-24T08:16:11.136Z,Checkout,OK,0,100
+2026-02-24T08:16:11.136Z,Category,OK,11.404,100
+2026-02-24T08:16:11.136Z,Product Page,OK,0,100
+2026-02-24T08:16:11.136Z,Add To Cart,OK,0,100
+2026-02-24T08:16:11.136Z,Login,OK,0,100
+2026-02-24T08:16:11.136Z,Checkout,OK,0,100
