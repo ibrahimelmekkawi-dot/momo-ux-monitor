@@ -4438,3 +4438,5 @@ Call log:
 2026-02-24T01:46:32.814Z,Add To Cart,OK,0,100
 2026-02-24T01:46:32.814Z,Login,OK,0,100
 2026-02-24T01:46:32.814Z,Checkout,OK,0,100
+2026-02-24T02:01:28.583Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded. =========================== logs ===========================   "domcontentloaded" event fired   "load" event fired ============================================================,0,0
+2026-02-24T02:01:28.583Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded. =========================== logs ===========================   "domcontentloaded" event fired   "load" event fired ============================================================,0,0
