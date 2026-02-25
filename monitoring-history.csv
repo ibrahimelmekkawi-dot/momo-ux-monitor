@@ -5904,3 +5904,13 @@ Call log:
 2026-02-25T20:31:17.277Z,Add To Cart,OK,0,100
 2026-02-25T20:31:17.277Z,Login,OK,0,100
 2026-02-25T20:31:17.277Z,Checkout,OK,0,100
+2026-02-25T20:45:55.696Z,Category,OK,22.504,100
+2026-02-25T20:45:55.696Z,Product Page,OK,0,100
+2026-02-25T20:45:55.696Z,Add To Cart,OK,0,100
+2026-02-25T20:45:55.696Z,Login,OK,0,100
+2026-02-25T20:45:55.696Z,Failure,page.waitForSelector: Timeout 20000ms exceeded. Call log:   - waiting for locator('button:has-text("Checkout")') to be visible,0,0
+2026-02-25T20:45:55.696Z,Category,OK,22.504,100
+2026-02-25T20:45:55.696Z,Product Page,OK,0,100
+2026-02-25T20:45:55.696Z,Add To Cart,OK,0,100
+2026-02-25T20:45:55.696Z,Login,OK,0,100
+2026-02-25T20:45:55.696Z,Failure,page.waitForSelector: Timeout 20000ms exceeded. Call log:   - waiting for locator('button:has-text("Checkout")') to be visible,0,0
