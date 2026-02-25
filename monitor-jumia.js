@@ -149,7 +149,7 @@ const path = require('path');
      WRITE HISTORY FILE
   ============================== */
 
-  const historyPath = 'monitoring-history-jumia.csv');
+  const historyPath = 'monitoring-history-jumia.csv';
 
   if (!fs.existsSync(historyPath)) {
     fs.writeFileSync(
