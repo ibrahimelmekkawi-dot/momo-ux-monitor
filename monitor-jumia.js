@@ -116,7 +116,7 @@ const fs = require('fs');
      WRITE TO MASTER HISTORY
   ============================ */
 
-  const historyFile = "monitoring-history.csv";
+  const historyFile = "monitoring-history-jumia.csv";
 
   if (!fs.existsSync(historyFile)) {
     fs.writeFileSync(
