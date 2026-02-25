@@ -5730,3 +5730,5 @@ Call log:
 2026-02-25T15:31:16.627Z,Checkout,OK,0,100
 2026-02-25T15:46:31.960Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded. =========================== logs ===========================   "domcontentloaded" event fired   "load" event fired ============================================================,0,0
 2026-02-25T15:46:31.960Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded. =========================== logs ===========================   "domcontentloaded" event fired   "load" event fired ============================================================,0,0
+2026-02-25T16:01:06.160Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded. =========================== logs ===========================   "domcontentloaded" event fired   "load" event fired ============================================================,0,0
+2026-02-25T16:01:06.160Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded. =========================== logs ===========================   "domcontentloaded" event fired   "load" event fired ============================================================,0,0
