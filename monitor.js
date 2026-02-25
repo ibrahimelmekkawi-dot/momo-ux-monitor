@@ -122,10 +122,10 @@ const fs = require('fs');
   fs.writeFileSync("health-report.csv", singleRunFile);
 
   /* ======================================================
-     MASTER HISTORY FILE (monitoring-history.csv)
+     MASTER HISTORY FILE (monitoring-history-jumia.csv)
   ====================================================== */
 
-  const historyFile = "monitoring-history.csv";
+  const historyFile = "monitoring-history-jumia.csv";
 
   if (!fs.existsSync(historyFile)) {
     fs.writeFileSync(
