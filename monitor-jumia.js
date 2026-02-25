@@ -27,7 +27,7 @@ const fs = require('fs');
       waitUntil: 'domcontentloaded'
     });
 
-    await page.waitForLoadState('networkidle');
+    await page.waitForLoadState('domcontentloaded');
 
     /* =========================
        WAIT FOR PRODUCT CARDS
@@ -49,7 +49,7 @@ const fs = require('fs');
     const firstProduct = page.locator('article').first();
     await firstProduct.click();
 
-    await page.waitForLoadState('networkidle');
+    await page.waitForLoadState('domcontentloaded');
 
     results.push({
       page: "Product Page",
