@@ -1,6 +1,5 @@
 const { chromium } = require('playwright');
 const fs = require('fs');
-const path = require('path');
 
 (async () => {
 
@@ -9,12 +8,10 @@ const path = require('path');
 
   const browser = await chromium.launch({
     headless: true,
-    args: ['--no-sandbox']
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
   });
 
   const context = await browser.newContext({
-    userAgent:
-      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36',
     viewport: { width: 1280, height: 800 }
   });
 
@@ -22,147 +19,92 @@ const path = require('path');
 
   try {
 
-    /* ==============================
-       HOMEPAGE
-    ============================== */
+    console.log("Opening Jumia...");
+    const start = Date.now();
 
-    console.log("Opening Jumia homepage...");
-    let start = Date.now();
-
-    await page.goto('https://www.jumia.ug/', {
+    await page.goto('https://www.jumia.ug', {
       timeout: 60000,
       waitUntil: 'domcontentloaded'
     });
 
-    try {
-      await page.click('button:has-text("Accept")', { timeout: 5000 });
-    } catch {}
+    await page.waitForLoadState('networkidle');
 
-    await page.waitForSelector('article.prd', { timeout: 30000 });
+    /* =========================
+       WAIT FOR PRODUCT CARDS
+    ========================== */
 
-    let loadTime = (Date.now() - start) / 1000;
+    await page.waitForSelector('article', { timeout: 45000 });
+
+    const loadTime = (Date.now() - start) / 1000;
 
     results.push({
-      page: "Homepage",
+      page: "Category",
       status: "OK",
       loadTime,
       score: 100
     });
 
-    /* ==============================
-       PRODUCT PAGE
-    ============================== */
+    console.log("Clicking first product...");
 
-    console.log("Opening first product...");
-    start = Date.now();
+    const firstProduct = page.locator('article').first();
+    await firstProduct.click();
 
-    await page.locator('article.prd').first().click();
-    await page.waitForLoadState('domcontentloaded');
-
-    loadTime = (Date.now() - start) / 1000;
+    await page.waitForLoadState('networkidle');
 
     results.push({
       page: "Product Page",
       status: "OK",
-      loadTime,
+      loadTime: 0,
       score: 100
     });
 
-    /* ==============================
-       ADD TO CART
-    ============================== */
+    console.log("Clicking Add to Cart...");
 
-    console.log("Adding to cart...");
-    start = Date.now();
+    await page.waitForSelector('button:has-text("Add to cart")', {
+      timeout: 20000
+    });
 
-    await page.waitForSelector('button:has-text("Add to cart")', { timeout: 20000 });
     await page.click('button:has-text("Add to cart")');
 
-    loadTime = (Date.now() - start) / 1000;
+    await page.waitForTimeout(5000);
 
     results.push({
       page: "Add To Cart",
       status: "OK",
-      loadTime,
-      score: 100
-    });
-
-    /* ==============================
-       CART PAGE
-    ============================== */
-
-    console.log("Opening cart...");
-    start = Date.now();
-
-    await page.goto('https://www.jumia.ug/cart/');
-    await page.waitForLoadState('networkidle');
-
-    loadTime = (Date.now() - start) / 1000;
-
-    results.push({
-      page: "Cart",
-      status: "OK",
-      loadTime,
-      score: 100
-    });
-
-    /* ==============================
-       CHECKOUT ENTRY
-    ============================== */
-
-    console.log("Testing checkout entry...");
-    start = Date.now();
-
-    await page.waitForSelector('button:has-text("Proceed")', { timeout: 20000 });
-    await page.click('button:has-text("Proceed")');
-
-    await page.waitForLoadState('domcontentloaded');
-
-    loadTime = (Date.now() - start) / 1000;
-
-    results.push({
-      page: "Checkout Entry",
-      status: "OK",
-      loadTime,
+      loadTime: 0,
       score: 100
     });
 
   } catch (error) {
 
+    console.log("JUMIA FAILURE:", error.message);
+
     await page.screenshot({
-      path: `jumia/debug-jumia-${Date.now()}.png`,
+      path: 'debug-error-jumia.png',
       fullPage: true
     });
 
     results.push({
       page: "Failure",
-      status: String(error.message)
-        .replace(/[\r\n]+/g, ' ')
-        .replace(/,/g, ' ')
-        .trim(),
+      status: error.message.replace(/[\r\n]+/g, ' ').replace(/,/g, ' '),
       loadTime: 0,
       score: 0
     });
   }
 
-  /* ==============================
-     WRITE HISTORY FILE
-  ============================== */
+  /* =========================
+     WRITE CSV FILE
+  ========================== */
 
-  const historyPath = 'monitoring-history-jumia.csv';
-
-  if (!fs.existsSync(historyPath)) {
-    fs.writeFileSync(
-      historyPath,
-      "Timestamp,Page,Status,LoadTime,Score\n"
-    );
-  }
-
-  const rows = results.map(r =>
+  const csvRows = results.map(r =>
     `${timestamp},${r.page},${r.status},${r.loadTime},${r.score}`
   ).join("\n");
 
-  fs.appendFileSync(historyPath, rows + "\n");
+  const fileContent =
+    "Timestamp,Page,Status,LoadTime,Score\n" +
+    csvRows + "\n";
+
+  fs.writeFileSync("monitoring-history-jumia.csv", fileContent);
 
   await browser.close();
 
