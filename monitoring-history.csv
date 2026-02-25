@@ -5814,3 +5814,13 @@ Call log:
 2026-02-25T18:31:01.755Z,Add To Cart,OK,0,100
 2026-02-25T18:31:01.755Z,Login,OK,0,100
 2026-02-25T18:31:01.755Z,Checkout,OK,0,100
+2026-02-25T18:49:44.919Z,Category,OK,26.118,100
+2026-02-25T18:49:44.919Z,Product Page,OK,0,100
+2026-02-25T18:49:44.919Z,Add To Cart,OK,0,100
+2026-02-25T18:49:44.919Z,Login,OK,0,100
+2026-02-25T18:49:44.919Z,Failure,page.waitForSelector: Timeout 20000ms exceeded. Call log:   - waiting for locator('button:has-text("Checkout")') to be visible,0,0
+2026-02-25T18:49:44.919Z,Category,OK,26.118,100
+2026-02-25T18:49:44.919Z,Product Page,OK,0,100
+2026-02-25T18:49:44.919Z,Add To Cart,OK,0,100
+2026-02-25T18:49:44.919Z,Login,OK,0,100
+2026-02-25T18:49:44.919Z,Failure,page.waitForSelector: Timeout 20000ms exceeded. Call log:   - waiting for locator('button:has-text("Checkout")') to be visible,0,0
