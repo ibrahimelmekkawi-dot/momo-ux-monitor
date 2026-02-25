@@ -2,8 +2,7 @@ name: JUMIA UX Monitor
 
 on:
   schedule:
-      - cron: "7,22,37,52 * * * *"
-
+    - cron: "7,22,37,52 * * * *"
   workflow_dispatch:
 
 jobs:
@@ -31,19 +30,8 @@ jobs:
 
       - name: Run Jumia Monitor
         run: node monitor-jumia.js
-         # ==============================
-      # APPEND TO MASTER HISTORY FILE
-      # ==============================
 
-      - name: Append to monitoring history
-        run: |
-          if [ ! -f monitoring-history-jumia.csv ]; then
-            echo "Timestamp,Page,Status,LoadTime,Score" > monitoring-history-jumia.csv
-          fi
-
-          tail -n +2 health-report.csv >> monitoring-history-jumia.csv
-
-      - name: Commit history file
+      - name: Commit Jumia History
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
