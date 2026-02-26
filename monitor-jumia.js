@@ -35,6 +35,7 @@ const fs = require('fs');
 
     await page.waitForTimeout(4000);
 
+    // Homepage check
     await page.waitForSelector('input[placeholder*="Search"]', {
       timeout: 30000
     });
@@ -50,15 +51,62 @@ const fs = require('fs');
 
     console.log("Homepage OK");
 
-    /* ======================
-       CATEGORY PAGE
-    ====================== */
+    // Navigation check
+    await page.waitForSelector('text=Account', { timeout: 15000 });
+    await page.waitForSelector('text=Cart', { timeout: 15000 });
 
-    console.log("Opening category page...");
-
-    await page.goto('https://www.jumia.ug/catalog/?q=phone', {
-      timeout: 60000,
-      waitUntil: 'domcontentloaded'
+    results.push({
+      page: "Navigation",
+      status: "OK",
+      loadTime: 0,
+      score: 100
     });
 
-    await page.waitForSelector('article', { timeout:
+    console.log("Navigation OK");
+
+  } catch (error) {
+
+    console.log("JUMIA FAILURE:", error.message);
+
+    await page.screenshot({
+      path: 'debug-error-jumia.png',
+      fullPage: true
+    });
+
+    results.push({
+      page: "Failure",
+      status: error.message.replace(/[\r\n]+/g, ' ').replace(/,/g, ' '),
+      loadTime: 0,
+      score: 0
+    });
+  }
+
+  // ===============================
+  // APPEND TO HISTORY FILE
+  // ===============================
+
+  const historyFile = "monitoring-history-jumia.csv";
+
+  if (!fs.existsSync(historyFile)) {
+    fs.writeFileSync(
+      historyFile,
+      "Timestamp,Page,Status,LoadTime,Score\n"
+    );
+  }
+
+  function clean(text) {
+    return String(text)
+      .replace(/[\r\n]+/g, ' ')
+      .replace(/,/g, ' ')
+      .trim();
+  }
+
+  const rows = results.map(r =>
+    `${timestamp},${r.page},${clean(r.status)},${r.loadTime},${r.score}`
+  ).join("\n");
+
+  fs.appendFileSync(historyFile, rows + "\n");
+
+  await browser.close();
+
+})();
