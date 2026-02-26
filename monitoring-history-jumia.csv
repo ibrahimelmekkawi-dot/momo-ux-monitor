@@ -83,3 +83,7 @@ Timestamp,Page,Status,LoadTime,Score
 2026-02-26T09:07:57.024Z,Homepage,OK,4.74,100
 2026-02-26T09:07:57.024Z,Category,OK,2.015,100
 2026-02-26T09:07:57.024Z,Failure,page.waitForSelector: Timeout 30000ms exceeded. Call log:   - waiting for locator('button:has-text("Add to cart")') to be visible     64 × locator resolved to 52 elements. Proceeding with the first one: <button type="button" data-trigpopup="" class="add btn _prim -pea _md">Add to cart</button>,0,0
+2026-02-26T09:19:52.784Z,Homepage,OK,8.096,100
+2026-02-26T09:19:52.784Z,Category,OK,2.835,100
+2026-02-26T09:19:52.784Z,Product Page,OK,1.439,100
+2026-02-26T09:19:52.784Z,Add To Cart,OK,0,100
