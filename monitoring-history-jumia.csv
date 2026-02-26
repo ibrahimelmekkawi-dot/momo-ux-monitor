@@ -1,1 +1,2 @@
 Timestamp,Page,Status,LoadTime,Score
+2026-02-26T00:18:50.571Z,Failure,page.waitForSelector: Timeout 45000ms exceeded. Call log:   - waiting for locator('a[href*=".html"]') to be visible ,0,0
