@@ -6321,4 +6321,11 @@ Call log:
 2026-02-26T19:46:38.524Z,Product Page,OK,0,100
 2026-02-26T19:46:38.524Z,Add To Cart,OK,0,100
 2026-02-26T19:46:38.524Z,Login,OK,0,100
-2026-02-26T19:46:38.524Z,Checkout,OK,0,100
+2026-02-26T19:46:38.524Z,Checkout,OK,0,1002026-02-26T20:03:57.618Z,Category,OK,25.111,100
+2026-02-26T20:03:57.618Z,Product Page,OK,0,100
+2026-02-26T20:03:57.618Z,Add To Cart,OK,0,100
+2026-02-26T20:03:57.618Z,Login,OK,0,100
+2026-02-26T20:03:57.618Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
