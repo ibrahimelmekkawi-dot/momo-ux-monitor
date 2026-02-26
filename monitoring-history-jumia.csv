@@ -234,3 +234,4 @@ Timestamp,Page,Status,LoadTime,Score
 2026-02-26T21:08:13.920Z,Product Page,OK,1.4,100
 2026-02-26T21:08:13.920Z,Add To Cart,OK,0,100
 2026-02-26T21:22:59.753Z,Failure,page.waitForSelector: Timeout 30000ms exceeded. Call log:   - waiting for locator('input[placeholder*="Search"]') to be visible,0,0
+2026-02-26T21:38:02.969Z,Failure,page.waitForSelector: Timeout 30000ms exceeded. Call log:   - waiting for locator('input[placeholder*="Search"]') to be visible,0,0
