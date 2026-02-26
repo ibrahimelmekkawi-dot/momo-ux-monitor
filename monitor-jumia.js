@@ -35,34 +35,93 @@ const fs = require('fs');
 
     await page.waitForTimeout(4000);
 
-    // Homepage check
     await page.waitForSelector('input[placeholder*="Search"]', {
       timeout: 30000
     });
 
-    const loadTime = (Date.now() - start) / 1000;
+    const homeLoad = (Date.now() - start) / 1000;
 
     results.push({
       page: "Homepage",
       status: "OK",
-      loadTime,
+      loadTime: homeLoad,
       score: 100
     });
 
     console.log("Homepage OK");
 
-    // Navigation check
-    await page.waitForSelector('text=Account', { timeout: 15000 });
-    await page.waitForSelector('text=Cart', { timeout: 15000 });
+    /* ==============================
+       CATEGORY PAGE
+    ============================== */
+
+    console.log("Opening category page...");
+
+    const catStart = Date.now();
+
+    await page.goto('https://www.jumia.ug/electronics/', {
+      timeout: 60000,
+      waitUntil: 'domcontentloaded'
+    });
+
+    await page.waitForSelector('article', { timeout: 45000 });
+
+    const catLoad = (Date.now() - catStart) / 1000;
 
     results.push({
-      page: "Navigation",
+      page: "Category",
+      status: "OK",
+      loadTime: catLoad,
+      score: 100
+    });
+
+    console.log("Category OK");
+
+    /* ==============================
+       PRODUCT PAGE
+    ============================== */
+
+    console.log("Opening first product...");
+
+    const productStart = Date.now();
+
+    const firstProduct = page.locator('article a').first();
+    await firstProduct.click();
+
+    await page.waitForLoadState('domcontentloaded');
+
+    await page.waitForSelector('button:has-text("Add to cart")', {
+      timeout: 30000
+    });
+
+    const productLoad = (Date.now() - productStart) / 1000;
+
+    results.push({
+      page: "Product Page",
+      status: "OK",
+      loadTime: productLoad,
+      score: 100
+    });
+
+    console.log("Product Page OK");
+
+    /* ==============================
+       ADD TO CART
+    ============================== */
+
+    console.log("Adding to cart...");
+
+    await page.click('button:has-text("Add to cart")');
+
+    await page.waitForTimeout(4000);
+
+    results.push({
+      page: "Add To Cart",
       status: "OK",
       loadTime: 0,
       score: 100
     });
 
-    console.log("Navigation OK");
+    console.log("Add to Cart OK");
 
   } catch (error) {
 
@@ -81,9 +140,9 @@ const fs = require('fs');
     });
   }
 
-  // ===============================
-  // APPEND TO HISTORY FILE
-  // ===============================
+  /* ==============================
+     APPEND TO HISTORY FILE
+  ============================== */
 
   const historyFile = "monitoring-history-jumia.csv";
 
