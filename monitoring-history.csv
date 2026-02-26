@@ -6198,4 +6198,8 @@ Call log:
 2026-02-26T13:01:07.452Z,Product Page,OK,0,100
 2026-02-26T13:01:07.452Z,Add To Cart,OK,0,100
 2026-02-26T13:01:07.452Z,Login,OK,0,100
-2026-02-26T13:01:07.452Z,Checkout,OK,0,100
+2026-02-26T13:01:07.452Z,Checkout,OK,0,1002026-02-26T13:16:08.806Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.
+=========================== logs ===========================
+  "domcontentloaded" event fired
+  "load" event fired
+============================================================,0,0
