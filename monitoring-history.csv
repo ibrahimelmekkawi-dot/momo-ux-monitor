@@ -6047,4 +6047,8 @@ Call log:
 2026-02-26T04:01:16.364Z,Product Page,OK,0,100
 2026-02-26T04:01:16.364Z,Add To Cart,OK,0,100
 2026-02-26T04:01:16.364Z,Login,OK,0,100
-2026-02-26T04:01:16.364Z,Checkout,OK,0,100
+2026-02-26T04:01:16.364Z,Checkout,OK,0,1002026-02-26T04:16:00.162Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.
+=========================== logs ===========================
+  "domcontentloaded" event fired
+  "load" event fired
+============================================================,0,0
