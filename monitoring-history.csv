@@ -6012,4 +6012,11 @@ Call log:
 2026-02-26T00:31:03.476Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
 Call log:
   - waiting for locator('button:has-text("Checkout")') to be visible
+,0,02026-02-26T01:01:04.552Z,Category,OK,26.078,100
+2026-02-26T01:01:04.552Z,Product Page,OK,0,100
+2026-02-26T01:01:04.552Z,Add To Cart,OK,0,100
+2026-02-26T01:01:04.552Z,Login,OK,0,100
+2026-02-26T01:01:04.552Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
 ,0,0
