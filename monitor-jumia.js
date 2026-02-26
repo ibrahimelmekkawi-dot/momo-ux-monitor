@@ -33,11 +33,10 @@ const fs = require('fs');
       waitUntil: 'domcontentloaded'
     });
 
-    // small human-like pause
     await page.waitForTimeout(4000);
 
     /* ==============================
-       HOMEPAGE CHECK (Search Bar)
+       HOMEPAGE CHECK
     ============================== */
 
     await page.waitForSelector('input[placeholder*="Search"]', {
@@ -56,7 +55,7 @@ const fs = require('fs');
     console.log("Search bar visible ✔");
 
     /* ==============================
-       NAVIGATION CHECK (Account / Cart)
+       NAVIGATION CHECK
     ============================== */
 
     await page.waitForSelector('text=Account', { timeout: 15000 });
@@ -70,7 +69,6 @@ const fs = require('fs');
     });
 
     console.log("Navigation visible ✔");
-
     console.log("JUMIA MONITOR SUCCESS");
 
   } catch (error) {
@@ -91,18 +89,33 @@ const fs = require('fs');
   }
 
   /* ==============================
-     WRITE CSV FILE
+     APPEND TO MASTER HISTORY FILE
   ============================== */
 
-  const csvRows = results.map(r =>
-    `${timestamp},${r.page},${r.status},${r.loadTime},${r.score}`
+  const historyFile = "monitoring-history-jumia.csv";
+
+  // Create file with header if not exists
+  if (!fs.existsSync(historyFile)) {
+    fs.writeFileSync(
+      historyFile,
+      "Timestamp,Page,Status,LoadTime,Score\n"
+    );
+  }
+
+  // Clean status safely
+  function clean(text) {
+    return String(text)
+      .replace(/[\r\n]+/g, ' ')
+      .replace(/,/g, ' ')
+      .trim();
+  }
+
+  const rows = results.map(r =>
+    `${timestamp},${r.page},${clean(r.status)},${r.loadTime},${r.score}`
   ).join("\n");
 
-  const fileContent =
-    "Timestamp,Page,Status,LoadTime,Score\n" +
-    csvRows + "\n";
-
-  fs.writeFileSync("monitoring-history-jumia.csv", fileContent);
+  // Append (NOT overwrite)
+  fs.appendFileSync(historyFile, rows + "\n");
 
   await browser.close();
 
