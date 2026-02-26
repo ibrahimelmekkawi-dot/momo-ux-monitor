@@ -6268,4 +6268,11 @@ Call log:
 2026-02-26T17:01:07.900Z,Product Page,OK,0,100
 2026-02-26T17:01:07.900Z,Add To Cart,OK,0,100
 2026-02-26T17:01:07.900Z,Login,OK,0,100
-2026-02-26T17:01:07.900Z,Checkout,OK,0,100
+2026-02-26T17:01:07.900Z,Checkout,OK,0,1002026-02-26T17:16:01.922Z,Category,OK,26.096,100
+2026-02-26T17:16:01.922Z,Product Page,OK,0,100
+2026-02-26T17:16:01.922Z,Add To Cart,OK,0,100
+2026-02-26T17:16:01.922Z,Login,OK,0,100
+2026-02-26T17:16:01.922Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
