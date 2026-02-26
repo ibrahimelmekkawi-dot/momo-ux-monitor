@@ -6126,4 +6126,8 @@ Call log:
 2026-02-26T08:31:01.884Z,Product Page,OK,0,100
 2026-02-26T08:31:01.884Z,Add To Cart,OK,0,100
 2026-02-26T08:31:01.884Z,Login,OK,0,100
-2026-02-26T08:31:01.884Z,Checkout,OK,0,100
+2026-02-26T08:31:01.884Z,Checkout,OK,0,1002026-02-26T08:46:05.990Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.
+=========================== logs ===========================
+  "domcontentloaded" event fired
+  "load" event fired
+============================================================,0,0
