@@ -27,13 +27,11 @@ const fs = require('fs');
       waitUntil: 'domcontentloaded'
     });
 
-    await page.waitForLoadState('domcontentloaded');
+    // Scroll once to trigger lazy loading
+    await page.mouse.wheel(0, 1500);
 
-    /* =========================
-       WAIT FOR PRODUCT CARDS
-    ========================== */
-
-    await page.waitForSelector('article', { timeout: 45000 });
+    // Wait for product links (more stable than article)
+    await page.waitForSelector('a[href*=".html"]', { timeout: 45000 });
 
     const loadTime = (Date.now() - start) / 1000;
 
@@ -46,10 +44,11 @@ const fs = require('fs');
 
     console.log("Clicking first product...");
 
-    const firstProduct = page.locator('article').first();
+    const firstProduct = page.locator('a[href*=".html"]').first();
     await firstProduct.click();
 
-    await page.waitForLoadState('domcontentloaded');
+    // Confirm navigation
+    await page.waitForURL(/\.html/, { timeout: 30000 });
 
     results.push({
       page: "Product Page",
@@ -66,7 +65,7 @@ const fs = require('fs');
 
     await page.click('button:has-text("Add to cart")');
 
-    await page.waitForTimeout(5000);
+    await page.waitForTimeout(3000);
 
     results.push({
       page: "Add To Cart",
@@ -92,10 +91,7 @@ const fs = require('fs');
     });
   }
 
-  /* =========================
-     WRITE CSV FILE
-  ========================== */
-
+  // Write CSV (overwrite each run — cleaner for Git)
   const csvRows = results.map(r =>
     `${timestamp},${r.page},${r.status},${r.loadTime},${r.score}`
   ).join("\n");
