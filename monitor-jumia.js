@@ -35,10 +35,6 @@ const fs = require('fs');
 
     await page.waitForTimeout(4000);
 
-    /* ==============================
-       HOMEPAGE CHECK
-    ============================== */
-
     await page.waitForSelector('input[placeholder*="Search"]', {
       timeout: 30000
     });
@@ -52,71 +48,17 @@ const fs = require('fs');
       score: 100
     });
 
-    console.log("Search bar visible ✔");
+    console.log("Homepage OK");
 
-    /* ==============================
-       NAVIGATION CHECK
-    ============================== */
+    /* ======================
+       CATEGORY PAGE
+    ====================== */
 
-    await page.waitForSelector('text=Account', { timeout: 15000 });
-    await page.waitForSelector('text=Cart', { timeout: 15000 });
+    console.log("Opening category page...");
 
-    results.push({
-      page: "Navigation",
-      status: "OK",
-      loadTime: 0,
-      score: 100
+    await page.goto('https://www.jumia.ug/catalog/?q=phone', {
+      timeout: 60000,
+      waitUntil: 'domcontentloaded'
     });
 
-    console.log("Navigation visible ✔");
-    console.log("JUMIA MONITOR SUCCESS");
-
-  } catch (error) {
-
-    console.log("JUMIA FAILURE:", error.message);
-
-    await page.screenshot({
-      path: 'debug-error-jumia.png',
-      fullPage: true
-    });
-
-    results.push({
-      page: "Failure",
-      status: error.message.replace(/[\r\n]+/g, ' ').replace(/,/g, ' '),
-      loadTime: 0,
-      score: 0
-    });
-  }
-
-  /* ==============================
-     APPEND TO MASTER HISTORY FILE
-  ============================== */
-
-  const historyFile = "monitoring-history-jumia.csv";
-
-  // Create file with header if not exists
-  if (!fs.existsSync(historyFile)) {
-    fs.writeFileSync(
-      historyFile,
-      "Timestamp,Page,Status,LoadTime,Score\n"
-    );
-  }
-
-  // Clean status safely
-  function clean(text) {
-    return String(text)
-      .replace(/[\r\n]+/g, ' ')
-      .replace(/,/g, ' ')
-      .trim();
-  }
-
-  const rows = results.map(r =>
-    `${timestamp},${r.page},${clean(r.status)},${r.loadTime},${r.score}`
-  ).join("\n");
-
-  // Append (NOT overwrite)
-  fs.appendFileSync(historyFile, rows + "\n");
-
-  await browser.close();
-
-})();
+    await page.waitForSelector('article', { timeout:
