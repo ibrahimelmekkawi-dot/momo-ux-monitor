@@ -6297,4 +6297,8 @@ Call log:
 2026-02-26T18:15:56.963Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
 Call log:
   - waiting for locator('button:has-text("Checkout")') to be visible
-,0,0
+,0,02026-02-26T18:31:06.668Z,Category,OK,22.622,100
+2026-02-26T18:31:06.668Z,Product Page,OK,0,100
+2026-02-26T18:31:06.668Z,Add To Cart,OK,0,100
+2026-02-26T18:31:06.668Z,Login,OK,0,100
+2026-02-26T18:31:06.668Z,Checkout,OK,0,100
