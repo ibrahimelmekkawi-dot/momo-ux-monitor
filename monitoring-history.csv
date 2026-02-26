@@ -6023,4 +6023,8 @@ Call log:
 =========================== logs ===========================
   "domcontentloaded" event fired
   "load" event fired
+============================================================,0,02026-02-26T02:00:57.544Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.
+=========================== logs ===========================
+  "domcontentloaded" event fired
+  "load" event fired
 ============================================================,0,0
