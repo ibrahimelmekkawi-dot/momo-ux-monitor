@@ -6290,4 +6290,11 @@ Call log:
 2026-02-26T18:00:54.989Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
 Call log:
   - waiting for locator('button:has-text("Checkout")') to be visible
+,0,02026-02-26T18:15:56.963Z,Category,OK,26.415,100
+2026-02-26T18:15:56.963Z,Product Page,OK,0,100
+2026-02-26T18:15:56.963Z,Add To Cart,OK,0,100
+2026-02-26T18:15:56.963Z,Login,OK,0,100
+2026-02-26T18:15:56.963Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
 ,0,0
