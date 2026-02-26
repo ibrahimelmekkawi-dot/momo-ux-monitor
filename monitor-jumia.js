@@ -110,9 +110,19 @@ const fs = require('fs');
 
     console.log("Adding to cart...");
 
-    await page.click('button:has-text("Add to cart")');
+    // Wait for product container
+await page.waitForSelector('#jm', { timeout: 30000 });
 
-    await page.waitForTimeout(4000);
+// Stable Add to cart selection
+const addButton = page.locator(
+  'button.add._prim.-pea._md'
+).filter({ hasText: 'Add to cart' }).first();
+
+await addButton.scrollIntoViewIfNeeded();
+await addButton.waitFor({ state: 'visible', timeout: 30000 });
+await addButton.click();
+
+await page.waitForTimeout(4000);
 
     results.push({
       page: "Add To Cart",
