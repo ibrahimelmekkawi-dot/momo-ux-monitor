@@ -32,6 +32,22 @@ const fs = require('fs');
       timeout: 60000,
       waitUntil: 'domcontentloaded'
     });
+    // small delay
+await page.waitForTimeout(3000);
+
+// Handle cookie popup if present
+try {
+  const cookieBtn = page.locator('button:has-text("Accept cookies")');
+  if (await cookieBtn.isVisible({ timeout: 5000 })) {
+    await cookieBtn.click();
+    console.log("Cookies accepted");
+  }
+} catch {}
+
+// Now wait for search bar
+await page.waitForSelector('input[placeholder*="Search"]', {
+  timeout: 30000
+});
 
     await page.waitForTimeout(4000);
 
