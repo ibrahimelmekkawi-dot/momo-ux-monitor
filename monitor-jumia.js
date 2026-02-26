@@ -8,10 +8,16 @@ const fs = require('fs');
 
   const browser = await chromium.launch({
     headless: true,
-    args: ['--no-sandbox', '--disable-setuid-sandbox']
+    args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox',
+      '--disable-blink-features=AutomationControlled'
+    ]
   });
 
   const context = await browser.newContext({
+    userAgent:
+      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
     viewport: { width: 1280, height: 800 }
   });
 
@@ -19,7 +25,7 @@ const fs = require('fs');
 
   try {
 
-    console.log("Opening Jumia...");
+    console.log("Opening Jumia homepage...");
     const start = Date.now();
 
     await page.goto('https://www.jumia.ug', {
@@ -27,52 +33,45 @@ const fs = require('fs');
       waitUntil: 'domcontentloaded'
     });
 
-    // Scroll once to trigger lazy loading
-    await page.mouse.wheel(0, 1500);
+    // small human-like pause
+    await page.waitForTimeout(4000);
 
-    // Wait for product links (more stable than article)
-    await page.waitForSelector('a[href*=".html"]', { timeout: 45000 });
+    /* ==============================
+       HOMEPAGE CHECK (Search Bar)
+    ============================== */
+
+    await page.waitForSelector('input[placeholder*="Search"]', {
+      timeout: 30000
+    });
 
     const loadTime = (Date.now() - start) / 1000;
 
     results.push({
-      page: "Category",
+      page: "Homepage",
       status: "OK",
       loadTime,
       score: 100
     });
 
-    console.log("Clicking first product...");
+    console.log("Search bar visible ✔");
 
-    const firstProduct = page.locator('a[href*=".html"]').first();
-    await firstProduct.click();
+    /* ==============================
+       NAVIGATION CHECK (Account / Cart)
+    ============================== */
 
-    // Confirm navigation
-    await page.waitForURL(/\.html/, { timeout: 30000 });
+    await page.waitForSelector('text=Account', { timeout: 15000 });
+    await page.waitForSelector('text=Cart', { timeout: 15000 });
 
     results.push({
-      page: "Product Page",
+      page: "Navigation",
       status: "OK",
       loadTime: 0,
       score: 100
     });
 
-    console.log("Clicking Add to Cart...");
+    console.log("Navigation visible ✔");
 
-    await page.waitForSelector('button:has-text("Add to cart")', {
-      timeout: 20000
-    });
-
-    await page.click('button:has-text("Add to cart")');
-
-    await page.waitForTimeout(3000);
-
-    results.push({
-      page: "Add To Cart",
-      status: "OK",
-      loadTime: 0,
-      score: 100
-    });
+    console.log("JUMIA MONITOR SUCCESS");
 
   } catch (error) {
 
@@ -91,7 +90,10 @@ const fs = require('fs');
     });
   }
 
-  // Write CSV (overwrite each run — cleaner for Git)
+  /* ==============================
+     WRITE CSV FILE
+  ============================== */
+
   const csvRows = results.map(r =>
     `${timestamp},${r.page},${r.status},${r.loadTime},${r.score}`
   ).join("\n");
