@@ -6498,4 +6498,11 @@ Call log:
 2026-02-27T06:16:16.719Z,Product Page,OK,0,100
 2026-02-27T06:16:16.719Z,Add To Cart,OK,0,100
 2026-02-27T06:16:16.719Z,Login,OK,0,100
-2026-02-27T06:16:16.719Z,Checkout,OK,0,100
+2026-02-27T06:16:16.719Z,Checkout,OK,0,1002026-02-27T06:30:58.548Z,Category,OK,24.484,100
+2026-02-27T06:30:58.548Z,Product Page,OK,0,100
+2026-02-27T06:30:58.548Z,Add To Cart,OK,0,100
+2026-02-27T06:30:58.548Z,Login,OK,0,100
+2026-02-27T06:30:58.548Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
