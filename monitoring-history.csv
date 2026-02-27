@@ -6628,4 +6628,8 @@ Call log:
 2026-02-27T13:45:59.311Z,Product Page,OK,0,100
 2026-02-27T13:45:59.311Z,Add To Cart,OK,0,100
 2026-02-27T13:45:59.311Z,Login,OK,0,100
-2026-02-27T13:45:59.311Z,Checkout,OK,0,100
+2026-02-27T13:45:59.311Z,Checkout,OK,0,1002026-02-27T14:01:01.261Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.
+=========================== logs ===========================
+  "domcontentloaded" event fired
+  "load" event fired
+============================================================,0,0
