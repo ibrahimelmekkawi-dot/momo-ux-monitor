@@ -6422,4 +6422,8 @@ Call log:
 2026-02-27T01:30:58.476Z,Product Page,OK,0,100
 2026-02-27T01:30:58.476Z,Add To Cart,OK,0,100
 2026-02-27T01:30:58.476Z,Login,OK,0,100
-2026-02-27T01:30:58.476Z,Checkout,OK,0,100
+2026-02-27T01:30:58.476Z,Checkout,OK,0,1002026-02-27T01:45:55.944Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.
+=========================== logs ===========================
+  "domcontentloaded" event fired
+  "load" event fired
+============================================================,0,0
