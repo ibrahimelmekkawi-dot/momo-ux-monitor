@@ -6400,4 +6400,11 @@ Call log:
 =========================== logs ===========================
   "domcontentloaded" event fired
   "load" event fired
-============================================================,0,0
+============================================================,0,02026-02-27T00:46:00.167Z,Category,OK,24.032,100
+2026-02-27T00:46:00.167Z,Product Page,OK,0,100
+2026-02-27T00:46:00.167Z,Add To Cart,OK,0,100
+2026-02-27T00:46:00.167Z,Login,OK,0,100
+2026-02-27T00:46:00.167Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
