@@ -6688,4 +6688,8 @@ Call log:
 2026-02-27T17:16:12.582Z,Product Page,OK,0,100
 2026-02-27T17:16:12.582Z,Add To Cart,OK,0,100
 2026-02-27T17:16:12.582Z,Login,OK,0,100
-2026-02-27T17:16:12.582Z,Checkout,OK,0,100
+2026-02-27T17:16:12.582Z,Checkout,OK,0,1002026-02-27T17:31:21.552Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.
+=========================== logs ===========================
+  "domcontentloaded" event fired
+  "load" event fired
+============================================================,0,0
