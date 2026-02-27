@@ -6396,4 +6396,8 @@ Call log:
 2026-02-27T00:15:54.783Z,Product Page,OK,0,100
 2026-02-27T00:15:54.783Z,Add To Cart,OK,0,100
 2026-02-27T00:15:54.783Z,Login,OK,0,100
-2026-02-27T00:15:54.783Z,Checkout,OK,0,100
+2026-02-27T00:15:54.783Z,Checkout,OK,0,1002026-02-27T00:30:53.727Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.
+=========================== logs ===========================
+  "domcontentloaded" event fired
+  "load" event fired
+============================================================,0,0
