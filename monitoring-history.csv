@@ -6795,4 +6795,11 @@ Call log:
 2026-02-27T23:01:04.756Z,Product Page,OK,0,100
 2026-02-27T23:01:04.756Z,Add To Cart,OK,0,100
 2026-02-27T23:01:04.756Z,Login,OK,0,100
-2026-02-27T23:01:04.756Z,Checkout,OK,0,100
+2026-02-27T23:01:04.756Z,Checkout,OK,0,1002026-02-27T23:15:55.679Z,Category,OK,23.632,100
+2026-02-27T23:15:55.679Z,Product Page,OK,0,100
+2026-02-27T23:15:55.679Z,Add To Cart,OK,0,100
+2026-02-27T23:15:55.679Z,Login,OK,0,100
+2026-02-27T23:15:55.679Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
