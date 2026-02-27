@@ -6768,4 +6768,11 @@ Call log:
 2026-02-27T21:46:12.844Z,Product Page,OK,0,100
 2026-02-27T21:46:12.844Z,Add To Cart,OK,0,100
 2026-02-27T21:46:12.844Z,Login,OK,0,100
-2026-02-27T21:46:12.844Z,Checkout,OK,0,100
+2026-02-27T21:46:12.844Z,Checkout,OK,0,1002026-02-27T21:55:12.901Z,Category,OK,24.654,100
+2026-02-27T21:55:12.901Z,Product Page,OK,0,100
+2026-02-27T21:55:12.901Z,Add To Cart,OK,0,100
+2026-02-27T21:55:12.901Z,Login,OK,0,100
+2026-02-27T21:55:12.901Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
