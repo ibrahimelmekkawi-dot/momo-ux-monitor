@@ -7189,4 +7189,11 @@ Call log:
 2026-02-28T21:16:10.092Z,Product Page,OK,0,100
 2026-02-28T21:16:10.092Z,Add To Cart,OK,0,100
 2026-02-28T21:16:10.092Z,Login,OK,0,100
-2026-02-28T21:16:10.092Z,Checkout,OK,0,100
+2026-02-28T21:16:10.092Z,Checkout,OK,0,1002026-02-28T21:31:09.633Z,Category,OK,27.638,100
+2026-02-28T21:31:09.633Z,Product Page,OK,0,100
+2026-02-28T21:31:09.633Z,Add To Cart,OK,0,100
+2026-02-28T21:31:09.633Z,Login,OK,0,100
+2026-02-28T21:31:09.633Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
