@@ -7009,4 +7009,8 @@ Call log:
 =========================== logs ===========================
   "domcontentloaded" event fired
   "load" event fired
+============================================================,0,02026-02-28T10:48:33.554Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.
+=========================== logs ===========================
+  "domcontentloaded" event fired
+  "load" event fired
 ============================================================,0,0
