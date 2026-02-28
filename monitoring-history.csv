@@ -6931,4 +6931,11 @@ Call log:
 2026-02-28T07:01:10.759Z,Product Page,OK,0,100
 2026-02-28T07:01:10.759Z,Add To Cart,OK,0,100
 2026-02-28T07:01:10.759Z,Login,OK,0,100
-2026-02-28T07:01:10.759Z,Checkout,OK,0,100
+2026-02-28T07:01:10.759Z,Checkout,OK,0,1002026-02-28T07:05:27.779Z,Category,OK,21.797,100
+2026-02-28T07:05:27.779Z,Product Page,OK,0,100
+2026-02-28T07:05:27.779Z,Add To Cart,OK,0,100
+2026-02-28T07:05:27.779Z,Login,OK,0,100
+2026-02-28T07:05:27.779Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
