@@ -6905,4 +6905,11 @@ Call log:
 2026-02-28T05:54:58.491Z,Product Page,OK,0,100
 2026-02-28T05:54:58.491Z,Add To Cart,OK,0,100
 2026-02-28T05:54:58.491Z,Login,OK,0,100
-2026-02-28T05:54:58.491Z,Checkout,OK,0,100
+2026-02-28T05:54:58.491Z,Checkout,OK,0,1002026-02-28T06:00:52.450Z,Category,OK,22.741,100
+2026-02-28T06:00:52.450Z,Product Page,OK,0,100
+2026-02-28T06:00:52.450Z,Add To Cart,OK,0,100
+2026-02-28T06:00:52.450Z,Login,OK,0,100
+2026-02-28T06:00:52.450Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
