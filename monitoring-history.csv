@@ -6878,4 +6878,11 @@ Call log:
 ============================================================,0,02026-02-28T04:31:12.966Z,Failure,page.waitForSelector: Timeout 45000ms exceeded.
 Call log:
   - waiting for locator('[class*="mtn-product-card"]') to be visible
+,0,02026-02-28T04:46:01.541Z,Category,OK,25.006,100
+2026-02-28T04:46:01.541Z,Product Page,OK,0,100
+2026-02-28T04:46:01.541Z,Add To Cart,OK,0,100
+2026-02-28T04:46:01.541Z,Login,OK,0,100
+2026-02-28T04:46:01.541Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
 ,0,0
