@@ -7464,4 +7464,11 @@ Call log:
 2026-03-01T12:16:08.568Z,Product Page,OK,0,100
 2026-03-01T12:16:08.568Z,Add To Cart,OK,0,100
 2026-03-01T12:16:08.568Z,Login,OK,0,100
-2026-03-01T12:16:08.568Z,Checkout,OK,0,100
+2026-03-01T12:16:08.568Z,Checkout,OK,0,1002026-03-01T12:31:02.121Z,Category,OK,25.028,100
+2026-03-01T12:31:02.121Z,Product Page,OK,0,100
+2026-03-01T12:31:02.121Z,Add To Cart,OK,0,100
+2026-03-01T12:31:02.121Z,Login,OK,0,100
+2026-03-01T12:31:02.121Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
