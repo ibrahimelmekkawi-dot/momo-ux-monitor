@@ -7277,4 +7277,7 @@ Call log:
 2026-03-01T01:31:03.746Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
 Call log:
   - waiting for locator('button:has-text("Checkout")') to be visible
+,0,02026-03-01T01:46:15.163Z,Failure,page.waitForSelector: Timeout 45000ms exceeded.
+Call log:
+  - waiting for locator('[class*="mtn-product-card"]') to be visible
 ,0,0
