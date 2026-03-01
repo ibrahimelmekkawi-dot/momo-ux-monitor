@@ -7522,4 +7522,11 @@ Call log:
 2026-03-01T15:31:12.489Z,Product Page,OK,0,100
 2026-03-01T15:31:12.489Z,Add To Cart,OK,0,100
 2026-03-01T15:31:12.489Z,Login,OK,0,100
-2026-03-01T15:31:12.489Z,Checkout,OK,0,100
+2026-03-01T15:31:12.489Z,Checkout,OK,0,1002026-03-01T15:43:43.000Z,Category,OK,29.72,100
+2026-03-01T15:43:43.000Z,Product Page,OK,0,100
+2026-03-01T15:43:43.000Z,Add To Cart,OK,0,100
+2026-03-01T15:43:43.000Z,Login,OK,0,100
+2026-03-01T15:43:43.000Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
