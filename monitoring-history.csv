@@ -7307,4 +7307,8 @@ Call log:
 ============================================================,0,02026-03-01T03:31:16.787Z,Category,OK,32.546,100
 2026-03-01T03:31:16.787Z,Product Page,OK,0,100
 2026-03-01T03:31:16.787Z,Add To Cart,OK,0,100
-2026-03-01T03:31:16.787Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.,0,0
+2026-03-01T03:31:16.787Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.,0,02026-03-01T03:45:54.280Z,Category,OK,23.266,100
+2026-03-01T03:45:54.280Z,Product Page,OK,0,100
+2026-03-01T03:45:54.280Z,Add To Cart,OK,0,100
+2026-03-01T03:45:54.280Z,Login,OK,0,100
+2026-03-01T03:45:54.280Z,Checkout,OK,0,100
