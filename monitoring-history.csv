@@ -7918,4 +7918,11 @@ Call log:
 2026-03-02T10:01:03.248Z,Product Page,OK,0,100
 2026-03-02T10:01:03.248Z,Add To Cart,OK,0,100
 2026-03-02T10:01:03.248Z,Login,OK,0,100
-2026-03-02T10:01:03.248Z,Checkout,OK,0,100
+2026-03-02T10:01:03.248Z,Checkout,OK,0,1002026-03-02T10:15:55.974Z,Category,OK,24.09,100
+2026-03-02T10:15:55.974Z,Product Page,OK,0,100
+2026-03-02T10:15:55.974Z,Add To Cart,OK,0,100
+2026-03-02T10:15:55.974Z,Login,OK,0,100
+2026-03-02T10:15:55.974Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
