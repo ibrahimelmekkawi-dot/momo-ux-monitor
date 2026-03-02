@@ -8094,4 +8094,11 @@ Call log:
 2026-03-02T20:01:25.051Z,Product Page,OK,0,100
 2026-03-02T20:01:25.051Z,Add To Cart,OK,0,100
 2026-03-02T20:01:25.051Z,Login,OK,0,100
-2026-03-02T20:01:25.051Z,Checkout,OK,0,100
+2026-03-02T20:01:25.051Z,Checkout,OK,0,1002026-03-02T20:16:18.380Z,Category,OK,25.368,100
+2026-03-02T20:16:18.380Z,Product Page,OK,0,100
+2026-03-02T20:16:18.380Z,Add To Cart,OK,0,100
+2026-03-02T20:16:18.380Z,Login,OK,0,100
+2026-03-02T20:16:18.380Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
