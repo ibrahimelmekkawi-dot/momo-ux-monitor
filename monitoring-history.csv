@@ -8109,4 +8109,11 @@ Call log:
 2026-03-02T20:46:07.632Z,Product Page,OK,0,100
 2026-03-02T20:46:07.632Z,Add To Cart,OK,0,100
 2026-03-02T20:46:07.632Z,Login,OK,0,100
-2026-03-02T20:46:07.632Z,Checkout,OK,0,100
+2026-03-02T20:46:07.632Z,Checkout,OK,0,1002026-03-02T21:01:06.204Z,Category,OK,24.246,100
+2026-03-02T21:01:06.204Z,Product Page,OK,0,100
+2026-03-02T21:01:06.204Z,Add To Cart,OK,0,100
+2026-03-02T21:01:06.204Z,Login,OK,0,100
+2026-03-02T21:01:06.204Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
