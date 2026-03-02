@@ -7730,4 +7730,10 @@ Call log:
   "commit" event fired
   "domcontentloaded" event fired
   "load" event fired
-============================================================,0,0
+============================================================,0,02026-03-02T03:16:05.608Z,Category,OK,27.037,100
+2026-03-02T03:16:05.608Z,Product Page,OK,0,100
+2026-03-02T03:16:05.608Z,Add To Cart,OK,0,100
+2026-03-02T03:16:05.608Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('input[type="tel"]') to be visible
+,0,0
