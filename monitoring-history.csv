@@ -8039,4 +8039,11 @@ Call log:
 2026-03-02T16:46:16.288Z,Product Page,OK,0,100
 2026-03-02T16:46:16.288Z,Add To Cart,OK,0,100
 2026-03-02T16:46:16.288Z,Login,OK,0,100
-2026-03-02T16:46:16.288Z,Checkout,OK,0,100
+2026-03-02T16:46:16.288Z,Checkout,OK,0,1002026-03-02T17:01:04.336Z,Category,OK,26.712,100
+2026-03-02T17:01:04.336Z,Product Page,OK,0,100
+2026-03-02T17:01:04.336Z,Add To Cart,OK,0,100
+2026-03-02T17:01:04.336Z,Login,OK,0,100
+2026-03-02T17:01:04.336Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
