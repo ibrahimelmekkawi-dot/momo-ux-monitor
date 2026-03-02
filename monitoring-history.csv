@@ -7887,4 +7887,8 @@ Call log:
 2026-03-02T08:16:10.942Z,Product Page,OK,0,100
 2026-03-02T08:16:10.942Z,Add To Cart,OK,0,100
 2026-03-02T08:16:10.942Z,Login,OK,0,100
-2026-03-02T08:16:10.942Z,Checkout,OK,0,100
+2026-03-02T08:16:10.942Z,Checkout,OK,0,1002026-03-02T08:30:56.490Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.
+=========================== logs ===========================
+  "domcontentloaded" event fired
+  "load" event fired
+============================================================,0,0
