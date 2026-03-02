@@ -7781,4 +7781,9 @@ Call log:
 ,0,02026-03-02T05:46:10.463Z,Failure,page.waitForSelector: Timeout 45000ms exceeded.
 Call log:
   - waiting for locator('[class*="mtn-product-card"]') to be visible
+,0,02026-03-02T06:00:59.424Z,Category,OK,25.747,100
+2026-03-02T06:00:59.424Z,Product Page,OK,0,100
+2026-03-02T06:00:59.424Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Add")') to be visible
 ,0,0
