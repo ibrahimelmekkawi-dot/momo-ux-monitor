@@ -7764,4 +7764,9 @@ Call log:
 2026-03-02T04:30:58.115Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
 Call log:
   - waiting for locator('input[type="tel"]') to be visible
-,0,0
+,0,02026-03-02T04:46:13.865Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.
+=========================== logs ===========================
+  "commit" event fired
+  "domcontentloaded" event fired
+  "load" event fired
+============================================================,0,0
