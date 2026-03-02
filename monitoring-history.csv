@@ -7789,4 +7789,65 @@ Call log:
 ,0,02026-03-02T06:15:59.877Z,Failure,page.waitForSelector: Timeout 45000ms exceeded.
 Call log:
   - waiting for locator('[class*="mtn-product-card"]') to be visible
-,0,0
+,0,02026-03-02T06:31:05.637Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.
+=========================== logs ===========================
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "load" event fired
+============================================================,0,0
