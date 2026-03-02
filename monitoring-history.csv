@@ -8160,4 +8160,8 @@ Call log:
 2026-03-02T23:16:24.079Z,Product Page,OK,0,100
 2026-03-02T23:16:24.079Z,Add To Cart,OK,0,100
 2026-03-02T23:16:24.079Z,Login,OK,0,100
-2026-03-02T23:16:24.079Z,Checkout,OK,0,100
+2026-03-02T23:16:24.079Z,Checkout,OK,0,1002026-03-02T23:31:04.279Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.
+=========================== logs ===========================
+  "domcontentloaded" event fired
+  "load" event fired
+============================================================,0,0
