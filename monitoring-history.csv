@@ -7876,4 +7876,11 @@ Call log:
 2026-03-02T07:46:00.174Z,Product Page,OK,0,100
 2026-03-02T07:46:00.174Z,Add To Cart,OK,0,100
 2026-03-02T07:46:00.174Z,Login,OK,0,100
-2026-03-02T07:46:00.174Z,Checkout,OK,0,100
+2026-03-02T07:46:00.174Z,Checkout,OK,0,1002026-03-02T08:01:03.719Z,Category,OK,25.477,100
+2026-03-02T08:01:03.719Z,Product Page,OK,0,100
+2026-03-02T08:01:03.719Z,Add To Cart,OK,0,100
+2026-03-02T08:01:03.719Z,Login,OK,0,100
+2026-03-02T08:01:03.719Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
