@@ -8015,4 +8015,8 @@ Call log:
 2026-03-02T15:30:59.177Z,Product Page,OK,0,100
 2026-03-02T15:30:59.177Z,Add To Cart,OK,0,100
 2026-03-02T15:30:59.177Z,Login,OK,0,100
-2026-03-02T15:30:59.177Z,Checkout,OK,0,100
+2026-03-02T15:30:59.177Z,Checkout,OK,0,1002026-03-02T15:46:05.031Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.
+=========================== logs ===========================
+  "domcontentloaded" event fired
+  "load" event fired
+============================================================,0,0
