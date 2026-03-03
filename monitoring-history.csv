@@ -8401,4 +8401,8 @@ Call log:
 2026-03-03T13:16:02.252Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
 Call log:
   - waiting for locator('button:has-text("Checkout")') to be visible
-,0,0
+,0,02026-03-03T13:31:02.309Z,Category,OK,27.131,100
+2026-03-03T13:31:02.309Z,Product Page,OK,0,100
+2026-03-03T13:31:02.309Z,Add To Cart,OK,0,100
+2026-03-03T13:31:02.309Z,Login,OK,0,100
+2026-03-03T13:31:02.309Z,Checkout,OK,0,100
