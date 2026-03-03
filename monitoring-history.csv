@@ -8331,4 +8331,11 @@ Call log:
 2026-03-03T09:31:15.487Z,Product Page,OK,0,100
 2026-03-03T09:31:15.487Z,Add To Cart,OK,0,100
 2026-03-03T09:31:15.487Z,Login,OK,0,100
-2026-03-03T09:31:15.487Z,Checkout,OK,0,100
+2026-03-03T09:31:15.487Z,Checkout,OK,0,1002026-03-03T09:45:59.370Z,Category,OK,28.724,100
+2026-03-03T09:45:59.370Z,Product Page,OK,0,100
+2026-03-03T09:45:59.370Z,Add To Cart,OK,0,100
+2026-03-03T09:45:59.370Z,Login,OK,0,100
+2026-03-03T09:45:59.370Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
