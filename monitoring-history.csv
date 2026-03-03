@@ -8394,4 +8394,11 @@ Call log:
 2026-03-03T13:01:08.719Z,Product Page,OK,0,100
 2026-03-03T13:01:08.719Z,Add To Cart,OK,0,100
 2026-03-03T13:01:08.719Z,Login,OK,0,100
-2026-03-03T13:01:08.719Z,Checkout,OK,0,100
+2026-03-03T13:01:08.719Z,Checkout,OK,0,1002026-03-03T13:16:02.252Z,Category,OK,27.808,100
+2026-03-03T13:16:02.252Z,Product Page,OK,0,100
+2026-03-03T13:16:02.252Z,Add To Cart,OK,0,100
+2026-03-03T13:16:02.252Z,Login,OK,0,100
+2026-03-03T13:16:02.252Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
