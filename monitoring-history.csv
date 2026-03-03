@@ -8521,4 +8521,11 @@ Call log:
 2026-03-03T20:45:54.518Z,Product Page,OK,0,100
 2026-03-03T20:45:54.518Z,Add To Cart,OK,0,100
 2026-03-03T20:45:54.518Z,Login,OK,0,100
-2026-03-03T20:45:54.518Z,Checkout,OK,0,100
+2026-03-03T20:45:54.518Z,Checkout,OK,0,1002026-03-03T20:55:55.361Z,Category,OK,26.564,100
+2026-03-03T20:55:55.361Z,Product Page,OK,0,100
+2026-03-03T20:55:55.361Z,Add To Cart,OK,0,100
+2026-03-03T20:55:55.361Z,Login,OK,0,100
+2026-03-03T20:55:55.361Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
