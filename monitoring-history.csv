@@ -8490,4 +8490,8 @@ Call log:
 2026-03-03T18:31:00.098Z,Product Page,OK,0,100
 2026-03-03T18:31:00.098Z,Add To Cart,OK,0,100
 2026-03-03T18:31:00.098Z,Login,OK,0,100
-2026-03-03T18:31:00.098Z,Checkout,OK,0,100
+2026-03-03T18:31:00.098Z,Checkout,OK,0,1002026-03-03T18:46:19.569Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.
+=========================== logs ===========================
+  "domcontentloaded" event fired
+  "load" event fired
+============================================================,0,0
