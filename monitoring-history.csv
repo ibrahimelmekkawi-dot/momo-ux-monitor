@@ -8568,4 +8568,11 @@ Call log:
 2026-03-03T23:16:05.776Z,Product Page,OK,0,100
 2026-03-03T23:16:05.776Z,Add To Cart,OK,0,100
 2026-03-03T23:16:05.776Z,Login,OK,0,100
-2026-03-03T23:16:05.776Z,Checkout,OK,0,100
+2026-03-03T23:16:05.776Z,Checkout,OK,0,1002026-03-03T23:31:03.397Z,Category,OK,23.076,100
+2026-03-03T23:31:03.397Z,Product Page,OK,0,100
+2026-03-03T23:31:03.397Z,Add To Cart,OK,0,100
+2026-03-03T23:31:03.397Z,Login,OK,0,100
+2026-03-03T23:31:03.397Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
