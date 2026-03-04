@@ -8932,4 +8932,11 @@ Call log:
 2026-03-04T22:01:27.052Z,Product Page,OK,0,100
 2026-03-04T22:01:27.052Z,Add To Cart,OK,0,100
 2026-03-04T22:01:27.052Z,Login,OK,0,100
-2026-03-04T22:01:27.052Z,Checkout,OK,0,100
+2026-03-04T22:01:27.052Z,Checkout,OK,0,1002026-03-04T22:16:02.457Z,Category,OK,24.069,100
+2026-03-04T22:16:02.457Z,Product Page,OK,0,100
+2026-03-04T22:16:02.457Z,Add To Cart,OK,0,100
+2026-03-04T22:16:02.457Z,Login,OK,0,100
+2026-03-04T22:16:02.457Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
