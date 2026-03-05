@@ -9099,4 +9099,11 @@ Call log:
 2026-03-05T07:16:12.747Z,Product Page,OK,0,100
 2026-03-05T07:16:12.747Z,Add To Cart,OK,0,100
 2026-03-05T07:16:12.747Z,Login,OK,0,100
-2026-03-05T07:16:12.747Z,Checkout,OK,0,100
+2026-03-05T07:16:12.747Z,Checkout,OK,0,1002026-03-05T07:31:17.898Z,Category,OK,25.486,100
+2026-03-05T07:31:17.898Z,Product Page,OK,0,100
+2026-03-05T07:31:17.898Z,Add To Cart,OK,0,100
+2026-03-05T07:31:17.898Z,Login,OK,0,100
+2026-03-05T07:31:17.898Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
