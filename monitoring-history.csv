@@ -9065,4 +9065,11 @@ Call log:
 2026-03-05T05:31:20.715Z,Product Page,OK,0,100
 2026-03-05T05:31:20.715Z,Add To Cart,OK,0,100
 2026-03-05T05:31:20.715Z,Login,OK,0,100
-2026-03-05T05:31:20.715Z,Checkout,OK,0,100
+2026-03-05T05:31:20.715Z,Checkout,OK,0,1002026-03-05T05:46:01.050Z,Category,OK,23.411,100
+2026-03-05T05:46:01.050Z,Product Page,OK,0,100
+2026-03-05T05:46:01.050Z,Add To Cart,OK,0,100
+2026-03-05T05:46:01.050Z,Login,OK,0,100
+2026-03-05T05:46:01.050Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
