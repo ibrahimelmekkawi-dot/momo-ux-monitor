@@ -9200,4 +9200,8 @@ Call log:
 2026-03-05T13:01:03.387Z,Product Page,OK,0,100
 2026-03-05T13:01:03.387Z,Add To Cart,OK,0,100
 2026-03-05T13:01:03.387Z,Login,OK,0,100
-2026-03-05T13:01:03.387Z,Checkout,OK,0,100
+2026-03-05T13:01:03.387Z,Checkout,OK,0,1002026-03-05T13:16:03.787Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.
+=========================== logs ===========================
+  "domcontentloaded" event fired
+  "load" event fired
+============================================================,0,0
