@@ -8978,4 +8978,11 @@ Call log:
 2026-03-05T00:31:09.027Z,Product Page,OK,0,100
 2026-03-05T00:31:09.027Z,Add To Cart,OK,0,100
 2026-03-05T00:31:09.027Z,Login,OK,0,100
-2026-03-05T00:31:09.027Z,Checkout,OK,0,100
+2026-03-05T00:31:09.027Z,Checkout,OK,0,1002026-03-05T00:46:23.640Z,Category,OK,25.164,100
+2026-03-05T00:46:23.640Z,Product Page,OK,0,100
+2026-03-05T00:46:23.640Z,Add To Cart,OK,0,100
+2026-03-05T00:46:23.640Z,Login,OK,0,100
+2026-03-05T00:46:23.640Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
