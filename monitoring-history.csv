@@ -9342,4 +9342,11 @@ Call log:
 2026-03-05T23:31:37.587Z,Product Page,OK,0,100
 2026-03-05T23:31:37.587Z,Add To Cart,OK,0,100
 2026-03-05T23:31:37.587Z,Login,OK,0,100
-2026-03-05T23:31:37.587Z,Checkout,OK,0,100
+2026-03-05T23:31:37.587Z,Checkout,OK,0,1002026-03-05T23:45:54.705Z,Category,OK,22.43,100
+2026-03-05T23:45:54.705Z,Product Page,OK,0,100
+2026-03-05T23:45:54.705Z,Add To Cart,OK,0,100
+2026-03-05T23:45:54.705Z,Login,OK,0,100
+2026-03-05T23:45:54.705Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
