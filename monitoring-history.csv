@@ -9110,4 +9110,11 @@ Call log:
 2026-03-05T07:45:58.543Z,Product Page,OK,0,100
 2026-03-05T07:45:58.543Z,Add To Cart,OK,0,100
 2026-03-05T07:45:58.543Z,Login,OK,0,100
-2026-03-05T07:45:58.543Z,Checkout,OK,0,100
+2026-03-05T07:45:58.543Z,Checkout,OK,0,1002026-03-05T08:01:02.586Z,Category,OK,26.017,100
+2026-03-05T08:01:02.586Z,Product Page,OK,0,100
+2026-03-05T08:01:02.586Z,Add To Cart,OK,0,100
+2026-03-05T08:01:02.586Z,Login,OK,0,100
+2026-03-05T08:01:02.586Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
