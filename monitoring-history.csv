@@ -9019,4 +9019,7 @@ Call log:
 2026-03-05T02:46:27.815Z,Product Page,OK,0,100
 2026-03-05T02:46:27.815Z,Add To Cart,OK,0,100
 2026-03-05T02:46:27.815Z,Login,OK,0,100
-2026-03-05T02:46:27.815Z,Checkout,OK,0,100
+2026-03-05T02:46:27.815Z,Checkout,OK,0,1002026-03-05T03:01:04.000Z,Failure,page.waitForSelector: Timeout 45000ms exceeded.
+Call log:
+  - waiting for locator('[class*="mtn-product-card"]') to be visible
+,0,0
