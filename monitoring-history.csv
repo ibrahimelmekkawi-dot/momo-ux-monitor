@@ -9264,4 +9264,11 @@ Call log:
 2026-03-05T19:00:58.020Z,Product Page,OK,0,100
 2026-03-05T19:00:58.020Z,Add To Cart,OK,0,100
 2026-03-05T19:00:58.020Z,Login,OK,0,100
-2026-03-05T19:00:58.020Z,Checkout,OK,0,100
+2026-03-05T19:00:58.020Z,Checkout,OK,0,1002026-03-05T19:16:16.006Z,Category,OK,25.155,100
+2026-03-05T19:16:16.006Z,Product Page,OK,0,100
+2026-03-05T19:16:16.006Z,Add To Cart,OK,0,100
+2026-03-05T19:16:16.006Z,Login,OK,0,100
+2026-03-05T19:16:16.006Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
