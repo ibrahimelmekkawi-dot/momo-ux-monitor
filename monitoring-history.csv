@@ -9555,4 +9555,11 @@ Call log:
 2026-03-06T11:30:59.923Z,Product Page,OK,0,100
 2026-03-06T11:30:59.923Z,Add To Cart,OK,0,100
 2026-03-06T11:30:59.923Z,Login,OK,0,100
-2026-03-06T11:30:59.923Z,Checkout,OK,0,100
+2026-03-06T11:30:59.923Z,Checkout,OK,0,1002026-03-06T11:46:07.255Z,Category,OK,26.978,100
+2026-03-06T11:46:07.255Z,Product Page,OK,0,100
+2026-03-06T11:46:07.255Z,Add To Cart,OK,0,100
+2026-03-06T11:46:07.255Z,Login,OK,0,100
+2026-03-06T11:46:07.255Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
