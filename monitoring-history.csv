@@ -9367,4 +9367,11 @@ Call log:
 2026-03-06T00:46:00.866Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
 Call log:
   - waiting for locator('button:has-text("Checkout")') to be visible
+,0,02026-03-06T01:01:10.859Z,Category,OK,25.492,100
+2026-03-06T01:01:10.859Z,Product Page,OK,0,100
+2026-03-06T01:01:10.859Z,Add To Cart,OK,0,100
+2026-03-06T01:01:10.859Z,Login,OK,0,100
+2026-03-06T01:01:10.859Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
 ,0,0
