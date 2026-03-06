@@ -9634,4 +9634,11 @@ Call log:
 2026-03-06T15:57:47.088Z,Product Page,OK,0,100
 2026-03-06T15:57:47.088Z,Add To Cart,OK,0,100
 2026-03-06T15:57:47.088Z,Login,OK,0,100
-2026-03-06T15:57:47.088Z,Checkout,OK,0,100
+2026-03-06T15:57:47.088Z,Checkout,OK,0,1002026-03-06T16:15:59.791Z,Category,OK,24.429,100
+2026-03-06T16:15:59.791Z,Product Page,OK,0,100
+2026-03-06T16:15:59.791Z,Add To Cart,OK,0,100
+2026-03-06T16:15:59.791Z,Login,OK,0,100
+2026-03-06T16:15:59.791Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
