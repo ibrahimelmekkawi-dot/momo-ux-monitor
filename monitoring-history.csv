@@ -9507,4 +9507,11 @@ Call log:
 2026-03-06T09:16:01.350Z,Product Page,OK,0,100
 2026-03-06T09:16:01.350Z,Add To Cart,OK,0,100
 2026-03-06T09:16:01.350Z,Login,OK,0,100
-2026-03-06T09:16:01.350Z,Checkout,OK,0,100
+2026-03-06T09:16:01.350Z,Checkout,OK,0,1002026-03-06T09:31:19.404Z,Category,OK,23.548,100
+2026-03-06T09:31:19.404Z,Product Page,OK,0,100
+2026-03-06T09:31:19.404Z,Add To Cart,OK,0,100
+2026-03-06T09:31:19.404Z,Login,OK,0,100
+2026-03-06T09:31:19.404Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
