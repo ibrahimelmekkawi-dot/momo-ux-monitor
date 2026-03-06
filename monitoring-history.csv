@@ -9540,4 +9540,11 @@ Call log:
 2026-03-06T10:46:02.346Z,Product Page,OK,0,100
 2026-03-06T10:46:02.346Z,Add To Cart,OK,0,100
 2026-03-06T10:46:02.346Z,Login,OK,0,100
-2026-03-06T10:46:02.346Z,Checkout,OK,0,100
+2026-03-06T10:46:02.346Z,Checkout,OK,0,1002026-03-06T11:00:55.966Z,Category,OK,25.91,100
+2026-03-06T11:00:55.966Z,Product Page,OK,0,100
+2026-03-06T11:00:55.966Z,Add To Cart,OK,0,100
+2026-03-06T11:00:55.966Z,Login,OK,0,100
+2026-03-06T11:00:55.966Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
