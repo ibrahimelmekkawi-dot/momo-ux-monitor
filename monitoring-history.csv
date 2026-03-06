@@ -9525,4 +9525,11 @@ Call log:
 2026-03-06T10:01:05.282Z,Product Page,OK,0,100
 2026-03-06T10:01:05.282Z,Add To Cart,OK,0,100
 2026-03-06T10:01:05.282Z,Login,OK,0,100
-2026-03-06T10:01:05.282Z,Checkout,OK,0,100
+2026-03-06T10:01:05.282Z,Checkout,OK,0,1002026-03-06T10:15:54.569Z,Category,OK,30.838,100
+2026-03-06T10:15:54.569Z,Product Page,OK,0,100
+2026-03-06T10:15:54.569Z,Add To Cart,OK,0,100
+2026-03-06T10:15:54.569Z,Login,OK,0,100
+2026-03-06T10:15:54.569Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
