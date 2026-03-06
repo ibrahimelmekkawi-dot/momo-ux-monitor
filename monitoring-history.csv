@@ -9714,4 +9714,11 @@ Call log:
 2026-03-06T19:31:05.486Z,Product Page,OK,0,100
 2026-03-06T19:31:05.486Z,Add To Cart,OK,0,100
 2026-03-06T19:31:05.486Z,Login,OK,0,100
-2026-03-06T19:31:05.486Z,Checkout,OK,0,100
+2026-03-06T19:31:05.486Z,Checkout,OK,0,1002026-03-06T19:46:03.064Z,Category,OK,25.677,100
+2026-03-06T19:46:03.064Z,Product Page,OK,0,100
+2026-03-06T19:46:03.064Z,Add To Cart,OK,0,100
+2026-03-06T19:46:03.064Z,Login,OK,0,100
+2026-03-06T19:46:03.064Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
