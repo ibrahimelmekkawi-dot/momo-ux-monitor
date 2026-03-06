@@ -9426,4 +9426,8 @@ Call log:
 2026-03-06T04:30:58.910Z,Product Page,OK,0,100
 2026-03-06T04:30:58.910Z,Add To Cart,OK,0,100
 2026-03-06T04:30:58.910Z,Login,OK,0,100
-2026-03-06T04:30:58.910Z,Checkout,OK,0,100
+2026-03-06T04:30:58.910Z,Checkout,OK,0,1002026-03-06T04:46:08.316Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.
+=========================== logs ===========================
+  "domcontentloaded" event fired
+  "load" event fired
+============================================================,0,0
