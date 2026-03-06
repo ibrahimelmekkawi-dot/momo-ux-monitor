@@ -9703,4 +9703,11 @@ Call log:
 2026-03-06T19:01:00.371Z,Product Page,OK,0,100
 2026-03-06T19:01:00.371Z,Add To Cart,OK,0,100
 2026-03-06T19:01:00.371Z,Login,OK,0,100
-2026-03-06T19:01:00.371Z,Checkout,OK,0,100
+2026-03-06T19:01:00.371Z,Checkout,OK,0,1002026-03-06T19:16:04.129Z,Category,OK,26.148,100
+2026-03-06T19:16:04.129Z,Product Page,OK,0,100
+2026-03-06T19:16:04.129Z,Add To Cart,OK,0,100
+2026-03-06T19:16:04.129Z,Login,OK,0,100
+2026-03-06T19:16:04.129Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
