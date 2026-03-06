@@ -9412,4 +9412,7 @@ Call log:
 2026-03-06T03:31:06.954Z,Product Page,OK,0,100
 2026-03-06T03:31:06.954Z,Add To Cart,OK,0,100
 2026-03-06T03:31:06.954Z,Login,OK,0,100
-2026-03-06T03:31:06.954Z,Checkout,OK,0,100
+2026-03-06T03:31:06.954Z,Checkout,OK,0,1002026-03-06T03:46:05.598Z,Failure,page.waitForSelector: Timeout 45000ms exceeded.
+Call log:
+  - waiting for locator('[class*="mtn-product-card"]') to be visible
+,0,0
