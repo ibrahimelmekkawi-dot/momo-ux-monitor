@@ -9729,4 +9729,11 @@ Call log:
 2026-03-06T20:01:00.183Z,Product Page,OK,0,100
 2026-03-06T20:01:00.183Z,Add To Cart,OK,0,100
 2026-03-06T20:01:00.183Z,Login,OK,0,100
-2026-03-06T20:01:00.183Z,Checkout,OK,0,100
+2026-03-06T20:01:00.183Z,Checkout,OK,0,1002026-03-06T20:16:09.963Z,Category,OK,25.348,100
+2026-03-06T20:16:09.963Z,Product Page,OK,0,100
+2026-03-06T20:16:09.963Z,Add To Cart,OK,0,100
+2026-03-06T20:16:09.963Z,Login,OK,0,100
+2026-03-06T20:16:09.963Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
