@@ -9892,4 +9892,11 @@ Call log:
 2026-03-07T05:46:10.866Z,Product Page,OK,0,100
 2026-03-07T05:46:10.866Z,Add To Cart,OK,0,100
 2026-03-07T05:46:10.866Z,Login,OK,0,100
-2026-03-07T05:46:10.866Z,Checkout,OK,0,100
+2026-03-07T05:46:10.866Z,Checkout,OK,0,1002026-03-07T06:01:04.215Z,Category,OK,28.963,100
+2026-03-07T06:01:04.215Z,Product Page,OK,0,100
+2026-03-07T06:01:04.215Z,Add To Cart,OK,0,100
+2026-03-07T06:01:04.215Z,Login,OK,0,100
+2026-03-07T06:01:04.215Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
