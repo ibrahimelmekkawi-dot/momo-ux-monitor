@@ -10074,4 +10074,10 @@ Call log:
 2026-03-07T14:16:09.295Z,Product Page,OK,0,100
 2026-03-07T14:16:09.295Z,Add To Cart,OK,0,100
 2026-03-07T14:16:09.295Z,Login,OK,0,100
-2026-03-07T14:16:09.295Z,Checkout,OK,0,100
+2026-03-07T14:16:09.295Z,Checkout,OK,0,1002026-03-07T14:31:01.284Z,Category,OK,22.548,100
+2026-03-07T14:31:01.284Z,Product Page,OK,0,100
+2026-03-07T14:31:01.284Z,Add To Cart,OK,0,100
+2026-03-07T14:31:01.284Z,Failure,page.fill: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('input[type="password"]')
+,0,0
