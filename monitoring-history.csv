@@ -10156,4 +10156,11 @@ Call log:
 =========================== logs ===========================
   "domcontentloaded" event fired
   "load" event fired
-============================================================,0,0
+============================================================,0,02026-03-07T19:00:14.541Z,Category,OK,30.259,100
+2026-03-07T19:00:14.541Z,Product Page,OK,0,100
+2026-03-07T19:00:14.541Z,Add To Cart,OK,0,100
+2026-03-07T19:00:14.541Z,Login,OK,0,100
+2026-03-07T19:00:14.541Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
