@@ -9852,4 +9852,8 @@ Call log:
 ============================================================,0,02026-03-07T03:15:53.780Z,Category,OK,30.961,100
 2026-03-07T03:15:53.780Z,Product Page,OK,0,100
 2026-03-07T03:15:53.780Z,Add To Cart,OK,0,100
-2026-03-07T03:15:53.780Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.,0,0
+2026-03-07T03:15:53.780Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.,0,02026-03-07T03:31:15.130Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.
+=========================== logs ===========================
+  "domcontentloaded" event fired
+  "load" event fired
+============================================================,0,0
