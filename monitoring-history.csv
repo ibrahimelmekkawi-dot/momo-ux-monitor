@@ -10140,4 +10140,8 @@ Call log:
 2026-03-07T17:58:24.495Z,Product Page,OK,0,100
 2026-03-07T17:58:24.495Z,Add To Cart,OK,0,100
 2026-03-07T17:58:24.495Z,Login,OK,0,100
-2026-03-07T17:58:24.495Z,Checkout,OK,0,100
+2026-03-07T17:58:24.495Z,Checkout,OK,0,1002026-03-07T18:00:57.086Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.
+=========================== logs ===========================
+  "domcontentloaded" event fired
+  "load" event fired
+============================================================,0,0
