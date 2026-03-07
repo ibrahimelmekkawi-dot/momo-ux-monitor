@@ -9837,4 +9837,8 @@ Call log:
 ============================================================,0,02026-03-07T02:16:03.374Z,Category,OK,34.661,100
 2026-03-07T02:16:03.374Z,Product Page,OK,0,100
 2026-03-07T02:16:03.374Z,Add To Cart,OK,0,100
-2026-03-07T02:16:03.374Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.,0,0
+2026-03-07T02:16:03.374Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.,0,02026-03-07T02:31:05.174Z,Category,OK,25.322,100
+2026-03-07T02:31:05.174Z,Product Page,OK,0,100
+2026-03-07T02:31:05.174Z,Add To Cart,OK,0,100
+2026-03-07T02:31:05.174Z,Login,OK,0,100
+2026-03-07T02:31:05.174Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.,0,0
