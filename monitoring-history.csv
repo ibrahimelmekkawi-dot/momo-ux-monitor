@@ -9956,4 +9956,11 @@ Call log:
        - <div class="spinner ng-star-inserted" _ngcontent-serverapp-c2052369478="">…</div> from <app-mtn-loader _nghost-serverapp-c2052369478="" _ngcontent-serverapp-c2022096464="">…</app-mtn-loader> subtree intercepts pointer events
   - retrying click action
     - waiting 500ms
+,0,02026-03-07T07:45:54.317Z,Category,OK,29.464,100
+2026-03-07T07:45:54.317Z,Product Page,OK,0,100
+2026-03-07T07:45:54.317Z,Add To Cart,OK,0,100
+2026-03-07T07:45:54.317Z,Login,OK,0,100
+2026-03-07T07:45:54.317Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
 ,0,0
