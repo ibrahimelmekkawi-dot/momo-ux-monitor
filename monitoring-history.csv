@@ -10086,4 +10086,10 @@ Call log:
 2026-03-07T15:01:01.908Z,Failure,page.fill: Timeout 30000ms exceeded.
 Call log:
   - waiting for locator('input[type="password"]')
+,0,02026-03-07T15:15:53.212Z,Category,OK,23.489,100
+2026-03-07T15:15:53.212Z,Product Page,OK,0,100
+2026-03-07T15:15:53.212Z,Add To Cart,OK,0,100
+2026-03-07T15:15:53.212Z,Failure,page.fill: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('input[type="password"]')
 ,0,0
