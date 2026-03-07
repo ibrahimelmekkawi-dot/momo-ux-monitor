@@ -9919,4 +9919,41 @@ Call log:
 2026-03-07T07:16:12.144Z,Product Page,OK,0,100
 2026-03-07T07:16:12.144Z,Add To Cart,OK,0,100
 2026-03-07T07:16:12.144Z,Login,OK,0,100
-2026-03-07T07:16:12.144Z,Checkout,OK,0,100
+2026-03-07T07:16:12.144Z,Checkout,OK,0,1002026-03-07T07:31:00.506Z,Category,OK,32.555,100
+2026-03-07T07:31:00.506Z,Product Page,OK,0,100
+2026-03-07T07:31:00.506Z,Add To Cart,OK,0,100
+2026-03-07T07:31:00.506Z,Failure,locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Sign-in")')
+    - locator resolved to <button pbutton="" type="button" _ngcontent-serverapp-c2034593079="" class="p-element sign-in-btn p-button p-component">…</button>
+  - attempting click action
+    2 × waiting for element to be visible  enabled and stable
+      - element is visible  enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="spinner ng-star-inserted" _ngcontent-serverapp-c2052369478="">…</div> from <app-mtn-loader _nghost-serverapp-c2052369478="" _ngcontent-serverapp-c2022096464="">…</app-mtn-loader> subtree intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    - waiting for element to be visible  enabled and stable
+    - element is not stable
+  - retrying click action
+    - waiting 100ms
+    - waiting for element to be visible  enabled and stable
+    - element is visible  enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div class="spinner ng-star-inserted" _ngcontent-serverapp-c2052369478="">…</div> from <app-mtn-loader _nghost-serverapp-c2052369478="" _ngcontent-serverapp-c2022096464="">…</app-mtn-loader> subtree intercepts pointer events
+  - retrying click action
+    - waiting 100ms
+    - waiting for element to be visible  enabled and stable
+    - element is not stable
+  55 × retrying click action
+       - waiting 500ms
+       - waiting for element to be visible  enabled and stable
+       - element is visible  enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - <div class="spinner ng-star-inserted" _ngcontent-serverapp-c2052369478="">…</div> from <app-mtn-loader _nghost-serverapp-c2052369478="" _ngcontent-serverapp-c2022096464="">…</app-mtn-loader> subtree intercepts pointer events
+  - retrying click action
+    - waiting 500ms
+,0,0
