@@ -10516,4 +10516,11 @@ Call log:
 2026-03-08T13:31:11.290Z,Product Page,OK,0,100
 2026-03-08T13:31:11.290Z,Add To Cart,OK,0,100
 2026-03-08T13:31:11.290Z,Login,OK,0,100
-2026-03-08T13:31:11.290Z,Checkout,OK,0,100
+2026-03-08T13:31:11.290Z,Checkout,OK,0,1002026-03-08T13:45:55.562Z,Category,OK,29.114,100
+2026-03-08T13:45:55.562Z,Product Page,OK,0,100
+2026-03-08T13:45:55.562Z,Add To Cart,OK,0,100
+2026-03-08T13:45:55.562Z,Login,OK,0,100
+2026-03-08T13:45:55.562Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
