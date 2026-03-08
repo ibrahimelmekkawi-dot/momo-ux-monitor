@@ -10635,4 +10635,11 @@ Call log:
 2026-03-08T20:48:08.301Z,Product Page,OK,0,100
 2026-03-08T20:48:08.301Z,Add To Cart,OK,0,100
 2026-03-08T20:48:08.301Z,Login,OK,0,100
-2026-03-08T20:48:08.301Z,Checkout,OK,0,100
+2026-03-08T20:48:08.301Z,Checkout,OK,0,1002026-03-08T21:01:01.348Z,Category,OK,24.928,100
+2026-03-08T21:01:01.348Z,Product Page,OK,0,100
+2026-03-08T21:01:01.348Z,Add To Cart,OK,0,100
+2026-03-08T21:01:01.348Z,Login,OK,0,100
+2026-03-08T21:01:01.348Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
