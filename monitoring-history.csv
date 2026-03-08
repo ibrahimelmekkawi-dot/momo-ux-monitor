@@ -10406,4 +10406,11 @@ Call log:
 2026-03-08T08:01:13.780Z,Product Page,OK,0,100
 2026-03-08T08:01:13.780Z,Add To Cart,OK,0,100
 2026-03-08T08:01:13.780Z,Login,OK,0,100
-2026-03-08T08:01:13.780Z,Checkout,OK,0,100
+2026-03-08T08:01:13.780Z,Checkout,OK,0,1002026-03-08T08:16:00.848Z,Category,OK,25.428,100
+2026-03-08T08:16:00.848Z,Product Page,OK,0,100
+2026-03-08T08:16:00.848Z,Add To Cart,OK,0,100
+2026-03-08T08:16:00.848Z,Login,OK,0,100
+2026-03-08T08:16:00.848Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
