@@ -10698,4 +10698,55 @@ Call log:
 2026-03-09T00:16:12.274Z,Product Page,OK,0,100
 2026-03-09T00:16:12.274Z,Add To Cart,OK,0,100
 2026-03-09T00:16:12.274Z,Login,OK,0,100
-2026-03-09T00:16:12.274Z,Checkout,OK,0,100
+2026-03-09T00:16:12.274Z,Checkout,OK,0,1002026-03-09T00:31:21.543Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.
+=========================== logs ===========================
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "load" event fired
+============================================================,0,0
