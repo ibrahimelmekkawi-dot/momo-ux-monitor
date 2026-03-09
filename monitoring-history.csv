@@ -11112,4 +11112,11 @@ Call log:
 2026-03-09T21:30:59.943Z,Product Page,OK,0,100
 2026-03-09T21:30:59.943Z,Add To Cart,OK,0,100
 2026-03-09T21:30:59.943Z,Login,OK,0,100
-2026-03-09T21:30:59.943Z,Checkout,OK,0,100
+2026-03-09T21:30:59.943Z,Checkout,OK,0,1002026-03-09T21:45:57.340Z,Category,OK,22.285,100
+2026-03-09T21:45:57.340Z,Product Page,OK,0,100
+2026-03-09T21:45:57.340Z,Add To Cart,OK,0,100
+2026-03-09T21:45:57.340Z,Login,OK,0,100
+2026-03-09T21:45:57.340Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
