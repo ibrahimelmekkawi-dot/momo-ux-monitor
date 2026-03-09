@@ -10845,4 +10845,11 @@ Call log:
 2026-03-09T06:16:11.916Z,Product Page,OK,0,100
 2026-03-09T06:16:11.916Z,Add To Cart,OK,0,100
 2026-03-09T06:16:11.916Z,Login,OK,0,100
-2026-03-09T06:16:11.916Z,Checkout,OK,0,100
+2026-03-09T06:16:11.916Z,Checkout,OK,0,1002026-03-09T06:30:57.245Z,Category,OK,25.93,100
+2026-03-09T06:30:57.245Z,Product Page,OK,0,100
+2026-03-09T06:30:57.245Z,Add To Cart,OK,0,100
+2026-03-09T06:30:57.245Z,Login,OK,0,100
+2026-03-09T06:30:57.245Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
