@@ -10787,4 +10787,8 @@ Call log:
 2026-03-09T02:46:09.534Z,Checkout,OK,0,1002026-03-09T03:00:58.241Z,Failure,page.waitForSelector: Timeout 45000ms exceeded.
 Call log:
   - waiting for locator('[class*="mtn-product-card"]') to be visible
-,0,0
+,0,02026-03-09T03:15:53.506Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.
+=========================== logs ===========================
+  "domcontentloaded" event fired
+  "load" event fired
+============================================================,0,0
