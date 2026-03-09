@@ -11131,4 +11131,11 @@ Call log:
 2026-03-09T22:46:06.964Z,Product Page,OK,0,100
 2026-03-09T22:46:06.964Z,Add To Cart,OK,0,100
 2026-03-09T22:46:06.964Z,Login,OK,0,100
-2026-03-09T22:46:06.964Z,Checkout,OK,0,100
+2026-03-09T22:46:06.964Z,Checkout,OK,0,1002026-03-09T23:00:02.047Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.
+=========================== logs ===========================
+  "domcontentloaded" event fired
+  "load" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "load" event fired
+============================================================,0,0
