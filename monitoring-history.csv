@@ -10860,4 +10860,8 @@ Call log:
 2026-03-09T07:01:13.791Z,Product Page,OK,0,100
 2026-03-09T07:01:13.791Z,Add To Cart,OK,0,100
 2026-03-09T07:01:13.791Z,Login,OK,0,100
-2026-03-09T07:01:13.791Z,Checkout,OK,0,100
+2026-03-09T07:01:13.791Z,Checkout,OK,0,1002026-03-09T07:16:02.601Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.
+=========================== logs ===========================
+  "domcontentloaded" event fired
+  "load" event fired
+============================================================,0,0
