@@ -10803,4 +10803,8 @@ Call log:
 =========================== logs ===========================
   "domcontentloaded" event fired
   "load" event fired
+============================================================,0,02026-03-09T04:15:54.757Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.
+=========================== logs ===========================
+  "domcontentloaded" event fired
+  "load" event fired
 ============================================================,0,0
