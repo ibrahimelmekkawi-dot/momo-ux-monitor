@@ -11166,4 +11166,9 @@ Call log:
 2026-03-10T00:46:01.257Z,Product Page,OK,0,100
 2026-03-10T00:46:01.257Z,Add To Cart,OK,0,100
 2026-03-10T00:46:01.257Z,Login,OK,0,100
-2026-03-10T00:46:01.257Z,Checkout,OK,0,100
+2026-03-10T00:46:01.257Z,Checkout,OK,0,1002026-03-10T01:01:09.937Z,Category,OK,43.107,100
+2026-03-10T01:01:09.937Z,Product Page,OK,0,100
+2026-03-10T01:01:09.937Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Add")') to be visible
+,0,0
