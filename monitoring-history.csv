@@ -11765,4 +11765,11 @@ Call log:
 2026-03-11T17:31:08.604Z,Product Page,OK,0,100
 2026-03-11T17:31:08.604Z,Add To Cart,OK,0,100
 2026-03-11T17:31:08.604Z,Login,OK,0,100
-2026-03-11T17:31:08.604Z,Checkout,OK,0,100
+2026-03-11T17:31:08.604Z,Checkout,OK,0,1002026-03-11T17:46:09.746Z,Category,OK,25.319,100
+2026-03-11T17:46:09.746Z,Product Page,OK,0,100
+2026-03-11T17:46:09.746Z,Add To Cart,OK,0,100
+2026-03-11T17:46:09.746Z,Login,OK,0,100
+2026-03-11T17:46:09.746Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
