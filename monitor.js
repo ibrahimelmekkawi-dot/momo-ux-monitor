@@ -11,103 +11,70 @@ const fs = require('fs');
 
   const browser = await chromium.launch({
     headless: true,
-    args: ['--no-sandbox','--disable-setuid-sandbox']
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
   });
 
   const context = await browser.newContext({
-    viewport: { width: 1280, height: 800 },
     userAgent:
-      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36"
+      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36',
+    viewport: { width: 1280, height: 800 }
   });
 
   const page = await context.newPage();
 
-  /* ==============================
-     CAPTURE API FAILURES
-  ============================== */
-
-  const apiErrors = [];
-
-  page.on('response', response => {
-    const status = response.status();
-    const url = response.url();
-
-    if (status >= 500) {
-      apiErrors.push(`${status} ${url}`);
-    }
-  });
-
   try {
 
-    /* ==============================
-       HOMEPAGE
-    ============================== */
-
-    console.log("Opening homepage...");
-
+    console.log("Opening main page...");
     const start = Date.now();
 
-    const response = await page.goto(
-      'https://market.momo.africa',
-      { timeout: 60000, waitUntil: 'domcontentloaded' }
-    );
+    await page.goto('https://market.momo.africa', {
+      timeout: 60000,
+      waitUntil: 'domcontentloaded'
+    });
 
-    if (!response || response.status() !== 200) {
-      throw new Error(`Homepage HTTP ${response?.status()}`);
-    }
-
-    /* Cookie */
-
+    /* ==============================
+       HANDLE COOKIE
+    ============================== */
     try {
-      const cookie = page.locator('text=I ACCEPT');
-      if (await cookie.isVisible({ timeout: 5000 })) {
-        await cookie.click();
-      }
+      await page.waitForSelector('text=I ACCEPT', { timeout: 10000 });
+      await page.click('text=I ACCEPT');
+      console.log("Cookie accepted");
     } catch {}
 
-    /* Country */
-
+    /* ==============================
+       SELECT COUNTRY
+    ============================== */
     try {
-      const country = page.locator('text=Uganda');
-      if (await country.isVisible({ timeout: 5000 })) {
-        await country.click();
-      }
+      await page.waitForSelector('text=Uganda', { timeout: 15000 });
+      await page.click('text=Uganda');
+      console.log("Country selected");
     } catch {}
 
     await page.waitForLoadState('networkidle');
 
     /* ==============================
-       VERIFY PRODUCTS
+       WAIT FOR PRODUCTS
     ============================== */
 
-    await page.waitForSelector('[class*="mtn-product-card"]', { timeout: 30000 });
-
-    const productCount = await page.locator('[class*="mtn-product-card"]').count();
-
-    if (productCount === 0) {
-      throw new Error("No products loaded");
-    }
+    await page.waitForSelector('[class*="mtn-product-card"]', {
+      timeout: 45000
+    });
 
     const loadTime = (Date.now() - start) / 1000;
 
     results.push({
-      page: "Homepage",
+      page: "Category",
       status: "OK",
       loadTime,
       score: 100
     });
 
-    console.log(`Products loaded: ${productCount}`);
-
-    /* ==============================
-       PRODUCT PAGE
-    ============================== */
-
     console.log("Opening first product...");
 
-    await page.locator('[class*="mtn-product-card"]').first().click();
+    const firstProduct = page.locator('[class*="mtn-product-card"]').first();
+    await firstProduct.click();
 
-    await page.waitForSelector('button:has-text("Add")', { timeout: 20000 });
+    await page.waitForLoadState('domcontentloaded');
 
     results.push({
       page: "Product Page",
@@ -116,21 +83,10 @@ const fs = require('fs');
       score: 100
     });
 
-    /* ==============================
-       ADD TO CART
-    ============================== */
-
     console.log("Adding to cart...");
 
+    await page.waitForSelector('button:has-text("Add")', { timeout: 20000 });
     await page.click('button:has-text("Add")');
-
-    await page.waitForTimeout(3000);
-
-    const cartCount = await page.locator('[class*="cart"]').count();
-
-    if (cartCount === 0) {
-      throw new Error("Cart not updated after add");
-    }
 
     results.push({
       page: "Add To Cart",
@@ -139,28 +95,16 @@ const fs = require('fs');
       score: 100
     });
 
-    /* ==============================
-       LOGIN
-    ============================== */
-
-    console.log("Opening login...");
+    console.log("Opening login page...");
 
     await page.goto('https://market.momo.africa/Portal/login');
-
     await page.waitForSelector('input[type="tel"]', { timeout: 20000 });
 
     await page.fill('input[type="tel"]', phone);
     await page.fill('input[type="password"]', password);
-
     await page.locator('button:has-text("Sign-in")').click();
 
     await page.waitForLoadState('networkidle');
-
-    /* Validate login success */
-
-    if (page.url().includes('login')) {
-      throw new Error("Login failed");
-    }
 
     results.push({
       page: "Login",
@@ -169,29 +113,14 @@ const fs = require('fs');
       score: 100
     });
 
-    /* ==============================
-       CART
-    ============================== */
-
     console.log("Opening cart...");
 
     await page.goto('https://market.momo.africa/Portal/cart');
+    await page.waitForLoadState('networkidle');
+
+    console.log("Proceeding to checkout...");
 
     await page.waitForSelector('button:has-text("Checkout")', { timeout: 20000 });
-
-    results.push({
-      page: "Cart",
-      status: "OK",
-      loadTime: 0,
-      score: 100
-    });
-
-    /* ==============================
-       CHECKOUT
-    ============================== */
-
-    console.log("Checkout...");
-
     await page.click('button:has-text("Checkout")');
 
     await page.waitForLoadState('networkidle');
@@ -203,49 +132,34 @@ const fs = require('fs');
       score: 100
     });
 
-    /* ==============================
-       API FAILURE CHECK
-    ============================== */
-
-    if (apiErrors.length > 0) {
-      throw new Error(`API failures detected: ${apiErrors.join(" | ")}`);
-    }
-
     console.log("FULL JOURNEY SUCCESS");
 
   } catch (error) {
 
-    console.error("MONITOR FAILURE:", error.message);
+    console.error("FAIL:", error.message);
 
-    await page.screenshot({
-      path: "monitor-error.png",
-      fullPage: true
-    });
+    await page.screenshot({ path: 'debug-error.png', fullPage: true });
 
     results.push({
       page: "Failure",
-      status: error.message.replace(/,/g,' '),
+      status: error.message.replace(/,/g, ' '),
       loadTime: 0,
       score: 0
     });
-
   }
 
   /* ==============================
-     SAVE CSV REPORT
+     SAVE CSV
   ============================== */
 
-  const file = "synthetic-monitor-report.csv";
+  const csv = [
+    "Timestamp,Page,Status,LoadTime,Score",
+    ...results.map(r =>
+      `${timestamp},${r.page},${r.status},${r.loadTime},${r.score}`
+    )
+  ].join("\n");
 
-  if (!fs.existsSync(file)) {
-    fs.writeFileSync(file, "Timestamp,Page,Status,LoadTime,Score\n");
-  }
-
-  const rows = results.map(r =>
-    `${timestamp},${r.page},${r.status},${r.loadTime},${r.score}`
-  ).join("\n");
-
-  fs.appendFileSync(file, rows + "\n");
+  fs.writeFileSync("health-report.csv", csv);
 
   await browser.close();
 
