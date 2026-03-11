@@ -11667,4 +11667,4 @@ Call log:
 2026-03-11T04:01:12.197Z,Product Page,OK,0,100
 2026-03-11T04:01:12.197Z,Add To Cart,OK,0,100
 2026-03-11T04:01:12.197Z,Login,OK,0,100
-2026-03-11T04:01:12.197Z,Checkout,OK,0,1002026-03-11T04:16:12.369Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.,0,0
+2026-03-11T04:01:12.197Z,Checkout,OK,0,1002026-03-11T04:16:12.369Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.,0,02026-03-11T04:30:56.320Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.,0,0
