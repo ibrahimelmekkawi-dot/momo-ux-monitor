@@ -12235,4 +12235,11 @@ Call log:
 2026-03-12T22:01:09.401Z,Product Page,OK,0,100
 2026-03-12T22:01:09.401Z,Add To Cart,OK,0,100
 2026-03-12T22:01:09.401Z,Login,OK,0,100
-2026-03-12T22:01:09.401Z,Checkout,OK,0,100
+2026-03-12T22:01:09.401Z,Checkout,OK,0,1002026-03-12T22:16:13.974Z,Category,OK,25.499,100
+2026-03-12T22:16:13.974Z,Product Page,OK,0,100
+2026-03-12T22:16:13.974Z,Add To Cart,OK,0,100
+2026-03-12T22:16:13.974Z,Login,OK,0,100
+2026-03-12T22:16:13.974Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
