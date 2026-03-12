@@ -11992,4 +11992,10 @@ Call log:
 2026-03-12T07:31:07.235Z,Failure,page.fill: Timeout 30000ms exceeded.
 Call log:
   - waiting for locator('input[type="password"]')
+,0,02026-03-12T07:46:14.847Z,Category,OK,32.655,100
+2026-03-12T07:46:14.847Z,Product Page,OK,0,100
+2026-03-12T07:46:14.847Z,Add To Cart,OK,0,100
+2026-03-12T07:46:14.847Z,Failure,page.fill: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('input[type="password"]')
 ,0,0
