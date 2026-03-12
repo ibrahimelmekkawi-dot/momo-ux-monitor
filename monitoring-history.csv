@@ -12026,4 +12026,11 @@ Call log:
 2026-03-12T09:16:12.090Z,Product Page,OK,0,100
 2026-03-12T09:16:12.090Z,Add To Cart,OK,0,100
 2026-03-12T09:16:12.090Z,Login,OK,0,100
-2026-03-12T09:16:12.090Z,Checkout,OK,0,100
+2026-03-12T09:16:12.090Z,Checkout,OK,0,1002026-03-12T09:31:11.889Z,Category,OK,26.682,100
+2026-03-12T09:31:11.889Z,Product Page,OK,0,100
+2026-03-12T09:31:11.889Z,Add To Cart,OK,0,100
+2026-03-12T09:31:11.889Z,Login,OK,0,100
+2026-03-12T09:31:11.889Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
