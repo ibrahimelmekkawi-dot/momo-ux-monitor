@@ -11998,4 +11998,10 @@ Call log:
 2026-03-12T07:46:14.847Z,Failure,page.fill: Timeout 30000ms exceeded.
 Call log:
   - waiting for locator('input[type="password"]')
+,0,02026-03-12T08:01:06.367Z,Category,OK,30.912,100
+2026-03-12T08:01:06.367Z,Product Page,OK,0,100
+2026-03-12T08:01:06.367Z,Add To Cart,OK,0,100
+2026-03-12T08:01:06.367Z,Failure,page.fill: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('input[type="password"]')
 ,0,0
