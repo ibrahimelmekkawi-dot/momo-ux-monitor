@@ -11986,4 +11986,10 @@ Call log:
 2026-03-12T07:16:05.313Z,Product Page,OK,0,100
 2026-03-12T07:16:05.313Z,Add To Cart,OK,0,100
 2026-03-12T07:16:05.313Z,Login,OK,0,100
-2026-03-12T07:16:05.313Z,Checkout,OK,0,100
+2026-03-12T07:16:05.313Z,Checkout,OK,0,1002026-03-12T07:31:07.235Z,Category,OK,24.83,100
+2026-03-12T07:31:07.235Z,Product Page,OK,0,100
+2026-03-12T07:31:07.235Z,Add To Cart,OK,0,100
+2026-03-12T07:31:07.235Z,Failure,page.fill: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('input[type="password"]')
+,0,0
