@@ -11894,4 +11894,10 @@ Call log:
 2026-03-12T01:01:16.425Z,Checkout,OK,0,1002026-03-12T01:16:15.028Z,Failure,page.waitForSelector: Timeout 45000ms exceeded.
 Call log:
   - waiting for locator('[class*="mtn-product-card"]') to be visible
+,0,02026-03-12T01:31:07.177Z,Category,OK,25.268,100
+2026-03-12T01:31:07.177Z,Product Page,OK,0,100
+2026-03-12T01:31:07.177Z,Add To Cart,OK,0,100
+2026-03-12T01:31:07.177Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('input[type="tel"]') to be visible
 ,0,0
