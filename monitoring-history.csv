@@ -12298,4 +12298,8 @@ Call log:
 2026-03-13T01:45:58.945Z,Product Page,OK,0,100
 2026-03-13T01:45:58.945Z,Add To Cart,OK,0,100
 2026-03-13T01:45:58.945Z,Login,OK,0,100
-2026-03-13T01:45:58.945Z,Checkout,OK,0,100
+2026-03-13T01:45:58.945Z,Checkout,OK,0,1002026-03-13T02:01:12.168Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.
+=========================== logs ===========================
+  "domcontentloaded" event fired
+  "load" event fired
+============================================================,0,0
