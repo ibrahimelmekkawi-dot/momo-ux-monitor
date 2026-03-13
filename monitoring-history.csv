@@ -12318,4 +12318,11 @@ Call log:
 2026-03-13T03:00:56.980Z,Product Page,OK,0,100
 2026-03-13T03:00:56.980Z,Add To Cart,OK,0,100
 2026-03-13T03:00:56.980Z,Login,OK,0,100
-2026-03-13T03:00:56.980Z,Checkout,OK,0,100
+2026-03-13T03:00:56.980Z,Checkout,OK,0,1002026-03-13T03:15:57.333Z,Category,OK,24.932,100
+2026-03-13T03:15:57.333Z,Product Page,OK,0,100
+2026-03-13T03:15:57.333Z,Add To Cart,OK,0,100
+2026-03-13T03:15:57.333Z,Login,OK,0,100
+2026-03-13T03:15:57.333Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
