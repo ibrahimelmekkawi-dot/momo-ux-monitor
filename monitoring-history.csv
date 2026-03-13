@@ -12555,4 +12555,11 @@ Call log:
 =========================== logs ===========================
   "domcontentloaded" event fired
   "load" event fired
-============================================================,0,0
+============================================================,0,02026-03-13T17:16:09.687Z,Category,OK,32.635,100
+2026-03-13T17:16:09.687Z,Product Page,OK,0,100
+2026-03-13T17:16:09.687Z,Add To Cart,OK,0,100
+2026-03-13T17:16:09.687Z,Login,OK,0,100
+2026-03-13T17:16:09.687Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
