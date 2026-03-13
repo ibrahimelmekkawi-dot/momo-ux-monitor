@@ -12270,4 +12270,11 @@ Call log:
 2026-03-13T00:16:19.790Z,Product Page,OK,0,100
 2026-03-13T00:16:19.790Z,Add To Cart,OK,0,100
 2026-03-13T00:16:19.790Z,Login,OK,0,100
-2026-03-13T00:16:19.790Z,Checkout,OK,0,100
+2026-03-13T00:16:19.790Z,Checkout,OK,0,1002026-03-13T00:31:18.846Z,Category,OK,27.121,100
+2026-03-13T00:31:18.846Z,Product Page,OK,0,100
+2026-03-13T00:31:18.846Z,Add To Cart,OK,0,100
+2026-03-13T00:31:18.846Z,Login,OK,0,100
+2026-03-13T00:31:18.846Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
