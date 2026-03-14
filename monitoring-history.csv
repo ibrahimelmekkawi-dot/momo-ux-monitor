@@ -13122,4 +13122,7 @@ Call log:
   "commit" event fired
   "domcontentloaded" event fired
   "commit" event fired
-============================================================,0,0
+============================================================,0,02026-03-14T21:15:56.737Z,Failure,page.waitForSelector: Timeout 45000ms exceeded.
+Call log:
+  - waiting for locator('[class*="mtn-product-card"]') to be visible
+,0,0
