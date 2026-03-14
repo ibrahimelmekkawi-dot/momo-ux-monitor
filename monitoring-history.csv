@@ -13144,4 +13144,8 @@ Call log:
 ============================================================,0,02026-03-14T22:31:13.132Z,Failure,page.waitForSelector: Timeout 45000ms exceeded.
 Call log:
   - waiting for locator('[class*="mtn-product-card"]') to be visible
-,0,0
+,0,02026-03-14T22:46:09.386Z,Category,OK,28.572,100
+2026-03-14T22:46:09.386Z,Product Page,OK,0,100
+2026-03-14T22:46:09.386Z,Add To Cart,OK,0,100
+2026-03-14T22:46:09.386Z,Login,OK,0,100
+2026-03-14T22:46:09.386Z,Checkout,OK,0,100
