@@ -12811,4 +12811,8 @@ Call log:
        - <div class="spinner ng-star-inserted" _ngcontent-serverapp-c2052369478="">…</div> from <app-mtn-loader _nghost-serverapp-c2052369478="" _ngcontent-serverapp-c2022096464="">…</app-mtn-loader> subtree intercepts pointer events
   - retrying click action
     - waiting 500ms
-,0,0
+,0,02026-03-14T07:15:55.501Z,Category,OK,25.346,100
+2026-03-14T07:15:55.501Z,Product Page,OK,0,100
+2026-03-14T07:15:55.501Z,Add To Cart,OK,0,100
+2026-03-14T07:15:55.501Z,Login,OK,0,100
+2026-03-14T07:15:55.501Z,Checkout,OK,0,100
