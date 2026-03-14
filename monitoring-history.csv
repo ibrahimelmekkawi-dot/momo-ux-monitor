@@ -12778,4 +12778,37 @@ Call log:
 2026-03-14T06:31:06.607Z,Checkout,OK,0,1002026-03-14T06:45:56.198Z,Failure,page.waitForSelector: Timeout 45000ms exceeded.
 Call log:
   - waiting for locator('[class*="mtn-product-card"]') to be visible
+,0,02026-03-14T07:01:00.314Z,Category,OK,29.779,100
+2026-03-14T07:01:00.314Z,Product Page,OK,0,100
+2026-03-14T07:01:00.314Z,Add To Cart,OK,0,100
+2026-03-14T07:01:00.314Z,Failure,locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Sign-in")')
+    - locator resolved to <button pbutton="" type="button" _ngcontent-serverapp-c2034593079="" class="p-element sign-in-btn p-button p-component">…</button>
+  - attempting click action
+    2 × waiting for element to be visible  enabled and stable
+      - element is visible  enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="spinner ng-star-inserted" _ngcontent-serverapp-c2052369478="">…</div> from <app-mtn-loader _nghost-serverapp-c2052369478="" _ngcontent-serverapp-c2022096464="">…</app-mtn-loader> subtree intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    - waiting for element to be visible  enabled and stable
+    - element is visible  enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div class="spinner ng-star-inserted" _ngcontent-serverapp-c2052369478="">…</div> from <app-mtn-loader _nghost-serverapp-c2052369478="" _ngcontent-serverapp-c2022096464="">…</app-mtn-loader> subtree intercepts pointer events
+  2 × retrying click action
+      - waiting 100ms
+      - waiting for element to be visible  enabled and stable
+      - element is not stable
+  55 × retrying click action
+       - waiting 500ms
+       - waiting for element to be visible  enabled and stable
+       - element is visible  enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - <div class="spinner ng-star-inserted" _ngcontent-serverapp-c2052369478="">…</div> from <app-mtn-loader _nghost-serverapp-c2052369478="" _ngcontent-serverapp-c2022096464="">…</app-mtn-loader> subtree intercepts pointer events
+  - retrying click action
+    - waiting 500ms
 ,0,0
