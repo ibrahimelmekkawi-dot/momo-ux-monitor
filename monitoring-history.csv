@@ -12927,4 +12927,11 @@ Call log:
 2026-03-14T14:16:07.154Z,Product Page,OK,0,100
 2026-03-14T14:16:07.154Z,Add To Cart,OK,0,100
 2026-03-14T14:16:07.154Z,Login,OK,0,100
-2026-03-14T14:16:07.154Z,Checkout,OK,0,100
+2026-03-14T14:16:07.154Z,Checkout,OK,0,1002026-03-14T14:31:10.117Z,Category,OK,27.415,100
+2026-03-14T14:31:10.117Z,Product Page,OK,0,100
+2026-03-14T14:31:10.117Z,Add To Cart,OK,0,100
+2026-03-14T14:31:10.117Z,Login,OK,0,100
+2026-03-14T14:31:10.117Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
