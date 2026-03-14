@@ -12732,4 +12732,7 @@ Call log:
 2026-03-14T03:45:55.705Z,Product Page,OK,0,100
 2026-03-14T03:45:55.705Z,Add To Cart,OK,0,100
 2026-03-14T03:45:55.705Z,Login,OK,0,100
-2026-03-14T03:45:55.705Z,Checkout,OK,0,100
+2026-03-14T03:45:55.705Z,Checkout,OK,0,1002026-03-14T04:00:58.331Z,Failure,page.waitForSelector: Timeout 45000ms exceeded.
+Call log:
+  - waiting for locator('[class*="mtn-product-card"]') to be visible
+,0,0
