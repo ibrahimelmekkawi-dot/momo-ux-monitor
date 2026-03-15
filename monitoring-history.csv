@@ -13572,4 +13572,10 @@ Call log:
 2026-03-15T23:16:03.594Z,Product Page,OK,0,100
 2026-03-15T23:16:03.594Z,Add To Cart,OK,0,100
 2026-03-15T23:16:03.594Z,Login,OK,0,100
-2026-03-15T23:16:03.594Z,Checkout,OK,0,100
+2026-03-15T23:16:03.594Z,Checkout,OK,0,1002026-03-15T23:31:06.543Z,Category,OK,9.065,100
+2026-03-15T23:31:06.543Z,Product Page,OK,0,100
+2026-03-15T23:31:06.543Z,Add To Cart,OK,0,100
+2026-03-15T23:31:06.543Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('input[type="tel"]') to be visible
+,0,0
