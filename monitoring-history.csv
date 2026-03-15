@@ -13557,4 +13557,7 @@ Call log:
 =========================== logs ===========================
   "domcontentloaded" event fired
   "load" event fired
-============================================================,0,0
+============================================================,0,02026-03-15T22:30:57.265Z,Failure,page.waitForSelector: Timeout 45000ms exceeded.
+Call log:
+  - waiting for locator('[class*="mtn-product-card"]') to be visible
+,0,0
