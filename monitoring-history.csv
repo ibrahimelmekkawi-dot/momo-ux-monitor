@@ -13599,4 +13599,11 @@ Call log:
 2026-03-16T00:15:54.319Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
 Call log:
   - waiting for locator('input[type="tel"]') to be visible
+,0,02026-03-16T00:31:11.785Z,Category,OK,8.291,100
+2026-03-16T00:31:11.785Z,Product Page,OK,0,100
+2026-03-16T00:31:11.785Z,Add To Cart,OK,0,100
+2026-03-16T00:31:11.785Z,Login,OK,0,100
+2026-03-16T00:31:11.785Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
 ,0,0
