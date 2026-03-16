@@ -13705,4 +13705,11 @@ Call log:
 2026-03-16T05:46:15.774Z,Product Page,OK,0,100
 2026-03-16T05:46:15.774Z,Add To Cart,OK,0,100
 2026-03-16T05:46:15.774Z,Login,OK,0,100
-2026-03-16T05:46:15.774Z,Checkout,OK,0,100
+2026-03-16T05:46:15.774Z,Checkout,OK,0,1002026-03-16T05:59:50.277Z,Category,OK,7.354,100
+2026-03-16T05:59:50.277Z,Product Page,OK,0,100
+2026-03-16T05:59:50.277Z,Add To Cart,OK,0,100
+2026-03-16T05:59:50.277Z,Login,OK,0,100
+2026-03-16T05:59:50.277Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
