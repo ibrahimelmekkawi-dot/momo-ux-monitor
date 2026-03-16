@@ -13593,4 +13593,10 @@ Call log:
 2026-03-16T00:01:12.187Z,Product Page,OK,0,100
 2026-03-16T00:01:12.187Z,Add To Cart,OK,0,100
 2026-03-16T00:01:12.187Z,Login,OK,0,100
-2026-03-16T00:01:12.187Z,Checkout,OK,0,100
+2026-03-16T00:01:12.187Z,Checkout,OK,0,1002026-03-16T00:15:54.319Z,Category,OK,7.344,100
+2026-03-16T00:15:54.319Z,Product Page,OK,0,100
+2026-03-16T00:15:54.319Z,Add To Cart,OK,0,100
+2026-03-16T00:15:54.319Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('input[type="tel"]') to be visible
+,0,0
