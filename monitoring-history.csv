@@ -13641,4 +13641,10 @@ Call log:
 2026-03-16T02:31:07.219Z,Product Page,OK,0,100
 2026-03-16T02:31:07.219Z,Add To Cart,OK,0,100
 2026-03-16T02:31:07.219Z,Login,OK,0,100
-2026-03-16T02:31:07.219Z,Checkout,OK,0,100
+2026-03-16T02:31:07.219Z,Checkout,OK,0,1002026-03-16T02:46:06.945Z,Category,OK,31.4,100
+2026-03-16T02:46:06.945Z,Product Page,OK,0,100
+2026-03-16T02:46:06.945Z,Add To Cart,OK,0,100
+2026-03-16T02:46:06.945Z,Failure,page.fill: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('input[type="password"]')
+,0,0
