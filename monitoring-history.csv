@@ -14088,4 +14088,10 @@ Call log:
 2026-03-17T04:16:01.932Z,Product Page,OK,0,100
 2026-03-17T04:16:01.932Z,Add To Cart,OK,0,100
 2026-03-17T04:16:01.932Z,Login,OK,0,100
-2026-03-17T04:16:01.932Z,Checkout,OK,0,100
+2026-03-17T04:16:01.932Z,Checkout,OK,0,1002026-03-17T04:30:56.838Z,Category,OK,26.189,100
+2026-03-17T04:30:56.838Z,Product Page,OK,0,100
+2026-03-17T04:30:56.838Z,Add To Cart,OK,0,100
+2026-03-17T04:30:56.838Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('input[type="tel"]') to be visible
+,0,0
