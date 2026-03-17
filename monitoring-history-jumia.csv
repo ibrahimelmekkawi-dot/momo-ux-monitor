@@ -7766,3 +7766,6 @@ Timestamp,Page,Status,LoadTime,Score
 2026-03-17T10:08:04.342Z,Category,OK,2.686,100
 2026-03-17T10:08:04.342Z,Product Page,OK,0.688,100
 2026-03-17T10:08:04.342Z,Add To Cart,OK,0,100
+2026-03-17T10:22:59.788Z,Homepage,OK,8.632,100
+2026-03-17T10:22:59.788Z,Category,OK,2.138,100
+2026-03-17T10:22:59.788Z,Failure,page.waitForSelector: Timeout 30000ms exceeded. Call log:   - waiting for locator('button:has-text("Add to cart")') to be visible     4 × locator resolved to 40 elements. Proceeding with the first one: <button value="in" type="button" name="action" data-submit="" class="add btn _prim -pea _md">Add to cart</button>     60 × locator resolved to 52 elements. Proceeding with the first one: <button value="in" type="button" name="action" data-submit="" class="add btn _prim -pea _md">Add to cart</button>,0,0
