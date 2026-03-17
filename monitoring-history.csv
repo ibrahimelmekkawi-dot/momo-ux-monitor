@@ -14190,4 +14190,11 @@ Call log:
 2026-03-17T10:01:24.452Z,Product Page,OK,0,100
 2026-03-17T10:01:24.452Z,Add To Cart,OK,0,100
 2026-03-17T10:01:24.452Z,Login,OK,0,100
-2026-03-17T10:01:24.452Z,Checkout,OK,0,100
+2026-03-17T10:01:24.452Z,Checkout,OK,0,1002026-03-17T10:15:57.440Z,Category,OK,7.39,100
+2026-03-17T10:15:57.440Z,Product Page,OK,0,100
+2026-03-17T10:15:57.440Z,Add To Cart,OK,0,100
+2026-03-17T10:15:57.440Z,Login,OK,0,100
+2026-03-17T10:15:57.440Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
