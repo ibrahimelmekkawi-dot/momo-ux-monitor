@@ -14295,4 +14295,11 @@ Call log:
 2026-03-17T15:31:18.525Z,Product Page,OK,0,100
 2026-03-17T15:31:18.525Z,Add To Cart,OK,0,100
 2026-03-17T15:31:18.525Z,Login,OK,0,100
-2026-03-17T15:31:18.525Z,Checkout,OK,0,100
+2026-03-17T15:31:18.525Z,Checkout,OK,0,1002026-03-17T15:46:00.598Z,Category,OK,6.741,100
+2026-03-17T15:46:00.598Z,Product Page,OK,0,100
+2026-03-17T15:46:00.598Z,Add To Cart,OK,0,100
+2026-03-17T15:46:00.598Z,Login,OK,0,100
+2026-03-17T15:46:00.598Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
