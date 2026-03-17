@@ -14062,4 +14062,11 @@ Call log:
 2026-03-17T03:01:18.909Z,Product Page,OK,0,100
 2026-03-17T03:01:18.909Z,Add To Cart,OK,0,100
 2026-03-17T03:01:18.909Z,Login,OK,0,100
-2026-03-17T03:01:18.909Z,Checkout,OK,0,100
+2026-03-17T03:01:18.909Z,Checkout,OK,0,1002026-03-17T03:15:56.582Z,Category,OK,7.369,100
+2026-03-17T03:15:56.582Z,Product Page,OK,0,100
+2026-03-17T03:15:56.582Z,Add To Cart,OK,0,100
+2026-03-17T03:15:56.582Z,Login,OK,0,100
+2026-03-17T03:15:56.582Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
