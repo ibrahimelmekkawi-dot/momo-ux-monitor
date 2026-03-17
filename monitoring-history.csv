@@ -14417,4 +14417,11 @@ Call log:
 2026-03-17T23:31:06.861Z,Product Page,OK,0,100
 2026-03-17T23:31:06.861Z,Add To Cart,OK,0,100
 2026-03-17T23:31:06.861Z,Login,OK,0,100
-2026-03-17T23:31:06.861Z,Checkout,OK,0,100
+2026-03-17T23:31:06.861Z,Checkout,OK,0,1002026-03-17T23:46:03.700Z,Category,OK,7.964,100
+2026-03-17T23:46:03.700Z,Product Page,OK,0,100
+2026-03-17T23:46:03.700Z,Add To Cart,OK,0,100
+2026-03-17T23:46:03.700Z,Login,OK,0,100
+2026-03-17T23:46:03.700Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
