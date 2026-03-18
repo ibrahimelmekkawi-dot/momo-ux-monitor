@@ -14702,4 +14702,11 @@ Call log:
 2026-03-18T17:16:14.553Z,Product Page,OK,0,100
 2026-03-18T17:16:14.553Z,Add To Cart,OK,0,100
 2026-03-18T17:16:14.553Z,Login,OK,0,100
-2026-03-18T17:16:14.553Z,Checkout,OK,0,100
+2026-03-18T17:16:14.553Z,Checkout,OK,0,1002026-03-18T17:46:06.321Z,Category,OK,10.236,100
+2026-03-18T17:46:06.321Z,Product Page,OK,0,100
+2026-03-18T17:46:06.321Z,Add To Cart,OK,0,100
+2026-03-18T17:46:06.321Z,Login,OK,0,100
+2026-03-18T17:46:06.321Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
