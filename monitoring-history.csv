@@ -14579,4 +14579,11 @@ Call log:
 2026-03-18T08:46:09.164Z,Checkout,OK,0,1002026-03-18T09:01:21.065Z,Failure,page.waitForSelector: Timeout 45000ms exceeded.
 Call log:
   - waiting for locator('[class*="mtn-product-card"]') to be visible
+,0,02026-03-18T09:15:59.886Z,Category,OK,7.268,100
+2026-03-18T09:15:59.886Z,Product Page,OK,0,100
+2026-03-18T09:15:59.886Z,Add To Cart,OK,0,100
+2026-03-18T09:15:59.886Z,Login,OK,0,100
+2026-03-18T09:15:59.886Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
 ,0,0
