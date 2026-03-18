@@ -14492,4 +14492,8 @@ Call log:
 2026-03-18T03:46:05.413Z,Product Page,OK,0,100
 2026-03-18T03:46:05.413Z,Add To Cart,OK,0,100
 2026-03-18T03:46:05.413Z,Login,OK,0,100
-2026-03-18T03:46:05.413Z,Checkout,OK,0,100
+2026-03-18T03:46:05.413Z,Checkout,OK,0,1002026-03-18T04:01:19.379Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.
+=========================== logs ===========================
+  "domcontentloaded" event fired
+  "load" event fired
+============================================================,0,0
