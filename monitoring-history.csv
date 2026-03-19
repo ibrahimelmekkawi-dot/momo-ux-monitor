@@ -14859,4 +14859,10 @@ Call log:
 ,0,02026-03-19T04:01:09.811Z,Failure,page.waitForSelector: Timeout 45000ms exceeded.
 Call log:
   - waiting for locator('[class*="mtn-product-card"]') to be visible
+,0,02026-03-19T04:16:35.780Z,Category,OK,29.848,100
+2026-03-19T04:16:35.780Z,Product Page,OK,0,100
+2026-03-19T04:16:35.780Z,Add To Cart,OK,0,100
+2026-03-19T04:16:35.780Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('input[type="tel"]') to be visible
 ,0,0
