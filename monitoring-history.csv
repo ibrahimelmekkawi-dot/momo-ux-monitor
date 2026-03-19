@@ -15050,4 +15050,10 @@ Call log:
 2026-03-19T15:01:25.058Z,Product Page,OK,0,100
 2026-03-19T15:01:25.058Z,Add To Cart,OK,0,100
 2026-03-19T15:01:25.058Z,Login,OK,0,100
-2026-03-19T15:01:25.058Z,Checkout,OK,0,100
+2026-03-19T15:01:25.058Z,Checkout,OK,0,1002026-03-19T15:16:26.589Z,Category,OK,8.713,100
+2026-03-19T15:16:26.589Z,Product Page,OK,0,100
+2026-03-19T15:16:26.589Z,Add To Cart,OK,0,100
+2026-03-19T15:16:26.589Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('input[type="tel"]') to be visible
+,0,0
