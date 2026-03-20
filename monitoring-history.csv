@@ -15311,4 +15311,11 @@ Call log:
 2026-03-20T06:51:43.306Z,Product Page,OK,0,100
 2026-03-20T06:51:43.306Z,Add To Cart,OK,0,100
 2026-03-20T06:51:43.306Z,Login,OK,0,100
-2026-03-20T06:51:43.306Z,Checkout,OK,0,100
+2026-03-20T06:51:43.306Z,Checkout,OK,0,1002026-03-20T07:00:55.537Z,Category,OK,8.109,100
+2026-03-20T07:00:55.537Z,Product Page,OK,0,100
+2026-03-20T07:00:55.537Z,Add To Cart,OK,0,100
+2026-03-20T07:00:55.537Z,Login,OK,0,100
+2026-03-20T07:00:55.537Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
