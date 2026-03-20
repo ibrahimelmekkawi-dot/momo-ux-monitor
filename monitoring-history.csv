@@ -15374,4 +15374,11 @@ Call log:
 2026-03-20T10:15:55.753Z,Product Page,OK,0,100
 2026-03-20T10:15:55.753Z,Add To Cart,OK,0,100
 2026-03-20T10:15:55.753Z,Login,OK,0,100
-2026-03-20T10:15:55.753Z,Checkout,OK,0,100
+2026-03-20T10:15:55.753Z,Checkout,OK,0,1002026-03-20T10:31:01.440Z,Category,OK,7.521,100
+2026-03-20T10:31:01.440Z,Product Page,OK,0,100
+2026-03-20T10:31:01.440Z,Add To Cart,OK,0,100
+2026-03-20T10:31:01.440Z,Login,OK,0,100
+2026-03-20T10:31:01.440Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
