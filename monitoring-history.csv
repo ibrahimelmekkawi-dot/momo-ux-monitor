@@ -15251,4 +15251,10 @@ Call log:
 2026-03-20T02:46:02.357Z,Product Page,OK,0,100
 2026-03-20T02:46:02.357Z,Add To Cart,OK,0,100
 2026-03-20T02:46:02.357Z,Login,OK,0,100
-2026-03-20T02:46:02.357Z,Checkout,OK,0,100
+2026-03-20T02:46:02.357Z,Checkout,OK,0,1002026-03-20T03:01:20.399Z,Category,OK,30.638,100
+2026-03-20T03:01:20.399Z,Product Page,OK,0,100
+2026-03-20T03:01:20.399Z,Add To Cart,OK,0,100
+2026-03-20T03:01:20.399Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('input[type="tel"]') to be visible
+,0,0
