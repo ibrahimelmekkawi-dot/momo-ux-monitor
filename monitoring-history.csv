@@ -15665,4 +15665,11 @@ Call log:
 2026-03-21T04:46:52.025Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.,0,02026-03-21T05:34:27.575Z,Failure,page.waitForSelector: Timeout 45000ms exceeded.
 Call log:
   - waiting for locator('[class*="mtn-product-card"]') to be visible
+,0,02026-03-21T06:06:55.475Z,Category,OK,8.457,100
+2026-03-21T06:06:55.475Z,Product Page,OK,0,100
+2026-03-21T06:06:55.475Z,Add To Cart,OK,0,100
+2026-03-21T06:06:55.475Z,Login,OK,0,100
+2026-03-21T06:06:55.475Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
 ,0,0
