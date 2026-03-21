@@ -15648,4 +15648,10 @@ Call log:
 2026-03-20T23:48:35.350Z,Product Page,OK,0,100
 2026-03-20T23:48:35.350Z,Add To Cart,OK,0,100
 2026-03-20T23:48:35.350Z,Login,OK,0,100
-2026-03-20T23:48:35.350Z,Checkout,OK,0,100
+2026-03-20T23:48:35.350Z,Checkout,OK,0,1002026-03-21T00:55:53.955Z,Category,OK,10.915,100
+2026-03-21T00:55:53.955Z,Product Page,OK,0,100
+2026-03-21T00:55:53.955Z,Add To Cart,OK,0,100
+2026-03-21T00:55:53.955Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('input[type="tel"]') to be visible
+,0,0
