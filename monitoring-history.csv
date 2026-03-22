@@ -15882,4 +15882,11 @@ Call log:
 2026-03-22T09:52:46.278Z,Product Page,OK,0,100
 2026-03-22T09:52:46.278Z,Add To Cart,OK,0,100
 2026-03-22T09:52:46.278Z,Login,OK,0,100
-2026-03-22T09:52:46.278Z,Checkout,OK,0,100
+2026-03-22T09:52:46.278Z,Checkout,OK,0,1002026-03-22T10:15:48.661Z,Category,OK,10.915,100
+2026-03-22T10:15:48.661Z,Product Page,OK,0,100
+2026-03-22T10:15:48.661Z,Add To Cart,OK,0,100
+2026-03-22T10:15:48.661Z,Login,OK,0,100
+2026-03-22T10:15:48.661Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
