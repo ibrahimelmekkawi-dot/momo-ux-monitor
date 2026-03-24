@@ -16210,4 +16210,11 @@ Call log:
 2026-03-24T21:59:12.703Z,Product Page,OK,0,100
 2026-03-24T21:59:12.703Z,Add To Cart,OK,0,100
 2026-03-24T21:59:12.703Z,Login,OK,0,100
-2026-03-24T21:59:12.703Z,Checkout,OK,0,100
+2026-03-24T21:59:12.703Z,Checkout,OK,0,1002026-03-24T22:26:36.766Z,Category,OK,7.434,100
+2026-03-24T22:26:36.766Z,Product Page,OK,0,100
+2026-03-24T22:26:36.766Z,Add To Cart,OK,0,100
+2026-03-24T22:26:36.766Z,Login,OK,0,100
+2026-03-24T22:26:36.766Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
