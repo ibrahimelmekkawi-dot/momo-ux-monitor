@@ -16246,4 +16246,8 @@ Call log:
 2026-03-25T05:15:08.295Z,Failure,page.fill: Timeout 30000ms exceeded.
 Call log:
   - waiting for locator('input[type="password"]')
-,0,0
+,0,02026-03-25T06:14:36.578Z,Category,OK,11.229,100
+2026-03-25T06:14:36.578Z,Product Page,OK,0,100
+2026-03-25T06:14:36.578Z,Add To Cart,OK,0,100
+2026-03-25T06:14:36.578Z,Login,OK,0,100
+2026-03-25T06:14:36.578Z,Checkout,OK,0,100
