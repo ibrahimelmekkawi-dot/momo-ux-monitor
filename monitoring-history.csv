@@ -16240,4 +16240,10 @@ Call log:
 2026-03-25T03:45:50.773Z,Product Page,OK,0,100
 2026-03-25T03:45:50.773Z,Add To Cart,OK,0,100
 2026-03-25T03:45:50.773Z,Login,OK,0,100
-2026-03-25T03:45:50.773Z,Checkout,OK,0,100
+2026-03-25T03:45:50.773Z,Checkout,OK,0,1002026-03-25T05:15:08.295Z,Category,OK,9.237,100
+2026-03-25T05:15:08.295Z,Product Page,OK,0,100
+2026-03-25T05:15:08.295Z,Add To Cart,OK,0,100
+2026-03-25T05:15:08.295Z,Failure,page.fill: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('input[type="password"]')
+,0,0
