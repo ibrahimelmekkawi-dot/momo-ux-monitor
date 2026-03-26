@@ -16418,4 +16418,8 @@ Call log:
 2026-03-26T23:18:37.044Z,Product Page,OK,0,100
 2026-03-26T23:18:37.044Z,Add To Cart,OK,0,100
 2026-03-26T23:18:37.044Z,Login,OK,0,100
-2026-03-26T23:18:37.044Z,Checkout,OK,0,100
+2026-03-26T23:18:37.044Z,Checkout,OK,0,1002026-03-26T23:53:23.520Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.
+=========================== logs ===========================
+  "domcontentloaded" event fired
+  "load" event fired
+============================================================,0,0
