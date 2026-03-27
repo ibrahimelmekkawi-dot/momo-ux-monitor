@@ -16506,4 +16506,11 @@ Call log:
 2026-03-27T21:50:10.247Z,Product Page,OK,0,100
 2026-03-27T21:50:10.247Z,Add To Cart,OK,0,100
 2026-03-27T21:50:10.247Z,Login,OK,0,100
-2026-03-27T21:50:10.247Z,Checkout,OK,0,100
+2026-03-27T21:50:10.247Z,Checkout,OK,0,1002026-03-27T22:19:06.132Z,Category,OK,9.084,100
+2026-03-27T22:19:06.132Z,Product Page,OK,0,100
+2026-03-27T22:19:06.132Z,Add To Cart,OK,0,100
+2026-03-27T22:19:06.132Z,Login,OK,0,100
+2026-03-27T22:19:06.132Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
