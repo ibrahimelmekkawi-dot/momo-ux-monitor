@@ -17018,4 +17018,11 @@ Call log:
 2026-04-01T21:55:41.811Z,Product Page,OK,0,100
 2026-04-01T21:55:41.811Z,Add To Cart,OK,0,100
 2026-04-01T21:55:41.811Z,Login,OK,0,100
-2026-04-01T21:55:41.811Z,Checkout,OK,0,100
+2026-04-01T21:55:41.811Z,Checkout,OK,0,1002026-04-01T22:24:44.386Z,Category,OK,7.408,100
+2026-04-01T22:24:44.386Z,Product Page,OK,0,100
+2026-04-01T22:24:44.386Z,Add To Cart,OK,0,100
+2026-04-01T22:24:44.386Z,Login,OK,0,100
+2026-04-01T22:24:44.386Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
