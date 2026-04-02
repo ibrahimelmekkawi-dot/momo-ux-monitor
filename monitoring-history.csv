@@ -17123,4 +17123,10 @@ Call log:
 2026-04-02T23:23:44.391Z,Product Page,OK,0,100
 2026-04-02T23:23:44.391Z,Add To Cart,OK,0,100
 2026-04-02T23:23:44.391Z,Login,OK,0,100
-2026-04-02T23:23:44.391Z,Checkout,OK,0,100
+2026-04-02T23:23:44.391Z,Checkout,OK,0,1002026-04-02T23:55:31.826Z,Category,OK,9.451,100
+2026-04-02T23:55:31.826Z,Product Page,OK,0,100
+2026-04-02T23:55:31.826Z,Add To Cart,OK,0,100
+2026-04-02T23:55:31.826Z,Failure,page.fill: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('input[type="password"]')
+,0,0
