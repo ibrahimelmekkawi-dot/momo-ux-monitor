@@ -17044,4 +17044,11 @@ Call log:
 2026-04-02T05:27:05.454Z,Product Page,OK,0,100
 2026-04-02T05:27:05.454Z,Add To Cart,OK,0,100
 2026-04-02T05:27:05.454Z,Login,OK,0,100
-2026-04-02T05:27:05.454Z,Checkout,OK,0,100
+2026-04-02T05:27:05.454Z,Checkout,OK,0,1002026-04-02T06:46:14.858Z,Category,OK,7.575,100
+2026-04-02T06:46:14.858Z,Product Page,OK,0,100
+2026-04-02T06:46:14.858Z,Add To Cart,OK,0,100
+2026-04-02T06:46:14.858Z,Login,OK,0,100
+2026-04-02T06:46:14.858Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
