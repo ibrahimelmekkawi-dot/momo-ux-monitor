@@ -17335,4 +17335,10 @@ Call log:
 2026-04-04T19:42:59.314Z,Failure,page.fill: Timeout 30000ms exceeded.
 Call log:
   - waiting for locator('input[type="password"]')
+,0,02026-04-04T19:59:37.907Z,Category,OK,6.922,100
+2026-04-04T19:59:37.907Z,Product Page,OK,0,100
+2026-04-04T19:59:37.907Z,Add To Cart,OK,0,100
+2026-04-04T19:59:37.907Z,Failure,page.fill: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('input[type="password"]')
 ,0,0
