@@ -17329,4 +17329,10 @@ Call log:
 2026-04-04T19:06:05.192Z,Product Page,OK,0,100
 2026-04-04T19:06:05.192Z,Add To Cart,OK,0,100
 2026-04-04T19:06:05.192Z,Login,OK,0,100
-2026-04-04T19:06:05.192Z,Checkout,OK,0,100
+2026-04-04T19:06:05.192Z,Checkout,OK,0,1002026-04-04T19:42:59.314Z,Category,OK,6.732,100
+2026-04-04T19:42:59.314Z,Product Page,OK,0,100
+2026-04-04T19:42:59.314Z,Add To Cart,OK,0,100
+2026-04-04T19:42:59.314Z,Failure,page.fill: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('input[type="password"]')
+,0,0
