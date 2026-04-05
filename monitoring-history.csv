@@ -17470,4 +17470,7 @@ Call log:
 2026-04-05T19:10:08.406Z,Product Page,OK,0,100
 2026-04-05T19:10:08.406Z,Add To Cart,OK,0,100
 2026-04-05T19:10:08.406Z,Login,OK,0,100
-2026-04-05T19:10:08.406Z,Checkout,OK,0,100
+2026-04-05T19:10:08.406Z,Checkout,OK,0,1002026-04-05T20:19:22.454Z,Failure,page.waitForSelector: Timeout 45000ms exceeded.
+Call log:
+  - waiting for locator('[class*="mtn-product-card"]') to be visible
+,0,0
