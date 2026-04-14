@@ -18185,4 +18185,10 @@ Call log:
 2026-04-14T08:09:33.000Z,Product Page,OK,0,100
 2026-04-14T08:09:33.000Z,Add To Cart,OK,0,100
 2026-04-14T08:09:33.000Z,Login,OK,0,100
-2026-04-14T08:09:33.000Z,Checkout,OK,0,100
+2026-04-14T08:09:33.000Z,Checkout,OK,0,1002026-04-14T09:47:48.747Z,Category,OK,10.883,100
+2026-04-14T09:47:48.747Z,Product Page,OK,0,100
+2026-04-14T09:47:48.747Z,Add To Cart,OK,0,100
+2026-04-14T09:47:48.747Z,Failure,page.fill: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('input[type="password"]')
+,0,0
