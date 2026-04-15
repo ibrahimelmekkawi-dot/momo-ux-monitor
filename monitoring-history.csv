@@ -18303,4 +18303,11 @@ Call log:
 2026-04-15T20:38:39.517Z,Product Page,OK,0,100
 2026-04-15T20:38:39.517Z,Add To Cart,OK,0,100
 2026-04-15T20:38:39.517Z,Login,OK,0,100
-2026-04-15T20:38:39.517Z,Checkout,OK,0,100
+2026-04-15T20:38:39.517Z,Checkout,OK,0,1002026-04-15T21:35:21.745Z,Category,OK,10.856,100
+2026-04-15T21:35:21.745Z,Product Page,OK,0,100
+2026-04-15T21:35:21.745Z,Add To Cart,OK,0,100
+2026-04-15T21:35:21.745Z,Login,OK,0,100
+2026-04-15T21:35:21.745Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
