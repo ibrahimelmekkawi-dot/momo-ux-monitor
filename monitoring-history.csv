@@ -18406,4 +18406,11 @@ Call log:
 2026-04-17T06:17:40.531Z,Product Page,OK,0,100
 2026-04-17T06:17:40.531Z,Add To Cart,OK,0,100
 2026-04-17T06:17:40.531Z,Login,OK,0,100
-2026-04-17T06:17:40.531Z,Checkout,OK,0,100
+2026-04-17T06:17:40.531Z,Checkout,OK,0,1002026-04-17T08:09:39.189Z,Category,OK,11.515,100
+2026-04-17T08:09:39.189Z,Product Page,OK,0,100
+2026-04-17T08:09:39.189Z,Add To Cart,OK,0,100
+2026-04-17T08:09:39.189Z,Login,OK,0,100
+2026-04-17T08:09:39.189Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
