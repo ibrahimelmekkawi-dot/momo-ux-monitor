@@ -18528,4 +18528,11 @@ Call log:
 2026-04-18T14:32:25.218Z,Product Page,OK,0,100
 2026-04-18T14:32:25.218Z,Add To Cart,OK,0,100
 2026-04-18T14:32:25.218Z,Login,OK,0,100
-2026-04-18T14:32:25.218Z,Checkout,OK,0,100
+2026-04-18T14:32:25.218Z,Checkout,OK,0,1002026-04-18T15:23:05.149Z,Category,OK,8.013,100
+2026-04-18T15:23:05.149Z,Product Page,OK,0,100
+2026-04-18T15:23:05.149Z,Add To Cart,OK,0,100
+2026-04-18T15:23:05.149Z,Login,OK,0,100
+2026-04-18T15:23:05.149Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
