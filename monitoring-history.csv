@@ -18761,4 +18761,10 @@ Call log:
 2026-04-21T01:27:23.178Z,Product Page,OK,0,100
 2026-04-21T01:27:23.178Z,Add To Cart,OK,0,100
 2026-04-21T01:27:23.178Z,Login,OK,0,100
-2026-04-21T01:27:23.178Z,Checkout,OK,0,100
+2026-04-21T01:27:23.178Z,Checkout,OK,0,1002026-04-21T04:26:01.966Z,Category,OK,8.98,100
+2026-04-21T04:26:01.966Z,Product Page,OK,0,100
+2026-04-21T04:26:01.966Z,Add To Cart,OK,0,100
+2026-04-21T04:26:01.966Z,Failure,page.fill: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('input[type="password"]')
+,0,0
