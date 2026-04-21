@@ -18795,4 +18795,11 @@ Call log:
 2026-04-21T14:27:54.276Z,Product Page,OK,0,100
 2026-04-21T14:27:54.276Z,Add To Cart,OK,0,100
 2026-04-21T14:27:54.276Z,Login,OK,0,100
-2026-04-21T14:27:54.276Z,Checkout,OK,0,100
+2026-04-21T14:27:54.276Z,Checkout,OK,0,1002026-04-21T15:50:24.873Z,Category,OK,10.885,100
+2026-04-21T15:50:24.873Z,Product Page,OK,0,100
+2026-04-21T15:50:24.873Z,Add To Cart,OK,0,100
+2026-04-21T15:50:24.873Z,Login,OK,0,100
+2026-04-21T15:50:24.873Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
