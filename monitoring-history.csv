@@ -18901,4 +18901,11 @@ Call log:
 2026-04-22T21:40:29.162Z,Product Page,OK,0,100
 2026-04-22T21:40:29.162Z,Add To Cart,OK,0,100
 2026-04-22T21:40:29.162Z,Login,OK,0,100
-2026-04-22T21:40:29.162Z,Checkout,OK,0,100
+2026-04-22T21:40:29.162Z,Checkout,OK,0,1002026-04-22T22:29:06.260Z,Category,OK,9.194,100
+2026-04-22T22:29:06.260Z,Product Page,OK,0,100
+2026-04-22T22:29:06.260Z,Add To Cart,OK,0,100
+2026-04-22T22:29:06.260Z,Login,OK,0,100
+2026-04-22T22:29:06.260Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
