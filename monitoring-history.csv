@@ -18916,4 +18916,10 @@ Call log:
 2026-04-23T00:00:05.174Z,Product Page,OK,0,100
 2026-04-23T00:00:05.174Z,Add To Cart,OK,0,100
 2026-04-23T00:00:05.174Z,Login,OK,0,100
-2026-04-23T00:00:05.174Z,Checkout,OK,0,100
+2026-04-23T00:00:05.174Z,Checkout,OK,0,1002026-04-23T02:30:31.477Z,Category,OK,10.705,100
+2026-04-23T02:30:31.477Z,Product Page,OK,0,100
+2026-04-23T02:30:31.477Z,Add To Cart,OK,0,100
+2026-04-23T02:30:31.477Z,Failure,page.fill: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('input[type="password"]')
+,0,0
