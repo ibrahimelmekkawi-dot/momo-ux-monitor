@@ -19260,4 +19260,8 @@ Call log:
        - element is not enabled
      - retrying click action
        - waiting 500ms
-,0,0
+,0,02026-04-25T16:00:21.599Z,Category,OK,7.492,100
+2026-04-25T16:00:21.599Z,Product Page,OK,0,100
+2026-04-25T16:00:21.599Z,Add To Cart,OK,0,100
+2026-04-25T16:00:21.599Z,Login,OK,0,100
+2026-04-25T16:00:21.599Z,Checkout,OK,0,100
