@@ -19369,4 +19369,7 @@ Call log:
        - element is not enabled
      - retrying click action
        - waiting 500ms
+,0,02026-04-25T20:08:38.890Z,Failure,page.waitForSelector: Timeout 45000ms exceeded.
+Call log:
+  - waiting for locator('[class*="mtn-product-card"]') to be visible
 ,0,0
