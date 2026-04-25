@@ -19372,4 +19372,11 @@ Call log:
 ,0,02026-04-25T20:08:38.890Z,Failure,page.waitForSelector: Timeout 45000ms exceeded.
 Call log:
   - waiting for locator('[class*="mtn-product-card"]') to be visible
-,0,02026-04-25T20:55:37.907Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.,0,0
+,0,02026-04-25T20:55:37.907Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.,0,02026-04-25T21:25:07.643Z,Category,OK,22.037,100
+2026-04-25T21:25:07.643Z,Product Page,OK,0,100
+2026-04-25T21:25:07.643Z,Add To Cart,OK,0,100
+2026-04-25T21:25:07.643Z,Login,OK,0,100
+2026-04-25T21:25:07.643Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
