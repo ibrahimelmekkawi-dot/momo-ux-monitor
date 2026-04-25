@@ -19130,4 +19130,25 @@ Call log:
 2026-04-25T06:11:06.574Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.,0,02026-04-25T08:34:48.691Z,Category,OK,10.147,100
 2026-04-25T08:34:48.691Z,Product Page,OK,0,100
 2026-04-25T08:34:48.691Z,Add To Cart,OK,0,100
-2026-04-25T08:34:48.691Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.,0,0
+2026-04-25T08:34:48.691Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.,0,02026-04-25T10:27:31.034Z,Category,OK,7.465,100
+2026-04-25T10:27:31.034Z,Product Page,OK,0,100
+2026-04-25T10:27:31.034Z,Add To Cart,OK,0,100
+2026-04-25T10:27:31.034Z,Login,OK,0,100
+2026-04-25T10:27:31.034Z,Failure,page.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")')
+    - locator resolved to <button disabled class="checkout-card__checkout" _ngcontent-serverapp-c4168816798=""> Proceed to checkout (7 Items) </button>
+  - attempting click action
+    2 × waiting for element to be visible  enabled and stable
+      - element is not enabled
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible  enabled and stable
+      - element is not enabled
+    - retrying click action
+      - waiting 100ms
+    58 × waiting for element to be visible  enabled and stable
+       - element is not enabled
+     - retrying click action
+       - waiting 500ms
+,0,0
