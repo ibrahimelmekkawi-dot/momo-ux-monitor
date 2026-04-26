@@ -19761,4 +19761,25 @@ Call log:
        - element is not enabled
      - retrying click action
        - waiting 500ms
+,0,02026-04-26T18:35:19.568Z,Category,OK,10.848,100
+2026-04-26T18:35:19.568Z,Product Page,OK,0,100
+2026-04-26T18:35:19.568Z,Add To Cart,OK,0,100
+2026-04-26T18:35:19.568Z,Login,OK,0,100
+2026-04-26T18:35:19.568Z,Failure,page.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")')
+    - locator resolved to <button disabled class="checkout-card__checkout" _ngcontent-serverapp-c4168816798=""> Proceed to checkout (7 Items) </button>
+  - attempting click action
+    2 × waiting for element to be visible  enabled and stable
+      - element is not enabled
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible  enabled and stable
+      - element is not enabled
+    - retrying click action
+      - waiting 100ms
+    58 × waiting for element to be visible  enabled and stable
+       - element is not enabled
+     - retrying click action
+       - waiting 500ms
 ,0,0
