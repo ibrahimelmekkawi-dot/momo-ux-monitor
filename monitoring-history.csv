@@ -20044,4 +20044,11 @@ Call log:
 2026-04-29T00:08:02.230Z,Product Page,OK,0,100
 2026-04-29T00:08:02.230Z,Add To Cart,OK,0,100
 2026-04-29T00:08:02.230Z,Login,OK,0,100
-2026-04-29T00:08:02.230Z,Checkout,OK,0,100
+2026-04-29T00:08:02.230Z,Checkout,OK,0,1002026-04-29T04:00:28.014Z,Category,OK,7.688,100
+2026-04-29T04:00:28.014Z,Product Page,OK,0,100
+2026-04-29T04:00:28.014Z,Add To Cart,OK,0,100
+2026-04-29T04:00:28.014Z,Login,OK,0,100
+2026-04-29T04:00:28.014Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
