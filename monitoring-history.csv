@@ -20391,4 +20391,10 @@ Call log:
 2026-05-04T00:08:32.179Z,Product Page,OK,0,100
 2026-05-04T00:08:32.179Z,Add To Cart,OK,0,100
 2026-05-04T00:08:32.179Z,Login,OK,0,100
-2026-05-04T00:08:32.179Z,Checkout,OK,0,100
+2026-05-04T00:08:32.179Z,Checkout,OK,0,1002026-05-04T04:05:33.386Z,Category,OK,11.486,100
+2026-05-04T04:05:33.386Z,Product Page,OK,0,100
+2026-05-04T04:05:33.386Z,Add To Cart,OK,0,100
+2026-05-04T04:05:33.386Z,Failure,page.fill: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('input[type="password"]')
+,0,0
