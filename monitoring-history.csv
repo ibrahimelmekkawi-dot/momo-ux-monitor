@@ -20697,4 +20697,11 @@ Call log:
        - element is not enabled
      - retrying click action
        - waiting 500ms
+,0,02026-05-05T19:13:52.885Z,Category,OK,7.858,100
+2026-05-05T19:13:52.885Z,Product Page,OK,0,100
+2026-05-05T19:13:52.885Z,Add To Cart,OK,0,100
+2026-05-05T19:13:52.885Z,Login,OK,0,100
+2026-05-05T19:13:52.885Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
 ,0,0
