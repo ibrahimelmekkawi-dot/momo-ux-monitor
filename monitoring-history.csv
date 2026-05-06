@@ -20810,4 +20810,11 @@ Call log:
 2026-05-06T22:12:20.066Z,Product Page,OK,0,100
 2026-05-06T22:12:20.066Z,Add To Cart,OK,0,100
 2026-05-06T22:12:20.066Z,Login,OK,0,100
-2026-05-06T22:12:20.066Z,Checkout,OK,0,100
+2026-05-06T22:12:20.066Z,Checkout,OK,0,1002026-05-06T23:05:56.686Z,Category,OK,7.604,100
+2026-05-06T23:05:56.686Z,Product Page,OK,0,100
+2026-05-06T23:05:56.686Z,Add To Cart,OK,0,100
+2026-05-06T23:05:56.686Z,Login,OK,0,100
+2026-05-06T23:05:56.686Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
