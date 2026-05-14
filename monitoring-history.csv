@@ -21232,4 +21232,11 @@ Call log:
 2026-05-14T20:11:11.135Z,Product Page,OK,0,100
 2026-05-14T20:11:11.135Z,Add To Cart,OK,0,100
 2026-05-14T20:11:11.135Z,Login,OK,0,100
-2026-05-14T20:11:11.135Z,Checkout,OK,0,100
+2026-05-14T20:11:11.135Z,Checkout,OK,0,1002026-05-14T21:21:18.820Z,Category,OK,9.703,100
+2026-05-14T21:21:18.820Z,Product Page,OK,0,100
+2026-05-14T21:21:18.820Z,Add To Cart,OK,0,100
+2026-05-14T21:21:18.820Z,Login,OK,0,100
+2026-05-14T21:21:18.820Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
