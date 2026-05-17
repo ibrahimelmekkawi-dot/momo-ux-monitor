@@ -21402,4 +21402,7 @@ Call log:
 2026-05-17T14:18:43.045Z,Checkout,OK,0,1002026-05-17T15:33:45.912Z,Category,OK,9.267,100
 2026-05-17T15:33:45.912Z,Product Page,OK,0,100
 2026-05-17T15:33:45.912Z,Add To Cart,OK,0,100
-2026-05-17T15:33:45.912Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.,0,0
+2026-05-17T15:33:45.912Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.,0,02026-05-17T16:36:43.882Z,Category,OK,8.971,100
+2026-05-17T16:36:43.882Z,Product Page,OK,0,100
+2026-05-17T16:36:43.882Z,Add To Cart,OK,0,100
+2026-05-17T16:36:43.882Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.,0,0
