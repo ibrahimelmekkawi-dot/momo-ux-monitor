@@ -21480,4 +21480,11 @@ Call log:
 2026-05-19T11:52:22.316Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
 Call log:
   - waiting for locator('button:has-text("Checkout")') to be visible
+,0,02026-05-19T14:26:40.239Z,Category,OK,7.232,100
+2026-05-19T14:26:40.239Z,Product Page,OK,0,100
+2026-05-19T14:26:40.239Z,Add To Cart,OK,0,100
+2026-05-19T14:26:40.239Z,Login,OK,0,100
+2026-05-19T14:26:40.239Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
 ,0,0
