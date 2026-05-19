@@ -21491,4 +21491,10 @@ Call log:
 2026-05-19T17:23:58.832Z,Product Page,OK,0,100
 2026-05-19T17:23:58.832Z,Add To Cart,OK,0,100
 2026-05-19T17:23:58.832Z,Login,OK,0,100
-2026-05-19T17:23:58.832Z,Checkout,OK,0,100
+2026-05-19T17:23:58.832Z,Checkout,OK,0,1002026-05-19T19:24:35.796Z,Category,OK,12.211,100
+2026-05-19T19:24:35.796Z,Product Page,OK,0,100
+2026-05-19T19:24:35.796Z,Add To Cart,OK,0,100
+2026-05-19T19:24:35.796Z,Failure,page.fill: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('input[type="password"]')
+,0,0
