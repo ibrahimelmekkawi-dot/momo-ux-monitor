@@ -21462,4 +21462,11 @@ Call log:
 2026-05-18T23:36:30.655Z,Product Page,OK,0,100
 2026-05-18T23:36:30.655Z,Add To Cart,OK,0,100
 2026-05-18T23:36:30.655Z,Login,OK,0,100
-2026-05-18T23:36:30.655Z,Checkout,OK,0,100
+2026-05-18T23:36:30.655Z,Checkout,OK,0,1002026-05-19T05:49:10.343Z,Category,OK,7.493,100
+2026-05-19T05:49:10.343Z,Product Page,OK,0,100
+2026-05-19T05:49:10.343Z,Add To Cart,OK,0,100
+2026-05-19T05:49:10.343Z,Login,OK,0,100
+2026-05-19T05:49:10.343Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
