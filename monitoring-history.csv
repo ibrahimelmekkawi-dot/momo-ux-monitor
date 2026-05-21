@@ -21565,4 +21565,11 @@ Call log:
 2026-05-21T16:28:19.202Z,Product Page,OK,0,100
 2026-05-21T16:28:19.202Z,Add To Cart,OK,0,100
 2026-05-21T16:28:19.202Z,Login,OK,0,100
-2026-05-21T16:28:19.202Z,Checkout,OK,0,100
+2026-05-21T16:28:19.202Z,Checkout,OK,0,1002026-05-21T18:18:12.006Z,Category,OK,9.275,100
+2026-05-21T18:18:12.006Z,Product Page,OK,0,100
+2026-05-21T18:18:12.006Z,Add To Cart,OK,0,100
+2026-05-21T18:18:12.006Z,Login,OK,0,100
+2026-05-21T18:18:12.006Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
