@@ -21608,4 +21608,11 @@ Call log:
 2026-05-22T13:44:02.124Z,Product Page,OK,0,100
 2026-05-22T13:44:02.124Z,Add To Cart,OK,0,100
 2026-05-22T13:44:02.124Z,Login,OK,0,100
-2026-05-22T13:44:02.124Z,Checkout,OK,0,100
+2026-05-22T13:44:02.124Z,Checkout,OK,0,1002026-05-22T16:05:51.328Z,Category,OK,9.472,100
+2026-05-22T16:05:51.328Z,Product Page,OK,0,100
+2026-05-22T16:05:51.328Z,Add To Cart,OK,0,100
+2026-05-22T16:05:51.328Z,Login,OK,0,100
+2026-05-22T16:05:51.328Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
