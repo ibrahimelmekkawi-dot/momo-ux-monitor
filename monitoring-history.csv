@@ -22155,4 +22155,10 @@ Call log:
 =========================== logs ===========================
   "domcontentloaded" event fired
   "load" event fired
-============================================================,0,0
+============================================================,0,02026-06-05T16:16:42.324Z,Category,OK,24.168,100
+2026-06-05T16:16:42.324Z,Product Page,OK,0,100
+2026-06-05T16:16:42.324Z,Add To Cart,OK,0,100
+2026-06-05T16:16:42.324Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('input[type="tel"]') to be visible
+,0,0
