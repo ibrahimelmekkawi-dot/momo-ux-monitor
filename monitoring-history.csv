@@ -22175,4 +22175,11 @@ Call log:
 2026-06-05T21:52:00.555Z,Product Page,OK,0,100
 2026-06-05T21:52:00.555Z,Add To Cart,OK,0,100
 2026-06-05T21:52:00.555Z,Login,OK,0,100
-2026-06-05T21:52:00.555Z,Checkout,OK,0,100
+2026-06-05T21:52:00.555Z,Checkout,OK,0,1002026-06-05T22:54:20.864Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.
+=========================== logs ===========================
+  "domcontentloaded" event fired
+  "load" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "load" event fired
+============================================================,0,0
