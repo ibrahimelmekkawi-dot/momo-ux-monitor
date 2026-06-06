@@ -22205,4 +22205,11 @@ Call log:
 2026-06-06T10:27:58.854Z,Product Page,OK,0,100
 2026-06-06T10:27:58.854Z,Add To Cart,OK,0,100
 2026-06-06T10:27:58.854Z,Login,OK,0,100
-2026-06-06T10:27:58.854Z,Checkout,OK,0,100
+2026-06-06T10:27:58.854Z,Checkout,OK,0,1002026-06-06T11:50:58.410Z,Category,OK,26.696,100
+2026-06-06T11:50:58.410Z,Product Page,OK,0,100
+2026-06-06T11:50:58.410Z,Add To Cart,OK,0,100
+2026-06-06T11:50:58.410Z,Login,OK,0,100
+2026-06-06T11:50:58.410Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
