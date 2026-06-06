@@ -22216,4 +22216,11 @@ Call log:
 2026-06-06T13:00:59.486Z,Product Page,OK,0,100
 2026-06-06T13:00:59.486Z,Add To Cart,OK,0,100
 2026-06-06T13:00:59.486Z,Login,OK,0,100
-2026-06-06T13:00:59.486Z,Checkout,OK,0,100
+2026-06-06T13:00:59.486Z,Checkout,OK,0,1002026-06-06T14:42:03.888Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.
+=========================== logs ===========================
+  "domcontentloaded" event fired
+  "load" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "load" event fired
+============================================================,0,0
