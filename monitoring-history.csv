@@ -22186,4 +22186,11 @@ Call log:
 2026-06-05T23:56:36.301Z,Product Page,OK,0,100
 2026-06-05T23:56:36.301Z,Add To Cart,OK,0,100
 2026-06-05T23:56:36.301Z,Login,OK,0,100
-2026-06-05T23:56:36.301Z,Checkout,OK,0,100
+2026-06-05T23:56:36.301Z,Checkout,OK,0,1002026-06-06T01:58:14.154Z,Category,OK,31.558,100
+2026-06-06T01:58:14.154Z,Product Page,OK,0,100
+2026-06-06T01:58:14.154Z,Add To Cart,OK,0,100
+2026-06-06T01:58:14.154Z,Login,OK,0,100
+2026-06-06T01:58:14.154Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
