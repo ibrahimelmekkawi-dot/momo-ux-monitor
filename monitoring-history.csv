@@ -22257,4 +22257,8 @@ Call log:
 2026-06-07T01:53:56.935Z,Product Page,OK,0,100
 2026-06-07T01:53:56.935Z,Add To Cart,OK,0,100
 2026-06-07T01:53:56.935Z,Login,OK,0,100
-2026-06-07T01:53:56.935Z,Checkout,OK,0,100
+2026-06-07T01:53:56.935Z,Checkout,OK,0,1002026-06-07T06:10:41.817Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.
+=========================== logs ===========================
+  "domcontentloaded" event fired
+  "load" event fired
+============================================================,0,0
