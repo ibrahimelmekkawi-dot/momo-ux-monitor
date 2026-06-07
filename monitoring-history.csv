@@ -22339,4 +22339,11 @@ Call log:
     - <div _ngcontent-ng-c2994455863="" class="modal-wrapper modal-body d-flex flex-column justify-content-center cookie-popup">…</div> from <modal-container role="dialog" tabindex="-1" aria-modal="true" class="modal fade show">…</modal-container> subtree intercepts pointer events
   - retrying click action
     - waiting 500ms
-,0,0
+,0,02026-06-07T18:19:19.597Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.
+=========================== logs ===========================
+  "domcontentloaded" event fired
+  "load" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "load" event fired
+============================================================,0,0
