@@ -22280,4 +22280,63 @@ Call log:
 =========================== logs ===========================
   "domcontentloaded" event fired
   "load" event fired
-============================================================,0,0
+============================================================,0,02026-06-07T17:14:03.956Z,Category,OK,36.286,100
+2026-06-07T17:14:03.956Z,Failure,locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('[class*="mtn-product-card"]').first()
+    - locator resolved to <div appgaimpression="" _ngcontent-ng-c1711499003="" class="mtn-product-card ng-star-inserted">…</div>
+  - attempting click action
+    2 × waiting for element to be visible  enabled and stable
+      - element is visible  enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <modal-container role="dialog" tabindex="-1" aria-modal="true" class="modal fade show">…</modal-container> intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible  enabled and stable
+      - element is not stable
+    - retrying click action
+      - waiting 100ms
+    4 × waiting for element to be visible  enabled and stable
+      - element is visible  enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <modal-container role="dialog" tabindex="-1" aria-modal="true" class="modal fade show">…</modal-container> intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+    13 × waiting for element to be visible  enabled and stable
+       - element is visible  enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - <div _ngcontent-ng-c2994455863="" class="modal-wrapper modal-body d-flex flex-column justify-content-center cookie-popup">…</div> from <modal-container role="dialog" tabindex="-1" aria-modal="true" class="modal fade show">…</modal-container> subtree intercepts pointer events
+     - retrying click action
+       - waiting 500ms
+       - waiting for element to be visible  enabled and stable
+       - element is visible  enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - <div _ngcontent-ng-c2994455863="" class="modal-wrapper modal-body d-flex flex-column justify-content-center cookie-popup">…</div> from <modal-container role="dialog" tabindex="-1" aria-modal="true" class="modal fade show">…</modal-container> subtree intercepts pointer events
+     - retrying click action
+       - waiting 500ms
+       - waiting for element to be visible  enabled and stable
+       - element is visible  enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - <modal-container role="dialog" tabindex="-1" aria-modal="true" class="modal fade show">…</modal-container> intercepts pointer events
+     - retrying click action
+       - waiting 500ms
+       - waiting for element to be visible  enabled and stable
+       - element is visible  enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - <modal-container role="dialog" tabindex="-1" aria-modal="true" class="modal fade show">…</modal-container> intercepts pointer events
+     - retrying click action
+       - waiting 500ms
+    - waiting for element to be visible  enabled and stable
+    - element is visible  enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div _ngcontent-ng-c2994455863="" class="modal-wrapper modal-body d-flex flex-column justify-content-center cookie-popup">…</div> from <modal-container role="dialog" tabindex="-1" aria-modal="true" class="modal fade show">…</modal-container> subtree intercepts pointer events
+  - retrying click action
+    - waiting 500ms
+,0,0
