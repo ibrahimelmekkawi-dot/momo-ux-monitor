@@ -22350,4 +22350,11 @@ Call log:
 2026-06-07T19:52:24.886Z,Product Page,OK,0,100
 2026-06-07T19:52:24.886Z,Add To Cart,OK,0,100
 2026-06-07T19:52:24.886Z,Login,OK,0,100
-2026-06-07T19:52:24.886Z,Checkout,OK,0,100
+2026-06-07T19:52:24.886Z,Checkout,OK,0,1002026-06-07T20:57:40.162Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.
+=========================== logs ===========================
+  "domcontentloaded" event fired
+  "load" event fired
+  "commit" event fired
+  "domcontentloaded" event fired
+  "load" event fired
+============================================================,0,0
