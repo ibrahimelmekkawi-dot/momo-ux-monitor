@@ -22380,4 +22380,8 @@ Call log:
 2026-06-08T09:21:29.833Z,Product Page,OK,0,100
 2026-06-08T09:21:29.833Z,Add To Cart,OK,0,100
 2026-06-08T09:21:29.833Z,Login,OK,0,100
-2026-06-08T09:21:29.833Z,Checkout,OK,0,100
+2026-06-08T09:21:29.833Z,Checkout,OK,0,1002026-06-08T13:49:16.481Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.
+=========================== logs ===========================
+  "domcontentloaded" event fired
+  "load" event fired
+============================================================,0,0
