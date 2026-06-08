@@ -22365,4 +22365,11 @@ Call log:
 =========================== logs ===========================
   "domcontentloaded" event fired
   "load" event fired
-============================================================,0,0
+============================================================,0,02026-06-08T00:04:47.509Z,Category,OK,30.256,100
+2026-06-08T00:04:47.509Z,Product Page,OK,0,100
+2026-06-08T00:04:47.509Z,Add To Cart,OK,0,100
+2026-06-08T00:04:47.509Z,Login,OK,0,100
+2026-06-08T00:04:47.509Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
