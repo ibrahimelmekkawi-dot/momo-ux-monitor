@@ -22484,4 +22484,11 @@ Call log:
 2026-06-09T19:28:52.282Z,Product Page,OK,0,100
 2026-06-09T19:28:52.282Z,Add To Cart,OK,0,100
 2026-06-09T19:28:52.282Z,Login,OK,0,100
-2026-06-09T19:28:52.282Z,Checkout,OK,0,100
+2026-06-09T19:28:52.282Z,Checkout,OK,0,1002026-06-09T21:17:55.807Z,Category,OK,34.859,100
+2026-06-09T21:17:55.807Z,Product Page,OK,0,100
+2026-06-09T21:17:55.807Z,Add To Cart,OK,0,100
+2026-06-09T21:17:55.807Z,Login,OK,0,100
+2026-06-09T21:17:55.807Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
