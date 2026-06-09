@@ -22471,4 +22471,9 @@ Call log:
 2026-06-09T11:58:02.736Z,Product Page,OK,0,100
 2026-06-09T11:58:02.736Z,Add To Cart,OK,0,100
 2026-06-09T11:58:02.736Z,Login,OK,0,100
-2026-06-09T11:58:02.736Z,Checkout,OK,0,100
+2026-06-09T11:58:02.736Z,Checkout,OK,0,1002026-06-09T14:31:23.899Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.
+=========================== logs ===========================
+  "commit" event fired
+  "domcontentloaded" event fired
+  "load" event fired
+============================================================,0,0
