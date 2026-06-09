@@ -22463,4 +22463,8 @@ Call log:
 2026-06-09T01:48:48.070Z,Product Page,OK,0,100
 2026-06-09T01:48:48.070Z,Add To Cart,OK,0,100
 2026-06-09T01:48:48.070Z,Login,OK,0,100
-2026-06-09T01:48:48.070Z,Checkout,OK,0,100
+2026-06-09T01:48:48.070Z,Checkout,OK,0,1002026-06-09T09:00:05.291Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.
+=========================== logs ===========================
+  "domcontentloaded" event fired
+  "load" event fired
+============================================================,0,0
