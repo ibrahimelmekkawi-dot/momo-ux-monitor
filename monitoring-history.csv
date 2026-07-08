@@ -23698,4 +23698,7 @@ Call log:
 ============================================================,0,02026-07-08T22:41:22.794Z,Category,OK,20.672,100
 2026-07-08T22:41:22.794Z,Product Page,OK,0,100
 2026-07-08T22:41:22.794Z,Add To Cart,OK,0,100
-2026-07-08T22:41:22.794Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.,0,0
+2026-07-08T22:41:22.794Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.,0,02026-07-08T23:42:26.195Z,Category,OK,16.104,100
+2026-07-08T23:42:26.195Z,Product Page,OK,0,100
+2026-07-08T23:42:26.195Z,Add To Cart,OK,0,100
+2026-07-08T23:42:26.195Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.,0,0
