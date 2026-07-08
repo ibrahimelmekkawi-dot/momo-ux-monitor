@@ -23690,4 +23690,9 @@ Call log:
 2026-07-08T19:00:43.695Z,Checkout,OK,0,1002026-07-08T20:20:10.158Z,Category,OK,23.515,100
 2026-07-08T20:20:10.158Z,Product Page,OK,0,100
 2026-07-08T20:20:10.158Z,Add To Cart,OK,0,100
-2026-07-08T20:20:10.158Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.,0,0
+2026-07-08T20:20:10.158Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.,0,02026-07-08T21:36:07.743Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.
+=========================== logs ===========================
+  "commit" event fired
+  "domcontentloaded" event fired
+  "load" event fired
+============================================================,0,0
