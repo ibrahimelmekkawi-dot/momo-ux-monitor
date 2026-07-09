@@ -23704,4 +23704,9 @@ Call log:
 2026-07-08T23:42:26.195Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.,0,02026-07-09T01:15:02.375Z,Category,OK,19.646,100
 2026-07-09T01:15:02.375Z,Product Page,OK,0,100
 2026-07-09T01:15:02.375Z,Add To Cart,OK,0,100
-2026-07-09T01:15:02.375Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.,0,0
+2026-07-09T01:15:02.375Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.,0,02026-07-09T05:05:40.814Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.
+=========================== logs ===========================
+  "commit" event fired
+  "domcontentloaded" event fired
+  "load" event fired
+============================================================,0,0
