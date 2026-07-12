@@ -23869,4 +23869,11 @@ Call log:
 2026-07-12T06:24:11.091Z,Product Page,OK,0,100
 2026-07-12T06:24:11.091Z,Add To Cart,OK,0,100
 2026-07-12T06:24:11.091Z,Login,OK,0,100
-2026-07-12T06:24:11.091Z,Checkout,OK,0,100
+2026-07-12T06:24:11.091Z,Checkout,OK,0,1002026-07-12T08:34:54.961Z,Category,OK,14.145,100
+2026-07-12T08:34:54.961Z,Product Page,OK,0,100
+2026-07-12T08:34:54.961Z,Add To Cart,OK,0,100
+2026-07-12T08:34:54.961Z,Login,OK,0,100
+2026-07-12T08:34:54.961Z,Failure,page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("Checkout")') to be visible
+,0,0
