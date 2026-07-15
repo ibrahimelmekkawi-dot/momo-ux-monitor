@@ -24077,4 +24077,9 @@ Call log:
 2026-07-15T14:25:40.170Z,Product Page,OK,0,100
 2026-07-15T14:25:40.170Z,Add To Cart,OK,0,100
 2026-07-15T14:25:40.170Z,Login,OK,0,100
-2026-07-15T14:25:40.170Z,Checkout,OK,0,100
+2026-07-15T14:25:40.170Z,Checkout,OK,0,1002026-07-15T15:56:57.444Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.
+=========================== logs ===========================
+  "commit" event fired
+  "domcontentloaded" event fired
+  "load" event fired
+============================================================,0,0
