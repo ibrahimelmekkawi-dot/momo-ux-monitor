@@ -24082,4 +24082,9 @@ Call log:
   "commit" event fired
   "domcontentloaded" event fired
   "load" event fired
+============================================================,0,02026-07-15T17:04:37.576Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.
+=========================== logs ===========================
+  "commit" event fired
+  "domcontentloaded" event fired
+  "load" event fired
 ============================================================,0,0
