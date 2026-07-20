@@ -24482,4 +24482,8 @@ Call log:
        - element is not enabled
      - retrying click action
        - waiting 500ms
-,0,0
+,0,02026-07-20T07:49:26.190Z,Category,OK,17.445,100
+2026-07-20T07:49:26.190Z,Product Page,OK,0,100
+2026-07-20T07:49:26.190Z,Add To Cart,OK,0,100
+2026-07-20T07:49:26.190Z,Login,OK,0,100
+2026-07-20T07:49:26.190Z,Checkout,OK,0,100
