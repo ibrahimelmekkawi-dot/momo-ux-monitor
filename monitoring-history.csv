@@ -25105,4 +25105,8 @@ Call log:
 2026-07-31T22:41:57.534Z,Checkout,OK,0,1002026-07-31T23:39:53.444Z,Failure,page.waitForSelector: Timeout 45000ms exceeded.
 Call log:
   - waiting for locator('[class*="mtn-product-card"]') to be visible
-,0,0
+,0,02026-08-01T01:11:01.709Z,Category,OK,16.95,100
+2026-08-01T01:11:01.709Z,Product Page,OK,0,100
+2026-08-01T01:11:01.709Z,Add To Cart,OK,0,100
+2026-08-01T01:11:01.709Z,Login,OK,0,100
+2026-08-01T01:11:01.709Z,Checkout,OK,0,100
