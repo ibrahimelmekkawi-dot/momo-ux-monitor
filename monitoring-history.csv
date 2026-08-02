@@ -26045,4 +26045,4 @@ Call log:
   - waiting for locator('[class*="mtn-product-card"]') to be visible
     - waiting for" https://market.momo.africa/" navigation to finish...
     - navigated to "https://market.momo.africa/"
-,0,0
+,0,02026-08-02T20:40:20.867Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.,0,0
