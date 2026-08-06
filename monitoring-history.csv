@@ -28231,4 +28231,9 @@ Call log:
     - <div _ngcontent-ng-c633831166="" class="cookie-popup__message">…</div> from <modal-container role="dialog" tabindex="-1" aria-modal="true" class="modal fade show">…</modal-container> subtree intercepts pointer events
   - retrying click action
     - waiting 500ms
+,0,02026-08-06T07:11:04.582Z,Failure,page.waitForSelector: Timeout 45000ms exceeded.
+Call log:
+  - waiting for locator('[class*="mtn-product-card"]') to be visible
+    - waiting for" https://market.momo.africa/" navigation to finish...
+    - navigated to "https://market.momo.africa/"
 ,0,0
