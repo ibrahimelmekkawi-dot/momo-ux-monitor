@@ -34647,4 +34647,9 @@ Call log:
     - <modal-container role="dialog" tabindex="-1" aria-modal="true" class="modal fade show">…</modal-container> intercepts pointer events
   - retrying click action
     - waiting 500ms
+,0,02026-08-10T11:19:12.259Z,Failure,page.waitForSelector: Timeout 45000ms exceeded.
+Call log:
+  - waiting for locator('[class*="mtn-product-card"]') to be visible
+    - waiting for" https://market.momo.africa/" navigation to finish...
+    - navigated to "https://market.momo.africa/"
 ,0,0
