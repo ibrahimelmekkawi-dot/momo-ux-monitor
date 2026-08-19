@@ -54729,4 +54729,9 @@ Call log:
        - <modal-container role="dialog" tabindex="-1" aria-modal="true" class="modal fade show" aria-labelledby="cookie-modal-title" aria-describedby="cookie-modal-desc">…</modal-container> intercepts pointer events
      - retrying click action
        - waiting 500ms
-,0,0
+,0,02026-08-19T23:43:32.376Z,Failure,page.waitForLoadState: Timeout 30000ms exceeded.
+=========================== logs ===========================
+  "commit" event fired
+  "domcontentloaded" event fired
+  "load" event fired
+============================================================,0,0
