@@ -80971,4 +80971,7 @@ Call log:
        - <modal-container role="dialog" tabindex="-1" aria-modal="true" class="modal fade show" aria-labelledby="cookie-modal-title" aria-describedby="cookie-modal-desc">…</modal-container> intercepts pointer events
   - retrying click action
     - waiting 500ms
+,0,02026-09-21T20:34:15.528Z,Failure,page.waitForSelector: Timeout 45000ms exceeded.
+Call log:
+  - waiting for locator('[class*="mtn-product-card"]') to be visible
 ,0,0
