@@ -84076,4 +84076,7 @@ Call log:
 ,0,02026-10-13T18:13:56.277Z,Failure,page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://market.momo.africa/
 Call log:
   - navigating to "https://market.momo.africa/"  waiting until "domcontentloaded"
+,0,02026-10-13T22:42:03.028Z,Failure,page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://market.momo.africa/
+Call log:
+  - navigating to "https://market.momo.africa/"  waiting until "domcontentloaded"
 ,0,0
