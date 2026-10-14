@@ -84091,4 +84091,7 @@ Call log:
 ,0,02026-10-14T17:05:49.784Z,Failure,page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://market.momo.africa/
 Call log:
   - navigating to "https://market.momo.africa/"  waiting until "domcontentloaded"
+,0,02026-10-14T20:40:31.122Z,Failure,page.waitForSelector: Timeout 45000ms exceeded.
+Call log:
+  - waiting for locator('[class*="mtn-product-card"]') to be visible
 ,0,0
