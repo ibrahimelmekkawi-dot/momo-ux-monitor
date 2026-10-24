@@ -84274,4 +84274,7 @@ Call log:
 ,0,02026-10-24T05:00:49.279Z,Failure,page.waitForSelector: Timeout 45000ms exceeded.
 Call log:
   - waiting for locator('[class*="mtn-product-card"]') to be visible
+,0,02026-10-24T09:19:29.379Z,Failure,page.waitForSelector: Timeout 45000ms exceeded.
+Call log:
+  - waiting for locator('[class*="mtn-product-card"]') to be visible
 ,0,0
